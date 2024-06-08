@@ -1,1 +1,2708 @@
-{"$schema":"https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json","luaClasses":{"ISUIElement":{"notes":"**ISUIElement** is the base UI class in the **Project Zomboid** Lua codebase.","values":{"IDMax":{"type":"number","notes":"The next ID to use for a new ISUIElement instance.","defaultValue":"1"}},"fields":{"anchorBottom":{"type":"boolean","notes":"If true, the element is anchored to the bottom of its parent element."},"anchorLeft":{"type":"boolean","notes":"If true, the element is anchored to the left of its parent element."},"anchorRight":{"type":"boolean","notes":"If true, the element is anchored to the right of its parent element."},"anchorTop":{"type":"boolean","notes":"If true, the element is anchored to the top of its parent element."},"children":{"type":"table<number, ISUIElement>","notes":"The registered child elements of the element, registered using self.ID as their key."},"controller":{"type":"any","notes":"Unknown. Not sure if **org.lwjglx.input.Controller**."},"dock":{"type":"string","notes":"Some possibly deprecated legacy field."},"enabled":{"type":"boolean","notes":"If true, the element is active."},"forceCursorVisible":{"type":"boolean","notes":"If true, the cursor will stay visible when inside the element's box-boundary."},"height":{"type":"double","notes":"The height of the UI element. (In pixels)"},"hscroll":{"type":"ISScrollBar","notes":"The element's horizontal scrollbar."},"ID":{"type":"int","notes":"The internal ID of the UI element. This is used to store elements in their parent-element's children array."},"javaObject":{"type":"UIElement","notes":"The Java instance of the UI element. This is used to communicate with the game's UI engine."},"joyfocus":{"type":"Joypad","notes":"The actively-focused Joypad object."},"keepOnScreen":{"type":"boolean","notes":"If true, the element will stay on the screen regardless of its state."},"minimumHeight":{"type":"number","notes":"The minimum height of the UI element. (In pixels)"},"minimumWidth":{"type":"number","notes":"The minimum width of the UI element. (In pixels)"},"onMouseDoubleClick":{"type":"fun(): void","notes":"A callback function for double clicking."},"parent":{"type":"ISUIElement","notes":"If not nil, the parent of the element will be stored here."},"removed":{"type":"boolean","notes":"True if the UI element is flagged for removal from the UI manager."},"scrollwidth":{"type":"number","notes":"The set scroll-width of the element's scroll pane."},"target":{"type":"any","notes":"(Related to 'onMouseDoubleClick')"},"visibleFunction":{"type":"fun(visibleTarget: ISUIElement, fromElement: ISUIElement): void;","notes":"An optional function to be invoked when self.setVisible() is invoked. Passes two ISUIElements as parameters."},"visibleTarget":{"type":"ISUIElement","notes":"The element-target or reference to self.visibleFunction when the visibility of the element is changed."},"vscroll":{"type":"ISScrollBar","notes":"The element's vertical scrollbar."},"wantKeyEvents":{"type":"boolean","notes":"If true, keyboard-events are broadcasted to the element."},"width":{"type":"number","notes":"The width of the UI element. (In pixels)"},"x":{"type":"number","notes":"The x coordinate on the screen. (In pixels)"},"y":{"type":"number","notes":"The y coordinate on the screen. (In pixels)"}},"constructor":{"parameters":[{"name":"x","type":"number","notes":"The x coordinate on the screen. (In pixels)"},{"name":"y","type":"number","notes":"The y coordinate on the screen. (In pixels)"},{"name":"width","type":"number","notes":"The width of the UI element. (In pixels)"},{"name":"height","type":"number","notes":"The height of the UI element. (In pixels)"}]},"methods":{"__toString__":{"returns":{"type":"string","notes":"A formally-wrapped for **tostring(self)** using the** getUIName()** to formally name the printed result. "}},"addChild":{"notes":"Adds a child UI element to this UI element.","parameters":[{"name":"other","type":"ISUIElement","notes":"The UI element to add as a child to this UI element."}],"returns":{"type":"void"}},"addScrollBars":{"notes":"Adds a vertical ISScrollBar to the UI element.","parameters":[{"name":"addHorizontal","type":"boolean","notes":"If true, the ISUIElement will also have a horizontal scrollbar."}],"returns":{"type":"void"}},"addToUIManager":{"notes":"Adds this UI element to the UI manager for the game.","returns":{"type":"void"}},"backMost":{"notes":"Moves the element to the back-most drawn on the stack of elements to render.","returns":{"type":"void","notes":""}},"bringToTop":{"notes":"Brings the element to the top of the rendering stack.","returns":{"type":"void","notes":""}},"clampStencilRectToParent":{"notes":"If the element has a parent, set the stencil box-boundary of the element to its parent.","parameters":[{"name":"x","type":"number","notes":"The left-most x-coordinate. (In pixels)"},{"name":"y","type":"number","notes":"The top-most y-coordinate. (In pixels)"},{"name":"width","type":"number","notes":"The width of the stencil. (In pixels)"},{"name":"height","type":"number","notes":"The height of the stencil. (In pixels)"}],"returns":{"type":"[number, number, number, number]","notes":"x, y, width, height"}},"clearChildren":{"notes":"Clears all registered child-elements from the element.","returns":{"type":"void","notes":""}},"clearMaxDrawHeight":{"notes":"Clears the maximum draw height of the element.","returns":{"type":"void","notes":""}},"clearMaxDrawWidth":{"notes":"Clears the maximum draw width of the element.","returns":{"type":"void","notes":""}},"clearStencilRect":{"notes":"Clears the set box-boundary for the element.","returns":{"type":"void","notes":""}},"containsPoint":{"notes":"Tests if the given coordinates are inside the element's box-boundary.","parameters":[{"name":"x","type":"number","notes":"The x-coordinate to test. (In pixels)"},{"name":"y","type":"number","notes":"The y-coordinate to test. (In pixels)"}],"returns":{"type":"void","notes":"True if the coordinates are inside the element's box-boundary."}},"containsPointLocal":{"notes":"Tests if the given coordinates are inside the element's local box-boundary. (the top-left of the element is 0,0)","parameters":[{"name":"x","type":"number","notes":"The x-coordinate to test. (In pixels)"},{"name":"y","type":"number","notes":"The y-coordinate to test. (In pixels)"}],"returns":{"type":"void","notes":"True if the coordinates are inside the element's local box-boundary."}},"createChildren":{"notes":"Fired when the element is instantiated. Create initial child elements here.","returns":{"type":"void","notes":""}},"drawLine2":{"notes":"Draws a line between two points on the screen. (In pixels)","parameters":[{"name":"x1","type":"number","notes":"The x-coordinate of the starting point of the line. (In pixels)"},{"name":"y1","type":"number","notes":"The y-coordinate of the starting point of the line. (In pixels)"},{"name":"x2","type":"number","notes":"The x-coordinate of the ending point of the line. (In pixels)"},{"name":"y2","type":"number","notes":"The y-coordinate of the ending point of the line. (In pixels)"},{"name":"alpha","type":"number","notes":"The value of the alpha channel. (0.0 -> 1.0)"},{"name":"red","type":"number","notes":"The value of the red color channel. (0.0 -> 1.0)"},{"name":"green","type":"number","notes":"The value of the green color channel. (0.0 -> 1.0)"},{"name":"blue","type":"number","notes":"The value of the blue color channel. (0.0 -> 1.0)"}],"returns":{"type":"void","notes":""}},"drawProgressBar":{"notes":"Draws a progress bar in the element.","parameters":[{"name":"x","type":"number","notes":"The x-coordinate of the top-left of the progress-bar. (In pixels)"},{"name":"y","type":"number","notes":"The x-coordinate of the top-left of the progress-bar. (In pixels)"},{"name":"width","type":"number","notes":"The width of the progress-bar. (In pixels)"},{"name":"height","type":"number","notes":"The height of the progress-bar. (In pixels)"},{"name":"percentage","type":"number","notes":"A value between 0.0 (0%) to 1.0. (100%)"},{"name":"foregroundColor","type":"{ r: number, g: number, b: number, a: number }","notes":"A primitive RGBA object to color the foreground.  "}],"returns":{"type":"void","notes":""}},"drawRect":{"notes":"Draws a colored rectangle at given coordinates on the screen. (In pixels)\\n\\nSimplified alias of:\\n**self.javaObject:DrawTextureScaledColor(nil, x, y, w, h, r, g, b, a);**","parameters":[{"name":"x","type":"number","notes":"The x-coordinate of the top-left area. (In pixels)"},{"name":"y","type":"number","notes":"The y-coordinate of the top-left area. (In pixels)"},{"name":"width","type":"number","notes":"The width of the area to draw. (In pixels)"},{"name":"height","type":"number","notes":"The height of the area to draw. (In pixels)"},{"name":"alpha","type":"number","notes":"The value of the alpha channel. (0.0 -> 1.0)"},{"name":"red","type":"number","notes":"The value of the red color channel. (0.0 -> 1.0)"},{"name":"green","type":"number","notes":"The value of the green color channel. (0.0 -> 1.0)"},{"name":"blue","type":"number","notes":"The value of the blue color channel. (0.0 -> 1.0)"}],"returns":{"type":"void","notes":""}},"drawRectBorder":{"notes":"TODO: Document.","parameters":[{"name":"x","type":"number","notes":"The x-coordinate of the top-left area. (In pixels)"},{"name":"y","type":"number","notes":"The y-coordinate of the top-left area. (In pixels)"},{"name":"width","type":"number","notes":"The width of the area to draw. (In pixels)"},{"name":"height","type":"number","notes":"The height of the area to draw. (In pixels)"},{"name":"alpha","type":"number","notes":"The value of the alpha channel. (0.0 -> 1.0)"},{"name":"red","type":"number","notes":"The value of the red color channel. (0.0 -> 1.0)"},{"name":"green","type":"number","notes":"The value of the green color channel. (0.0 -> 1.0)"},{"name":"blue","type":"number","notes":"The value of the blue color channel. (0.0 -> 1.0)"}],"returns":{"type":"void","notes":""}},"drawRectBorderStatic":{"notes":"TODO: Document.","parameters":[{"name":"x","type":"number","notes":"The x-coordinate of the top-left area. (In pixels)"},{"name":"y","type":"number","notes":"The y-coordinate of the top-left area. (In pixels)"},{"name":"width","type":"number","notes":"The width of the area to draw. (In pixels)"},{"name":"height","type":"number","notes":"The height of the area to draw. (In pixels)"},{"name":"alpha","type":"number","notes":"The value of the alpha channel. (0.0 -> 1.0)"},{"name":"red","type":"number","notes":"The value of the red color channel. (0.0 -> 1.0)"},{"name":"green","type":"number","notes":"The value of the green color channel. (0.0 -> 1.0)"},{"name":"blue","type":"number","notes":"The value of the blue color channel. (0.0 -> 1.0)"}],"returns":{"type":"void","notes":""}},"drawRectStatic":{"notes":"TODO: Document.","parameters":[{"name":"x","type":"number","notes":"The x-coordinate of the top-left area. (In pixels)"},{"name":"y","type":"number","notes":"The y-coordinate of the top-left area. (In pixels)"},{"name":"width","type":"number","notes":"The width of the area to draw. (In pixels)"},{"name":"height","type":"number","notes":"The height of the area to draw. (In pixels)"},{"name":"alpha","type":"number","notes":"The value of the alpha channel. (0.0 -> 1.0)"},{"name":"red","type":"number","notes":"The value of the red color channel. (0.0 -> 1.0)"},{"name":"green","type":"number","notes":"The value of the green color channel. (0.0 -> 1.0)"},{"name":"blue","type":"number","notes":"The value of the blue color channel. (0.0 -> 1.0)"}],"returns":{"type":"void","notes":""}},"drawText":{"notes":"Draws text on the screen. (The equivalence of a \"drawTextLeft\")","parameters":[{"name":"text","type":"string","notes":"The text to draw."},{"name":"x","type":"number","notes":"The x-coordinate of the top-left area. (In pixels)"},{"name":"y","type":"number","notes":"The y-coordinate of the top-left area. (In pixels)"},{"name":"red","type":"number","notes":"The value of the red color channel. (0.0 -> 1.0)"},{"name":"green","type":"number","notes":"The value of the green color channel. (0.0 -> 1.0)"},{"name":"blue","type":"number","notes":"The value of the blue color channel. (0.0 -> 1.0)"},{"name":"alpha","type":"number","notes":"The value of the alpha channel. (0.0 -> 1.0)"},{"name":"font","type":"UIFont","notes":"The font preset to use. (If nil, UIFont.Small is used)"}],"returns":{"type":"void","notes":""}},"drawTextCentre":{"notes":"Draws text on the screen from a coordinate-centric position. (In pixels)","parameters":[{"name":"text","type":"string","notes":"The text to draw."},{"name":"x","type":"number","notes":"The x-coordinate of the center area. (In pixels)"},{"name":"y","type":"number","notes":"The y-coordinate of the center area. (In pixels)"},{"name":"red","type":"number","notes":"The value of the red color channel. (0.0 -> 1.0)"},{"name":"green","type":"number","notes":"The value of the green color channel. (0.0 -> 1.0)"},{"name":"blue","type":"number","notes":"The value of the blue color channel. (0.0 -> 1.0)"},{"name":"alpha","type":"number","notes":"The value of the alpha channel. (0.0 -> 1.0)"},{"name":"font","type":"UIFont","notes":"The font preset to use. (If nil, UIFont.Small is used)"}],"returns":{"type":"void","notes":""}},"drawTextCentreStatic":{"notes":"TODO: Document.","parameters":[{"name":"text","type":"string","notes":"The text to draw."},{"name":"x","type":"number","notes":"The x-coordinate of the center area. (In pixels)"},{"name":"y","type":"number","notes":"The y-coordinate of the center area. (In pixels)"},{"name":"red","type":"number","notes":"The value of the red color channel. (0.0 -> 1.0)"},{"name":"green","type":"number","notes":"The value of the green color channel. (0.0 -> 1.0)"},{"name":"blue","type":"number","notes":"The value of the blue color channel. (0.0 -> 1.0)"},{"name":"alpha","type":"number","notes":"The value of the alpha channel. (0.0 -> 1.0)"},{"name":"font","type":"UIFont","notes":"The font preset to use. (If nil, UIFont.Small is used)"}],"returns":{"type":"void","notes":""}},"drawTextRight":{"notes":"Draws text on the screen, rendering the text left of the given coordinates on the screen.","parameters":[{"name":"text","type":"string","notes":"The text to draw."},{"name":"x","type":"number","notes":" The x-coordinate of the top-right area."},{"name":"y","type":"number","notes":" The y-coordinate of the top-right area."},{"name":"red","type":"number","notes":"The value of the red color channel. (0.0 -> 1.0)"},{"name":"green","type":"number","notes":"The value of the green color channel. (0.0 -> 1.0)"},{"name":"blue","type":"number","notes":"The value of the blue color channel. (0.0 -> 1.0)"},{"name":"alpha","type":"number","notes":"The value of the alpha channel. (0.0 -> 1.0)"},{"name":"font","type":"UIFont","notes":"The font preset to use. (If nil, UIFont.Small is used)"}],"returns":{"type":"void","notes":""}},"drawTextRightStatic":{"notes":"TODO: Document.","parameters":[{"name":"text","type":"string","notes":"The text to draw."},{"name":"x","type":"number","notes":"The x-coordinate of the top-right area. (In pixels)"},{"name":"y","type":"number","notes":"The y-coordinate of the top-right area. (In pixels)"},{"name":"red","type":"number","notes":"The value of the red color channel. (0.0 -> 1.0)"},{"name":"green","type":"number","notes":"The value of the green color channel. (0.0 -> 1.0)"},{"name":"blue","type":"number","notes":"The value of the blue color channel. (0.0 -> 1.0)"},{"name":"alpha","type":"number","notes":"The value of the alpha channel. (0.0 -> 1.0)"},{"name":"font","type":"UIFont","notes":"The font preset to use. (If nil, UIFont.Small is used)"}],"returns":{"type":"void","notes":""}},"drawTextStatic":{"notes":"TODO: Document.","parameters":[{"name":"text","type":"string","notes":"The text to draw."},{"name":"x","type":"number","notes":"The x-coordinate of the top-left area. (In pixels)"},{"name":"y","type":"number","notes":"The y-coordinate of the top-left area. (In pixels)"},{"name":"red","type":"number","notes":"The value of the red color channel. (0.0 -> 1.0)"},{"name":"green","type":"number","notes":"The value of the green color channel. (0.0 -> 1.0)"},{"name":"blue","type":"number","notes":"The value of the blue color channel. (0.0 -> 1.0)"},{"name":"alpha","type":"number","notes":"The value of the alpha channel. (0.0 -> 1.0)"},{"name":"font","type":"UIFont","notes":"The font preset to use. (If nil, UIFont.Small is used)"}],"returns":{"type":"void","notes":""}},"drawTextUntrimmed":{"notes":"Draws text untrimmed on the screen.\\n\\n**NOTE**: If a font is not provided the text is drawn trimmed. (This might be a bug)","parameters":[{"name":"text","type":"string","notes":"The text to draw."},{"name":"x","type":"number","notes":"The x-coordinate of the top-left area. (In pixels)"},{"name":"y","type":"number","notes":"The y-coordinate of the top-left area. (In pixels)"},{"name":"red","type":"number","notes":"The value of the red color channel. (0.0 -> 1.0)"},{"name":"green","type":"number","notes":"The value of the green color channel. (0.0 -> 1.0)"},{"name":"blue","type":"number","notes":"The value of the blue color channel. (0.0 -> 1.0)"},{"name":"alpha","type":"number","notes":"The value of the alpha channel. (0.0 -> 1.0)"},{"name":"font","type":"UIFont","notes":"The font preset to use. (If nil, UIFont.Small is used)"}],"returns":{"type":"void","notes":""}},"drawTexture":{"notes":"Draws a texture on the screen using top-left coordinates and a color multiplier.","parameters":[{"name":"texture","type":"Texture","notes":"The texture to draw. If null, the color will be the texture."},{"name":"x","type":"number","notes":"The x coordinate on the screen to draw the left of the texture. (In pixels)"},{"name":"y","type":"number","notes":"The y coordinate on the screen to draw the top of the texture. (In pixels)"},{"name":"red","type":"number","notes":"The red color value to draw. (Range: 0.0 -> 1.0)"},{"name":"green","type":"number","notes":"The green color value to draw. (Range: 0.0 -> 1.0)"},{"name":"blue","type":"number","notes":"The blue color value to draw. (Range: 0.0 -> 1.0)"},{"name":"alpha","type":"number","notes":"The alpha value to draw. (Range: 0.0 -> 1.0)"}],"returns":{"type":"void"}},"drawTextureAllPoint":{"notes":"Draws a texture, providing all four points for the GL_QUAD when drawn. (top-left -> top-right -> bottom-right -> bottom-left) If the texture is **nil** then a solid color is rendered. If one is provided then the color values become a color-multiplier.","parameters":[{"name":"texture","type":"Texture","notes":"The texture to draw. If **nil** is provided, the color passed is rendered."},{"name":"topLeftX","type":"number","notes":"The x-coordinate of the top-left area. (In pixels)"},{"name":"topLeftY","type":"number","notes":"The y-coordinate of the top-left area. (In pixels)"},{"name":"topRightX","type":"number","notes":"The x-coordinate of the top-right area. (In pixels)"},{"name":"topRightY","type":"number","notes":"The y-coordinate of the top-right area. (In pixels)"},{"name":"bottomRightX","type":"number","notes":"The x-coordinate of the bottom-right area. (In pixels)"},{"name":"bottomRightY","type":"number","notes":"The y-coordinate of the bottom-right area. (In pixels)"},{"name":"bottomLeftX","type":"number","notes":"The x-coordinate of the bottom-left area. (In pixels)"},{"name":"bottomLeftY","type":"number","notes":"The y-coordinate of the bottom-left area. (In pixels)"},{"name":"red","type":"number","notes":"The value of the red color channel. (0.0 -> 1.0)"},{"name":"green","type":"number","notes":"The value of the green color channel. (0.0 -> 1.0)"},{"name":"blue","type":"number","notes":"The value of the blue color channel. (0.0 -> 1.0)"},{"name":"alpha","type":"number","notes":"The value of the alpha channel. (0.0 -> 1.0)"}],"returns":{"type":"void","notes":""}},"DrawTextureAngle":{"notes":"TODO: Document.","parameters":[{"name":"texture","type":"Texture"},{"name":"centerX","type":"number"},{"name":"centerY","type":"number"},{"name":"angle","type":"number","notes":"The angle of rotation. (In degrees)"}],"returns":{"type":"void","notes":""}},"drawTextureScaled":{"notes":"Draws a texture that is scaled to fit a square boundary on the screen using top-left coordinates and provided width and height values. \\n**NOTE**: If the texture is **nil**, the color provided will be rendered in its place.","parameters":[{"name":"texture","type":"Texture","notes":"The texture to draw. If **nil** is provided, the color passed is rendered."},{"name":"x","type":"number","notes":"The x-coordinate of the top-left area. (In pixels)"},{"name":"y","type":"number","notes":"The y-coordinate of the top-left area. (In pixels)"},{"name":"width","type":"number","notes":"The width of the area to draw. (In pixels)"},{"name":"height","type":"number","notes":"The height of the area to draw. (In pixels)"},{"name":"alpha","type":"number","notes":"The value of the alpha channel. (0.0 -> 1.0)"},{"name":"red","type":"number","notes":"The value of the red color channel. (0.0 -> 1.0)"},{"name":"green","type":"number","notes":"The value of the green color channel. (0.0 -> 1.0)"},{"name":"blue","type":"number","notes":"The value of the blue color channel. (0.0 -> 1.0)"}],"returns":{"type":"void","notes":""}},"drawTextureScaledAspect":{"notes":"Draws a scaled texture with proportionate dimensions, scaling from the texture's center-point. This variant uses the texture's original width and height when calculating the aspect ratio to draw.\\n**NOTE**: If the texture is **nil**, nothing will render.","parameters":[{"name":"texture","type":"Texture","notes":"The texture to draw."},{"name":"x","type":"number","notes":"The x-coordinate of the center area. (In pixels)"},{"name":"y","type":"number","notes":"The y-coordinate of the center area. (In pixels)"},{"name":"width","type":"number","notes":"The width of the area to draw. (In pixels)"},{"name":"height","type":"number","notes":"The height of the area to draw. (In pixels)"},{"name":"alpha","type":"number","notes":"The value of the alpha channel. (0.0 -> 1.0)"},{"name":"red","type":"number","notes":"(Optional) The value of the red color channel. (0.0 -> 1.0)"},{"name":"green","type":"number","notes":"(Optional) The value of the green color channel. (0.0 -> 1.0)"},{"name":"blue","type":"number","notes":"(Optional) The value of the blue color channel. (0.0 -> 1.0)"}],"returns":{"type":"void","notes":""}},"drawTextureScaledAspect2":{"notes":"Draws a scaled texture with proportionate dimensions, scaling from the texture's center-point. This variant uses the texture's width and height instead of the original width and height of the texture when calculating the aspect ratio to draw.\\n**NOTE**: If the texture is **nil**, nothing will render.","parameters":[{"name":"texture","type":"Texture","notes":"The texture to draw.\\nNOTE: If the texture is nil, nothing will render."},{"name":"x","type":"number","notes":"The x-coordinate of the top-left area. (In pixels)"},{"name":"y","type":"number","notes":"The y-coordinate of the top-left area. (In pixels)"},{"name":"width","type":"number","notes":"The width of the area to draw. (In pixels)"},{"name":"height","type":"number","notes":"The height of the area to draw. (In pixels)"},{"name":"alpha","type":"number","notes":"The value of the alpha channel. (0.0 -> 1.0)"},{"name":"red","type":"number","notes":"(Optional) The value of the red color channel. (0.0 -> 1.0)"},{"name":"green","type":"number","notes":"(Optional) The value of the green color channel. (0.0 -> 1.0)"},{"name":"blue","type":"number","notes":"(Optional) The value of the blue color channel. (0.0 -> 1.0)"}],"returns":{"type":"void","notes":""}},"drawTextureScaledStatic":{"notes":"Draws a texture that is scaled to fit a square boundary on the screen using top-left coordinates and provided width and height values.\\n**NOTE**: If the texture is **nil**, the color provided will be rendered in its place.","parameters":[{"name":"texture","type":"Texture","notes":"The texture to draw. If nil is provided, the color passed is rendered."},{"name":"x","type":"number","notes":"The x-coordinate of the top-left area. (In pixels)"},{"name":"y","type":"number","notes":"The y-coordinate of the top-left area. (In pixels)"},{"name":"width","type":"number","notes":"The width of the area to draw. (In pixels)"},{"name":"height","type":"number","notes":"The height of the area to draw. (In pixels)"},{"name":"alpha","type":"number","notes":"The value of the alpha channel. (0.0 -> 1.0)"},{"name":"red","type":"number","notes":"(Optional) The value of the red color channel. (0.0 -> 1.0)"},{"name":"green","type":"number","notes":"(Optional) The value of the green color channel. (0.0 -> 1.0)"},{"name":"blue","type":"number","notes":"(Optional) The value of the blue color channel. (0.0 -> 1.0)"}],"returns":{"type":"void","notes":""}},"drawTextureScaledUniform":{"notes":"Draws a scaled texture with proportionate dimensions using a scale multiplier.\\n**NOTE**: If the texture is **nil**, nothing will render.","parameters":[{"name":"texture","type":"Texture","notes":"The texture to draw."},{"name":"x","type":"number","notes":"The x-coordinate of the top-left area. (In pixels)"},{"name":"y","type":"number","notes":"The y-coordinate of the top-left area. (In pixels)"},{"name":"scale","type":"number","notes":"The scale multiplier. (100% scale is **1.0**)"},{"name":"alpha","type":"number","notes":"The value of the alpha channel. (0.0 -> 1.0)"},{"name":"red","type":"number","notes":"(Optional) The value of the red color channel. (0.0 -> 1.0)"},{"name":"green","type":"number","notes":"(Optional) The value of the green color channel. (0.0 -> 1.0)"},{"name":"blue","type":"number","notes":"(Optional) The value of the blue color channel. (0.0 -> 1.0)"}],"returns":{"type":"void","notes":""}},"drawTextureStatic":{"notes":"TODO: Document.","parameters":[{"name":"texture","type":"Texture"},{"name":"x","type":"number"},{"name":"y","type":"number"},{"name":"alpha","type":"number"},{"name":"red","type":"number"},{"name":"green","type":"number"},{"name":"blue","type":"number"}],"returns":{"type":"void","notes":""}},"drawTextureTiledX":{"notes":"TODO: Document.","parameters":[{"name":"texture","type":"Texture"},{"name":"x","type":"number"},{"name":"y","type":"number"},{"name":"width","type":"number"},{"name":"height","type":"number"},{"name":"red","type":"number"},{"name":"green","type":"number"},{"name":"blue","type":"number"},{"name":"alpha","type":"number"}],"returns":{"type":"void","notes":""}},"drawTextureTiledY":{"notes":"TODO: Document.","parameters":[{"name":"texture","type":"Texture"},{"name":"x","type":"number"},{"name":"y","type":"number"},{"name":"width","type":"number"},{"name":"height","type":"number"},{"name":"red","type":"number"},{"name":"green","type":"number"},{"name":"blue","type":"number"},{"name":"alpha","type":"number"}],"returns":{"type":"void","notes":""}},"drawTextZoomed":{"notes":"Draws text on the screen with a scale-factor.","parameters":[{"name":"text","type":"string","notes":"The text to draw."},{"name":"x","type":"number","notes":"The x-coordinate of the top-left area. (In pixels)"},{"name":"y","type":"number","notes":"The y-coordinate of the top-left area. (In pixels)"},{"name":"scale","type":"number","notes":"The scale multiplier. (100% scale is 1.0)"},{"name":"red","type":"number","notes":"The value of the red color channel. (0.0 -> 1.0)"},{"name":"green","type":"number","notes":"The value of the green color channel. (0.0 -> 1.0)"},{"name":"blue","type":"number","notes":"The value of the blue color channel. (0.0 -> 1.0)"},{"name":"alpha","type":"number","notes":"The value of the alpha channel. (0.0 -> 1.0)"},{"name":"font","type":"UIFont","notes":"The font preset to use. (If nil, UIFont.Small is used)"}],"returns":{"type":"void","notes":""}},"getAbsoluteX":{"returns":{"type":"number","notes":"The x-coordinate of the element in screen-space. (In pixels)"}},"getAbsoluteY":{"returns":{"type":"number","notes":"The x-coordinate of the element in screen-space. (In pixels)"}},"getBottom":{"returns":{"type":"number","notes":"The position of the element's x-coordinate plus the element's width. (In pixels)"}},"getCentreX":{"returns":{"type":"number","notes":"The center-most x-coordinate of the element on the screen. (In pixels)"}},"getCentreY":{"returns":{"type":"number","notes":"The center-most y-coordinate of the element on the screen. (In pixels)"}},"getChildren":{"returns":{"type":"ISUIElement[]","notes":"Any child-elements assigned to the element."}},"getController":{"returns":{"type":"any","notes":"The controller object."}},"getHeight":{"returns":{"type":"number","notes":"The height of the element. (In pixels)"}},"getIsCaptured":{"returns":{"type":"boolean","notes":"True if the element is set to capture input."}},"getIsFollowGameWorld":{"returns":{"type":"boolean","notes":"True if the element follows the offset of the world-camera."}},"getIsVisible":{"returns":{"type":"boolean","notes":"True if the element is visible."}},"getJavaObject":{"notes":"This object operates the java-side of the UI engine for Project Zomboid.","returns":{"type":"UIElement","notes":"The internal element instance."}},"getKeepOnScreen":{"returns":{"type":"boolean","notes":"True if the element is set to stay on the screen, even when not active."}},"getMaxDrawHeight":{"returns":{"type":"number","notes":"The maximum height the element will draw anything."}},"getMaxDrawWidth":{"returns":{"type":"number","notes":"The maximum width the element will draw anything."}},"getMouseX":{"returns":{"type":"number","notes":"The mouse's x-coordinate, relative to the left-most x-coordinate of the element on the screen. (In pixels)"}},"getMouseY":{"returns":{"type":"number","notes":"The mouse's y-coordinate, relative to the top-most y-coordinate of the element on the screen. (In pixels)"}},"getParent":{"returns":{"type":"ISUIElement","notes":"The parent element, or **nil** if not assigned a parent."}},"getRenderThisPlayerOnly":{"returns":{"type":"boolean","notes":"The player's index that should only be rendered. (-1 if not set)"}},"getRight":{"returns":{"type":"number","notes":"The position of the element's x-coordinate plus the element's width. (In pixels)"}},"getScrollAreaHeight":{"returns":{"type":"number","notes":"The accurate height of the element, taking into account the area taken up by the horizontal scrollbar."}},"getScrollAreaWidth":{"returns":{"type":"number","notes":"The accurate width of the element, taking into account the area taken up by the vertical scrollbar."}},"getScrollChildren":{"returns":{"type":"boolean","notes":"True if the children of the element should be scrolled."}},"getScrollHeight":{"returns":{"type":"number","notes":"The height of the scrollbar pane. (In pixels)"}},"getScrollWidth":{"returns":{"type":"number","notes":"The width of the scrollbar pane. (In pixels)"}},"getScrollWithParent":{"returns":{"type":"boolean","notes":"True if the element should be scrolled with its parent element."}},"getUIName":{"returns":{"type":"string","notes":"The formal UI name for the element."}},"getWidth":{"returns":{"type":"number","notes":"The width of the element. (In pixels)"}},"getX":{"returns":{"type":"number","notes":"The x-coordinate of the element on the screen. (In pixels)"}},"getXScroll":{"returns":{"type":"number","notes":"The offset of the element's horizontal scrollbar. (In pixels) "}},"getY":{"returns":{"type":"void","notes":"The y-coordinate of the element on the screen. (In pixels)"}},"getYScroll":{"returns":{"type":"number","notes":"The offset of the element's vertical scrollbar. (In pixels) "}},"ignoreHeightChange":{"notes":"Internally sets the element's next updated width value, ignoring the change.","returns":{"type":"nil","notes":"**NOTE**: The method returns but nothing is actually returned."}},"ignoreWidthChange":{"notes":"Internally sets the element's next updated width value, ignoring the change.","returns":{"type":"nil","notes":"**NOTE**: The method returns but nothing is actually returned."}},"initialise":{"notes":"Initializes the element, assigning the next value of **ISUIElement.IDMax**.","returns":{"type":"void"}},"instantiate":{"notes":"Instantiates the internal Java object instance of the element. All initial dimensions are set and children are created.","returns":{"type":"void","notes":""}},"isEnabled":{"returns":{"type":"boolean","notes":"True if the element is set enabled."}},"isFollowGameWorld":{"returns":{"type":"boolean","notes":"True if the element follows the offset of the world-camera."}},"isMouseOver":{"returns":{"type":"boolean","notes":"True if the mouse is inside the box boundaries of the element."}},"isReallyVisible":{"returns":{"type":"boolean","notes":"True if the element ***really*** is visible."}},"isRemoved":{"returns":{"type":"boolean","notes":"True if the element is flagged for removal on the next update tick."}},"isVisible":{"returns":{"type":"boolean","notes":"True if the element is visible."}},"isVScrollBarVisible":{"returns":{"type":"boolean","notes":"True if vertical scrollbars are enabled and the height of the contents of the element are greater than the scrollbar's height."}},"onFocus":{"notes":"Triggered when the element is focused from a MouseEvent.","parameters":[{"name":"x","type":"number","notes":"The mouse's x-coordinate. (In pixels)"},{"name":"y","type":"number","notes":"The mouse's y-coordinate. (In pixels)"}],"returns":{"type":"void","notes":""}},"onGainJoypadFocus":{"notes":"Triggered when a joypad gains focus.","parameters":[{"name":"joypad","type":"Joypad","notes":"The joypad."}],"returns":{"type":"void","notes":""}},"onJoypadDirDown":{"notes":"Triggered when the down-direction of the arrow-pad of the joypad is pressed.","returns":{"type":"void","notes":""}},"onJoypadDirLeft":{"notes":"Triggered when the left-direction of the arrow-pad of the joypad is pressed.","returns":{"type":"void","notes":""}},"onJoypadDirRight":{"notes":"Triggered when the right-direction of the arrow-pad of the joypad is pressed.","returns":{"type":"void","notes":""}},"onJoypadDirUp":{"notes":"Triggered when the up-direction of the arrow-pad of the joypad is pressed.","returns":{"type":"void","notes":""}},"onJoypadDown":{"notes":"Triggered when a button for a focused joypad is pressed. ","parameters":[{"name":"button","type":"any"}],"returns":{"type":"void","notes":""}},"onLoseJoypadFocus":{"notes":"Triggered when a focused joypad loses focus.","parameters":[{"name":"joypad","type":"Joypad","notes":"The joypad."}],"returns":{"type":"void","notes":""}},"onMouseDownOutside":{"notes":"Triggered when the left-mouse-button is pressed outside of the element's box-boundary.","parameters":[{"name":"x","type":"number","notes":"The mouse's x-coordinate. (In pixels)"},{"name":"y","type":"number","notes":"The mouse's y-coordinate. (In pixels)"}],"returns":{"type":"void","notes":""}},"onMouseMove":{"notes":"Triggered when the mouse moves inside the element's box-boundary.","parameters":[{"name":"deltaX","type":"number","notes":"The delta (b - a), the mouse's x-coordinate moved from the last update. (In pixels)"},{"name":"deltaY","type":"number","notes":"The delta (b - a), the mouse's y-coordinate moved from the last update. (In pixels)"}],"returns":{"type":"void","notes":""}},"onMouseMoveOutside":{"notes":"Triggered when the mouse moves outside the element's box-boundary.","parameters":[{"name":"deltaX","type":"number","notes":"The delta (b - a), the mouse's x-coordinate moved from the last update. (In pixels)"},{"name":"deltaY","type":"number","notes":"The delta (b - a), the mouse's y-coordinate moved from the last update. (In pixels)"}],"returns":{"type":"void","notes":""}},"onMouseUp":{"notes":"Triggered when the left-mouse-button is released over the element.","parameters":[{"name":"x","type":"number","notes":"The x-coordinate of the mouse relative to the element."},{"name":"y","type":"number","notes":"The y-coordinate of the mouse relative to the element."}],"returns":{"type":"void","notes":""}},"onMouseUpOutside":{"notes":"Triggered when the left-mouse-button is released outside of the element's box-boundary.","parameters":[{"name":"x","type":"number","notes":"The mouse's x-coordinate. (In pixels)"},{"name":"y","type":"number","notes":"The mouse's y-coordinate. (In pixels)"}],"returns":{"type":"void","notes":""}},"onMouseWheel":{"notes":"Triggered when the mouse-wheel moves over the element.","parameters":[{"name":"delta","type":"number","notes":"The change (or offset) of the mouse-wheel. Signage of the value identifies the direction of the mouse-wheel. "}],"returns":{"type":"void","notes":""}},"onResize":{"notes":"Triggered when the element resizes.","returns":{"type":"void","notes":""}},"onRightMouseDown":{"notes":"Triggered when the right-mouse-button is pressed inside the element's box-boundary.","parameters":[{"name":"x","type":"number","notes":"The mouse's x-coordinate. (In pixels)"},{"name":"y","type":"number","notes":"The mouse's y-coordinate. (In pixels)"}],"returns":{"type":"void","notes":""}},"onRightMouseDownOutside":{"notes":"Triggered when the right-mouse-button is pressed outside of the element's box-boundary.","parameters":[{"name":"x","type":"number","notes":"The mouse's x-coordinate. (In pixels)"},{"name":"y","type":"number","notes":"The mouse's y-coordinate. (In pixels)"}],"returns":{"type":"void","notes":""}},"onRightMouseUp":{"notes":"Triggered when the right-mouse-button is released inside the element's box-boundary.","parameters":[{"name":"x","type":"number","notes":"The mouse's x-coordinate. (In pixels)"},{"name":"y","type":"number","notes":"The mouse's y-coordinate. (In pixels)"}],"returns":{"type":"void","notes":""}},"onRightMouseUpOutside":{"notes":"Triggered when the right-mouse-button is released outside of the element's box-boundary.","parameters":[{"name":"x","type":"number","notes":"The mouse's x-coordinate. (In pixels)"},{"name":"y","type":"number","notes":"The mouse's y-coordinate. (In pixels)"}],"returns":{"type":"void","notes":""}},"prerender":{"notes":"Triggered before rendering the element. All render-based calculations go here.","returns":{"type":"void","notes":""}},"recalcSize":{"notes":"Triggers **self.javaObject:onResize()**.","returns":{"type":"void","notes":""}},"removeChild":{"notes":"Removes a child from the element.","parameters":[{"name":"child","type":"ISUIElement","notes":"The child to remove."}],"returns":{"type":"void","notes":""}},"removeFromUIManager":{"notes":"Removes the element reference from the UIManager instance.","returns":{"type":"void","notes":""}},"render":{"notes":"Triggered when rendering the element. All render calls go here.\\n**NOTE**: This is called in the game's render thread. All render calls fired outside of this call are ignored.","returns":{"type":"void","notes":""}},"repaintStencilRect":{"notes":"Repaints the stencil at the given box-boundary.","parameters":[{"name":"x","type":"number","notes":"The left-most x-coordinate of the stencil. (In pixels)"},{"name":"y","type":"number","notes":"The top-most y-coordinate of the stencil. (In pixels)"},{"name":"width","type":"number","notes":"The width of the stencil. (In pixels)"},{"name":"height","type":"number","notes":"The height of the stencil. (In pixels)"}],"returns":{"type":"void","notes":""}},"resumeStencil":{"notes":"Resumes (or starts) the stencil for the set box boundary of the element. Anything drawn through or outside the box boundaries of the element is clipped & stenciled out of the frame buffer.","returns":{"type":"void","notes":""}},"setAlwaysOnTop":{"notes":"Sets the element to render at the top of any stack of elements.","parameters":[{"name":"flag","type":"boolean","notes":"The flag to set."}],"returns":{"type":"void","notes":""}},"setAnchorBottom":{"parameters":[{"name":"flag","type":"boolean","notes":"If true, the element anchors to the bottom its parent element."}],"returns":{"type":"void"}},"setAnchorLeft":{"parameters":[{"name":"flag","type":"boolean","notes":"If true, the element anchors to the left-side of its parent element."}],"returns":{"type":"void"}},"setAnchorRight":{"parameters":[{"name":"flag","type":"boolean","notes":"If true, the element anchors to the right-side of its parent element."}],"returns":{"type":"void"}},"setAnchorTop":{"parameters":[{"name":"flag","type":"boolean","notes":"If true, the element anchors to the top of its parent element."}],"returns":{"type":"void"}},"setCapture":{"notes":"(Something to do with mouse input capturing)","parameters":[{"name":"flag","type":"boolean"}],"returns":{"type":"void","notes":""}},"setController":{"notes":"Sets the controller object for the element.","parameters":[{"name":"controller","type":"any","notes":"The controller object."}],"returns":{"type":"void"}},"setEnabled":{"notes":"Sets the enabled-state of the element. If disabled, the element will not update or render either itself or its children.","parameters":[{"name":"flag","type":"boolean","notes":"The flag to set."}],"returns":{"type":"void","notes":""}},"setFollowGameWorld":{"notes":"Sets the element's flag for following the game's world offset when the player moves their camera.","parameters":[{"name":"flag","type":"boolean","notes":"The flag to set."}],"returns":{"type":"void","notes":""}},"setForceCursorVisible":{"notes":"Sets whether the cursor is forced to render if over the element.","parameters":[{"name":"flag","type":"boolean","notes":"The flag to set."}],"returns":{"type":"void","notes":""}},"setHeight":{"notes":"Sets the height of the element on the screen. (In pixels)\\n**NOTE**: If the element is set to stay on the screen, the height is capped.","parameters":[{"name":"height","type":"number","notes":"The height to set. (In pixels)"}],"returns":{"type":"void","notes":""}},"setHeightAndParentHeight":{"notes":"Sets the height of the element and all parent elements up to their root element. (In pixels)","parameters":[{"name":"height","type":"number","notes":"The height to set. (In pixels)"}],"returns":{"type":"void","notes":""}},"setMaxDrawHeight":{"notes":"Sets the maximum height the element will draw anything.","parameters":[{"name":"height","type":"number","notes":"The height to set. (In pixels)"}],"returns":{"type":"void","notes":""}},"setMaxDrawWidth":{"notes":"Sets the maximum width the element will draw anything.","parameters":[{"name":"width","type":"number","notes":"The height to set. (In pixels)"}],"returns":{"type":"void","notes":""}},"setOnMouseDoubleClick":{"parameters":[{"name":"target","type":"ISUIElement","notes":"The target clicked."},{"name":"callback","type":"fun(item: ISUIElement): void","notes":"The callback to trigger on the MouseEvent."}],"returns":{"type":"void","notes":""}},"setRemoved":{"notes":"Sets the element flagged for removal on the next update tick.","parameters":[{"name":"flag","type":"boolean","notes":"The flag to set."}],"returns":{"type":"void","notes":""}},"setRenderThisPlayerOnly":{"notes":"Sets the player's index that should only be rendered. (-1 if unset)","parameters":[{"name":"value","type":"number","notes":"The player's index to set. (0 - 3)"}],"returns":{"type":"void","notes":""}},"setScrollChildren":{"notes":"Sets whether the children of the element should be scrolled.","parameters":[{"name":"flag","type":"boolean","notes":"The flag to set."}],"returns":{"type":"void","notes":""}},"setScrollHeight":{"notes":"Sets the height of the scrollbar pane.","parameters":[{"name":"value","type":"number","notes":"The value to set. (In pixels)"}],"returns":{"type":"void","notes":""}},"setScrollWidth":{"notes":"Sets the width of the scrollbar pane.","parameters":[{"name":"value","type":"number","notes":"The value to set. (In pixels)"}],"returns":{"type":"void","notes":""}},"setScrollWithParent":{"notes":"Sets whether the element should be scrolled with its parent element.","parameters":[{"name":"flag","type":"boolean","notes":"The flag to set."}],"returns":{"type":"void","notes":""}},"setStencilRect":{"notes":"Sets the box-boundary of the element's stencil. Anything drawn through or outside this boundary is clipped in the frame buffer.","parameters":[{"name":"x","type":"number","notes":"The left-most x-coordinate. (In pixels)"},{"name":"y","type":"number","notes":"The top-most y-coordinate. (In pixels)"},{"name":"width","type":"number","notes":"The width of the stencil. (In pixels)"},{"name":"height","type":"number","notes":"The height of the stencil. (In pixels)"}],"returns":{"type":"void","notes":""}},"setUIName":{"notes":"Sets the formal UI name for the element.","parameters":[{"name":"name","type":"string","notes":"The name to set."}],"returns":{"type":"void","notes":""}},"setVisible":{"notes":"Sets the element visible. When visible, elements update and render.","parameters":[{"name":"flag","type":"boolean","notes":"The flag to set."}],"returns":{"type":"void","notes":""}},"setWantKeyEvents":{"notes":"Sets whether the element should receive keyboard events.","parameters":[{"name":"flag","type":"boolean","notes":"The flag to set."}],"returns":{"type":"void","notes":""}},"setWidth":{"notes":"Sets the width of the element on the screen. (In pixels)\\n**NOTE**: If the element is set to stay on the screen, the width is capped.","parameters":[{"name":"width","type":"number","notes":"The width to set. (In pixels)"}],"returns":{"type":"void","notes":""}},"setWidthAndParentWidth":{"notes":"Sets the width of the element and all parent elements up to their root element. (In pixels)","parameters":[{"name":"width","type":"number","notes":"The width to set. (In pixels)"}],"returns":{"type":"void","notes":""}},"setX":{"notes":"Sets the x-coordinate of the element on the screen. (In pixels)\\n**NOTE**: If the element is set to stay on the screen, the maximum x coordinate is capped.","parameters":[{"name":"x","type":"number","notes":"The x-coordinate to set. (In pixels)"}],"returns":{"type":"void"}},"setXScroll":{"notes":"Sets the x-offset of the horizontal scrollbar and the contents of the scrollbar-pane. If the given value falls outside the range of the horizontal scrollbar and its contents, the value set will be clamped to the range. ","parameters":[{"name":"value","type":"number","notes":"The value to set. (In pixels)"}],"returns":{"type":"void","notes":""}},"setY":{"notes":"Sets the y-coordinate of the element on the screen. (In pixels)\\n**NOTE**: If the element is set to stay on the screen, the maximum y coordinate is capped.","parameters":[{"name":"y","type":"number","notes":"The y-coordinate to set. (In pixels)"}],"returns":{"type":"void"}},"setYScroll":{"notes":"Sets the y-offset of the vertical scrollbar and the contents of the scrollbar-pane. If the given value falls outside the range of the vertical scrollbar and its contents, the value set will be clamped to the range. ","parameters":[{"name":"value","type":"number","notes":"The value to set. (In pixels)"}],"returns":{"type":"void","notes":""}},"shrinkX":{"notes":"Shrinks the element's width by a given value.","parameters":[{"name":"value","type":"number","notes":"The value to shrink the width. (In pixels)"}],"returns":{"type":"void","notes":""}},"shrinkY":{"notes":"Shrinks the element's height by a given value.","parameters":[{"name":"value","type":"number","notes":"The height to shrink. (In pixels)"}],"returns":{"type":"void","notes":""}},"stayOnSplitScreen":{"notes":"Sets if the element stays on a split-screen for a player, clamping the element between the ranges for the player's screen-space.\\n**NOTE**: If the amount of players is one, then the method does nothing.","parameters":[{"name":"playerIndex","type":"number","notes":"The player's index value. (between 0 and 3)"}],"returns":{"type":"void","notes":""}},"suspendStencil":{"notes":"Suspends (or halts) the stencil used to clip render / draw calls from rendering outside the set box boundary of the element. Once suspended, anything drawn outside the boundary will show.","returns":{"type":"void","notes":""}},"toString":{"returns":{"type":"string","notes":"A formally-wrapped for **tostring(self)** using the** getUIName()** to formally name the printed result. "}},"update":{"notes":"Triggered every updated tick in the game's simulation.","returns":{"type":"void","notes":""}},"updateScrollbars":{"notes":"Updates the horizontal and vertical scrollbars, clamping the vertical scrollbar if outside of the content-range.","returns":{"type":"void","notes":""}},"wrapInCollapsableWindow":{"notes":"Wraps the element in a window class instance. (By Default **ISCollapsableWindow**)","parameters":[{"name":"title","type":"string","notes":"The title of the window."},{"name":"isResizable","type":"boolean","notes":"True if the window can be resized by the player."},{"name":"subClass","type":"any","notes":"If set, the class object is used instead. If nil, **ISCollapsableWindow** is used."}],"returns":{"type":"ISCollapsableWindow | any","notes":"The instance of the wrapping class."}}},"mutable":false}}}
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "luaClasses": {
+    "ISUIElement": {
+      "notes": "**ISUIElement** is the base UI class in the **Project Zomboid** Lua codebase.",
+      "values": {
+        "IDMax": {
+          "type": "number",
+          "notes": "The next ID to use for a new ISUIElement instance.",
+          "defaultValue": "1"
+        }
+      },
+      "fields": {
+        "anchorBottom": {
+          "type": "boolean",
+          "notes": "If true, the element is anchored to the bottom of its parent element."
+        },
+        "anchorLeft": {
+          "type": "boolean",
+          "notes": "If true, the element is anchored to the left of its parent element."
+        },
+        "anchorRight": {
+          "type": "boolean",
+          "notes": "If true, the element is anchored to the right of its parent element."
+        },
+        "anchorTop": {
+          "type": "boolean",
+          "notes": "If true, the element is anchored to the top of its parent element."
+        },
+        "children": {
+          "type": "table<number, ISUIElement>",
+          "notes": "The registered child elements of the element, registered using self.ID as their key."
+        },
+        "controller": {
+          "type": "any",
+          "notes": "Unknown. Not sure if **org.lwjglx.input.Controller**."
+        },
+        "dock": {
+          "type": "string",
+          "notes": "Some possibly deprecated legacy field."
+        },
+        "enabled": {
+          "type": "boolean",
+          "notes": "If true, the element is active."
+        },
+        "forceCursorVisible": {
+          "type": "boolean",
+          "notes": "If true, the cursor will stay visible when inside the element's box-boundary."
+        },
+        "height": {
+          "type": "double",
+          "notes": "The height of the UI element. (In pixels)"
+        },
+        "hscroll": {
+          "type": "ISScrollBar",
+          "notes": "The element's horizontal scrollbar."
+        },
+        "ID": {
+          "type": "int",
+          "notes": "The internal ID of the UI element. This is used to store elements in their parent-element's children array."
+        },
+        "javaObject": {
+          "type": "UIElement",
+          "notes": "The Java instance of the UI element. This is used to communicate with the game's UI engine."
+        },
+        "joyfocus": {
+          "type": "Joypad",
+          "notes": "The actively-focused Joypad object."
+        },
+        "keepOnScreen": {
+          "type": "boolean",
+          "notes": "If true, the element will stay on the screen regardless of its state."
+        },
+        "minimumHeight": {
+          "type": "number",
+          "notes": "The minimum height of the UI element. (In pixels)"
+        },
+        "minimumWidth": {
+          "type": "number",
+          "notes": "The minimum width of the UI element. (In pixels)"
+        },
+        "onMouseDoubleClick": {
+          "type": "fun(): void",
+          "notes": "A callback function for double clicking."
+        },
+        "parent": {
+          "type": "ISUIElement",
+          "notes": "If not nil, the parent of the element will be stored here."
+        },
+        "removed": {
+          "type": "boolean",
+          "notes": "True if the UI element is flagged for removal from the UI manager."
+        },
+        "scrollwidth": {
+          "type": "number",
+          "notes": "The set scroll-width of the element's scroll pane."
+        },
+        "target": {
+          "type": "any",
+          "notes": "(Related to 'onMouseDoubleClick')"
+        },
+        "visibleFunction": {
+          "type": "fun(visibleTarget: ISUIElement, fromElement: ISUIElement): void;",
+          "notes": "An optional function to be invoked when self.setVisible() is invoked. Passes two ISUIElements as parameters."
+        },
+        "visibleTarget": {
+          "type": "ISUIElement",
+          "notes": "The element-target or reference to self.visibleFunction when the visibility of the element is changed."
+        },
+        "vscroll": {
+          "type": "ISScrollBar",
+          "notes": "The element's vertical scrollbar."
+        },
+        "wantKeyEvents": {
+          "type": "boolean",
+          "notes": "If true, keyboard-events are broadcasted to the element."
+        },
+        "width": {
+          "type": "number",
+          "notes": "The width of the UI element. (In pixels)"
+        },
+        "x": {
+          "type": "number",
+          "notes": "The x coordinate on the screen. (In pixels)"
+        },
+        "y": {
+          "type": "number",
+          "notes": "The y coordinate on the screen. (In pixels)"
+        }
+      },
+      "constructor": {
+        "parameters": [
+          {
+            "name": "x",
+            "type": "number",
+            "notes": "The x coordinate on the screen. (In pixels)"
+          },
+          {
+            "name": "y",
+            "type": "number",
+            "notes": "The y coordinate on the screen. (In pixels)"
+          },
+          {
+            "name": "width",
+            "type": "number",
+            "notes": "The width of the UI element. (In pixels)"
+          },
+          {
+            "name": "height",
+            "type": "number",
+            "notes": "The height of the UI element. (In pixels)"
+          }
+        ]
+      },
+      "methods": {
+        "__toString__": {
+          "returns": {
+            "type": "string",
+            "notes": "A formally-wrapped for **tostring(self)** using the** getUIName()** to formally name the printed result. "
+          }
+        },
+        "addChild": {
+          "notes": "Adds a child UI element to this UI element.",
+          "parameters": [
+            {
+              "name": "other",
+              "type": "ISUIElement",
+              "notes": "The UI element to add as a child to this UI element."
+            }
+          ],
+          "returns": {
+            "type": "void"
+          }
+        },
+        "addScrollBars": {
+          "notes": "Adds a vertical ISScrollBar to the UI element.",
+          "parameters": [
+            {
+              "name": "addHorizontal",
+              "type": "boolean",
+              "notes": "If true, the ISUIElement will also have a horizontal scrollbar."
+            }
+          ],
+          "returns": {
+            "type": "void"
+          }
+        },
+        "addToUIManager": {
+          "notes": "Adds this UI element to the UI manager for the game.",
+          "returns": {
+            "type": "void"
+          }
+        },
+        "backMost": {
+          "notes": "Moves the element to the back-most drawn on the stack of elements to render.",
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "bringToTop": {
+          "notes": "Brings the element to the top of the rendering stack.",
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "clampStencilRectToParent": {
+          "notes": "If the element has a parent, set the stencil box-boundary of the element to its parent.",
+          "parameters": [
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The left-most x-coordinate. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The top-most y-coordinate. (In pixels)"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "notes": "The width of the stencil. (In pixels)"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "notes": "The height of the stencil. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "[number, number, number, number]",
+            "notes": "x, y, width, height"
+          }
+        },
+        "clearChildren": {
+          "notes": "Clears all registered child-elements from the element.",
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "clearMaxDrawHeight": {
+          "notes": "Clears the maximum draw height of the element.",
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "clearMaxDrawWidth": {
+          "notes": "Clears the maximum draw width of the element.",
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "clearStencilRect": {
+          "notes": "Clears the set box-boundary for the element.",
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "containsPoint": {
+          "notes": "Tests if the given coordinates are inside the element's box-boundary.",
+          "parameters": [
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The x-coordinate to test. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The y-coordinate to test. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": "True if the coordinates are inside the element's box-boundary."
+          }
+        },
+        "containsPointLocal": {
+          "notes": "Tests if the given coordinates are inside the element's local box-boundary. (the top-left of the element is 0,0)",
+          "parameters": [
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The x-coordinate to test. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The y-coordinate to test. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": "True if the coordinates are inside the element's local box-boundary."
+          }
+        },
+        "createChildren": {
+          "notes": "Fired when the element is instantiated. Create initial child elements here.",
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "drawLine2": {
+          "notes": "Draws a line between two points on the screen. (In pixels)",
+          "parameters": [
+            {
+              "name": "x1",
+              "type": "number",
+              "notes": "The x-coordinate of the starting point of the line. (In pixels)"
+            },
+            {
+              "name": "y1",
+              "type": "number",
+              "notes": "The y-coordinate of the starting point of the line. (In pixels)"
+            },
+            {
+              "name": "x2",
+              "type": "number",
+              "notes": "The x-coordinate of the ending point of the line. (In pixels)"
+            },
+            {
+              "name": "y2",
+              "type": "number",
+              "notes": "The y-coordinate of the ending point of the line. (In pixels)"
+            },
+            {
+              "name": "alpha",
+              "type": "number",
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "red",
+              "type": "number",
+              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "green",
+              "type": "number",
+              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "blue",
+              "type": "number",
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "drawProgressBar": {
+          "notes": "Draws a progress bar in the element.",
+          "parameters": [
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The x-coordinate of the top-left of the progress-bar. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The x-coordinate of the top-left of the progress-bar. (In pixels)"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "notes": "The width of the progress-bar. (In pixels)"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "notes": "The height of the progress-bar. (In pixels)"
+            },
+            {
+              "name": "percentage",
+              "type": "number",
+              "notes": "A value between 0.0 (0%) to 1.0. (100%)"
+            },
+            {
+              "name": "foregroundColor",
+              "type": "{ r: number, g: number, b: number, a: number }",
+              "notes": "A primitive RGBA object to color the foreground.  "
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "drawRect": {
+          "notes": "Draws a colored rectangle at given coordinates on the screen. (In pixels)\\n\\nSimplified alias of:\\n**self.javaObject:DrawTextureScaledColor(nil, x, y, w, h, r, g, b, a);**",
+          "parameters": [
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The x-coordinate of the top-left area. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The y-coordinate of the top-left area. (In pixels)"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "notes": "The width of the area to draw. (In pixels)"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "notes": "The height of the area to draw. (In pixels)"
+            },
+            {
+              "name": "alpha",
+              "type": "number",
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "red",
+              "type": "number",
+              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "green",
+              "type": "number",
+              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "blue",
+              "type": "number",
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "drawRectBorder": {
+          "notes": "TODO: Document.",
+          "parameters": [
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The x-coordinate of the top-left area. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The y-coordinate of the top-left area. (In pixels)"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "notes": "The width of the area to draw. (In pixels)"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "notes": "The height of the area to draw. (In pixels)"
+            },
+            {
+              "name": "alpha",
+              "type": "number",
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "red",
+              "type": "number",
+              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "green",
+              "type": "number",
+              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "blue",
+              "type": "number",
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "drawRectBorderStatic": {
+          "notes": "TODO: Document.",
+          "parameters": [
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The x-coordinate of the top-left area. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The y-coordinate of the top-left area. (In pixels)"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "notes": "The width of the area to draw. (In pixels)"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "notes": "The height of the area to draw. (In pixels)"
+            },
+            {
+              "name": "alpha",
+              "type": "number",
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "red",
+              "type": "number",
+              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "green",
+              "type": "number",
+              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "blue",
+              "type": "number",
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "drawRectStatic": {
+          "notes": "TODO: Document.",
+          "parameters": [
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The x-coordinate of the top-left area. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The y-coordinate of the top-left area. (In pixels)"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "notes": "The width of the area to draw. (In pixels)"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "notes": "The height of the area to draw. (In pixels)"
+            },
+            {
+              "name": "alpha",
+              "type": "number",
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "red",
+              "type": "number",
+              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "green",
+              "type": "number",
+              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "blue",
+              "type": "number",
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "drawText": {
+          "notes": "Draws text on the screen. (The equivalence of a \"drawTextLeft\")",
+          "parameters": [
+            {
+              "name": "text",
+              "type": "string",
+              "notes": "The text to draw."
+            },
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The x-coordinate of the top-left area. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The y-coordinate of the top-left area. (In pixels)"
+            },
+            {
+              "name": "red",
+              "type": "number",
+              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "green",
+              "type": "number",
+              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "blue",
+              "type": "number",
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "alpha",
+              "type": "number",
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "font",
+              "type": "UIFont",
+              "notes": "The font preset to use. (If nil, UIFont.Small is used)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "drawTextCentre": {
+          "notes": "Draws text on the screen from a coordinate-centric position. (In pixels)",
+          "parameters": [
+            {
+              "name": "text",
+              "type": "string",
+              "notes": "The text to draw."
+            },
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The x-coordinate of the center area. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The y-coordinate of the center area. (In pixels)"
+            },
+            {
+              "name": "red",
+              "type": "number",
+              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "green",
+              "type": "number",
+              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "blue",
+              "type": "number",
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "alpha",
+              "type": "number",
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "font",
+              "type": "UIFont",
+              "notes": "The font preset to use. (If nil, UIFont.Small is used)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "drawTextCentreStatic": {
+          "notes": "TODO: Document.",
+          "parameters": [
+            {
+              "name": "text",
+              "type": "string",
+              "notes": "The text to draw."
+            },
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The x-coordinate of the center area. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The y-coordinate of the center area. (In pixels)"
+            },
+            {
+              "name": "red",
+              "type": "number",
+              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "green",
+              "type": "number",
+              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "blue",
+              "type": "number",
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "alpha",
+              "type": "number",
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "font",
+              "type": "UIFont",
+              "notes": "The font preset to use. (If nil, UIFont.Small is used)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "drawTextRight": {
+          "notes": "Draws text on the screen, rendering the text left of the given coordinates on the screen.",
+          "parameters": [
+            {
+              "name": "text",
+              "type": "string",
+              "notes": "The text to draw."
+            },
+            {
+              "name": "x",
+              "type": "number",
+              "notes": " The x-coordinate of the top-right area."
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": " The y-coordinate of the top-right area."
+            },
+            {
+              "name": "red",
+              "type": "number",
+              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "green",
+              "type": "number",
+              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "blue",
+              "type": "number",
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "alpha",
+              "type": "number",
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "font",
+              "type": "UIFont",
+              "notes": "The font preset to use. (If nil, UIFont.Small is used)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "drawTextRightStatic": {
+          "notes": "TODO: Document.",
+          "parameters": [
+            {
+              "name": "text",
+              "type": "string",
+              "notes": "The text to draw."
+            },
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The x-coordinate of the top-right area. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The y-coordinate of the top-right area. (In pixels)"
+            },
+            {
+              "name": "red",
+              "type": "number",
+              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "green",
+              "type": "number",
+              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "blue",
+              "type": "number",
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "alpha",
+              "type": "number",
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "font",
+              "type": "UIFont",
+              "notes": "The font preset to use. (If nil, UIFont.Small is used)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "drawTextStatic": {
+          "notes": "TODO: Document.",
+          "parameters": [
+            {
+              "name": "text",
+              "type": "string",
+              "notes": "The text to draw."
+            },
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The x-coordinate of the top-left area. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The y-coordinate of the top-left area. (In pixels)"
+            },
+            {
+              "name": "red",
+              "type": "number",
+              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "green",
+              "type": "number",
+              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "blue",
+              "type": "number",
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "alpha",
+              "type": "number",
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "font",
+              "type": "UIFont",
+              "notes": "The font preset to use. (If nil, UIFont.Small is used)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "drawTextUntrimmed": {
+          "notes": "Draws text untrimmed on the screen.\\n\\n**NOTE**: If a font is not provided the text is drawn trimmed. (This might be a bug)",
+          "parameters": [
+            {
+              "name": "text",
+              "type": "string",
+              "notes": "The text to draw."
+            },
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The x-coordinate of the top-left area. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The y-coordinate of the top-left area. (In pixels)"
+            },
+            {
+              "name": "red",
+              "type": "number",
+              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "green",
+              "type": "number",
+              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "blue",
+              "type": "number",
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "alpha",
+              "type": "number",
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "font",
+              "type": "UIFont",
+              "notes": "The font preset to use. (If nil, UIFont.Small is used)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "drawTexture": {
+          "notes": "Draws a texture on the screen using top-left coordinates and a color multiplier.",
+          "parameters": [
+            {
+              "name": "texture",
+              "type": "Texture",
+              "notes": "The texture to draw. If null, the color will be the texture."
+            },
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The x coordinate on the screen to draw the left of the texture. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The y coordinate on the screen to draw the top of the texture. (In pixels)"
+            },
+            {
+              "name": "red",
+              "type": "number",
+              "notes": "The red color value to draw. (Range: 0.0 -> 1.0)"
+            },
+            {
+              "name": "green",
+              "type": "number",
+              "notes": "The green color value to draw. (Range: 0.0 -> 1.0)"
+            },
+            {
+              "name": "blue",
+              "type": "number",
+              "notes": "The blue color value to draw. (Range: 0.0 -> 1.0)"
+            },
+            {
+              "name": "alpha",
+              "type": "number",
+              "notes": "The alpha value to draw. (Range: 0.0 -> 1.0)"
+            }
+          ],
+          "returns": {
+            "type": "void"
+          }
+        },
+        "drawTextureAllPoint": {
+          "notes": "Draws a texture, providing all four points for the GL_QUAD when drawn. (top-left -> top-right -> bottom-right -> bottom-left) If the texture is **nil** then a solid color is rendered. If one is provided then the color values become a color-multiplier.",
+          "parameters": [
+            {
+              "name": "texture",
+              "type": "Texture",
+              "notes": "The texture to draw. If **nil** is provided, the color passed is rendered."
+            },
+            {
+              "name": "topLeftX",
+              "type": "number",
+              "notes": "The x-coordinate of the top-left area. (In pixels)"
+            },
+            {
+              "name": "topLeftY",
+              "type": "number",
+              "notes": "The y-coordinate of the top-left area. (In pixels)"
+            },
+            {
+              "name": "topRightX",
+              "type": "number",
+              "notes": "The x-coordinate of the top-right area. (In pixels)"
+            },
+            {
+              "name": "topRightY",
+              "type": "number",
+              "notes": "The y-coordinate of the top-right area. (In pixels)"
+            },
+            {
+              "name": "bottomRightX",
+              "type": "number",
+              "notes": "The x-coordinate of the bottom-right area. (In pixels)"
+            },
+            {
+              "name": "bottomRightY",
+              "type": "number",
+              "notes": "The y-coordinate of the bottom-right area. (In pixels)"
+            },
+            {
+              "name": "bottomLeftX",
+              "type": "number",
+              "notes": "The x-coordinate of the bottom-left area. (In pixels)"
+            },
+            {
+              "name": "bottomLeftY",
+              "type": "number",
+              "notes": "The y-coordinate of the bottom-left area. (In pixels)"
+            },
+            {
+              "name": "red",
+              "type": "number",
+              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "green",
+              "type": "number",
+              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "blue",
+              "type": "number",
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "alpha",
+              "type": "number",
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "DrawTextureAngle": {
+          "notes": "TODO: Document.",
+          "parameters": [
+            {
+              "name": "texture",
+              "type": "Texture"
+            },
+            {
+              "name": "centerX",
+              "type": "number"
+            },
+            {
+              "name": "centerY",
+              "type": "number"
+            },
+            {
+              "name": "angle",
+              "type": "number",
+              "notes": "The angle of rotation. (In degrees)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "drawTextureScaled": {
+          "notes": "Draws a texture that is scaled to fit a square boundary on the screen using top-left coordinates and provided width and height values. \\n**NOTE**: If the texture is **nil**, the color provided will be rendered in its place.",
+          "parameters": [
+            {
+              "name": "texture",
+              "type": "Texture",
+              "notes": "The texture to draw. If **nil** is provided, the color passed is rendered."
+            },
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The x-coordinate of the top-left area. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The y-coordinate of the top-left area. (In pixels)"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "notes": "The width of the area to draw. (In pixels)"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "notes": "The height of the area to draw. (In pixels)"
+            },
+            {
+              "name": "alpha",
+              "type": "number",
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "red",
+              "type": "number",
+              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "green",
+              "type": "number",
+              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "blue",
+              "type": "number",
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "drawTextureScaledAspect": {
+          "notes": "Draws a scaled texture with proportionate dimensions, scaling from the texture's center-point. This variant uses the texture's original width and height when calculating the aspect ratio to draw.\\n**NOTE**: If the texture is **nil**, nothing will render.",
+          "parameters": [
+            {
+              "name": "texture",
+              "type": "Texture",
+              "notes": "The texture to draw."
+            },
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The x-coordinate of the center area. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The y-coordinate of the center area. (In pixels)"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "notes": "The width of the area to draw. (In pixels)"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "notes": "The height of the area to draw. (In pixels)"
+            },
+            {
+              "name": "alpha",
+              "type": "number",
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "red",
+              "type": "number",
+              "notes": "(Optional) The value of the red color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "green",
+              "type": "number",
+              "notes": "(Optional) The value of the green color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "blue",
+              "type": "number",
+              "notes": "(Optional) The value of the blue color channel. (0.0 -> 1.0)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "drawTextureScaledAspect2": {
+          "notes": "Draws a scaled texture with proportionate dimensions, scaling from the texture's center-point. This variant uses the texture's width and height instead of the original width and height of the texture when calculating the aspect ratio to draw.\\n**NOTE**: If the texture is **nil**, nothing will render.",
+          "parameters": [
+            {
+              "name": "texture",
+              "type": "Texture",
+              "notes": "The texture to draw.\\nNOTE: If the texture is nil, nothing will render."
+            },
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The x-coordinate of the top-left area. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The y-coordinate of the top-left area. (In pixels)"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "notes": "The width of the area to draw. (In pixels)"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "notes": "The height of the area to draw. (In pixels)"
+            },
+            {
+              "name": "alpha",
+              "type": "number",
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "red",
+              "type": "number",
+              "notes": "(Optional) The value of the red color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "green",
+              "type": "number",
+              "notes": "(Optional) The value of the green color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "blue",
+              "type": "number",
+              "notes": "(Optional) The value of the blue color channel. (0.0 -> 1.0)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "drawTextureScaledStatic": {
+          "notes": "Draws a texture that is scaled to fit a square boundary on the screen using top-left coordinates and provided width and height values.\\n**NOTE**: If the texture is **nil**, the color provided will be rendered in its place.",
+          "parameters": [
+            {
+              "name": "texture",
+              "type": "Texture",
+              "notes": "The texture to draw. If nil is provided, the color passed is rendered."
+            },
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The x-coordinate of the top-left area. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The y-coordinate of the top-left area. (In pixels)"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "notes": "The width of the area to draw. (In pixels)"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "notes": "The height of the area to draw. (In pixels)"
+            },
+            {
+              "name": "alpha",
+              "type": "number",
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "red",
+              "type": "number",
+              "notes": "(Optional) The value of the red color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "green",
+              "type": "number",
+              "notes": "(Optional) The value of the green color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "blue",
+              "type": "number",
+              "notes": "(Optional) The value of the blue color channel. (0.0 -> 1.0)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "drawTextureScaledUniform": {
+          "notes": "Draws a scaled texture with proportionate dimensions using a scale multiplier.\\n**NOTE**: If the texture is **nil**, nothing will render.",
+          "parameters": [
+            {
+              "name": "texture",
+              "type": "Texture",
+              "notes": "The texture to draw."
+            },
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The x-coordinate of the top-left area. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The y-coordinate of the top-left area. (In pixels)"
+            },
+            {
+              "name": "scale",
+              "type": "number",
+              "notes": "The scale multiplier. (100% scale is **1.0**)"
+            },
+            {
+              "name": "alpha",
+              "type": "number",
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "red",
+              "type": "number",
+              "notes": "(Optional) The value of the red color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "green",
+              "type": "number",
+              "notes": "(Optional) The value of the green color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "blue",
+              "type": "number",
+              "notes": "(Optional) The value of the blue color channel. (0.0 -> 1.0)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "drawTextureStatic": {
+          "notes": "TODO: Document.",
+          "parameters": [
+            {
+              "name": "texture",
+              "type": "Texture"
+            },
+            {
+              "name": "x",
+              "type": "number"
+            },
+            {
+              "name": "y",
+              "type": "number"
+            },
+            {
+              "name": "alpha",
+              "type": "number"
+            },
+            {
+              "name": "red",
+              "type": "number"
+            },
+            {
+              "name": "green",
+              "type": "number"
+            },
+            {
+              "name": "blue",
+              "type": "number"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "drawTextureTiledX": {
+          "notes": "TODO: Document.",
+          "parameters": [
+            {
+              "name": "texture",
+              "type": "Texture"
+            },
+            {
+              "name": "x",
+              "type": "number"
+            },
+            {
+              "name": "y",
+              "type": "number"
+            },
+            {
+              "name": "width",
+              "type": "number"
+            },
+            {
+              "name": "height",
+              "type": "number"
+            },
+            {
+              "name": "red",
+              "type": "number"
+            },
+            {
+              "name": "green",
+              "type": "number"
+            },
+            {
+              "name": "blue",
+              "type": "number"
+            },
+            {
+              "name": "alpha",
+              "type": "number"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "drawTextureTiledY": {
+          "notes": "TODO: Document.",
+          "parameters": [
+            {
+              "name": "texture",
+              "type": "Texture"
+            },
+            {
+              "name": "x",
+              "type": "number"
+            },
+            {
+              "name": "y",
+              "type": "number"
+            },
+            {
+              "name": "width",
+              "type": "number"
+            },
+            {
+              "name": "height",
+              "type": "number"
+            },
+            {
+              "name": "red",
+              "type": "number"
+            },
+            {
+              "name": "green",
+              "type": "number"
+            },
+            {
+              "name": "blue",
+              "type": "number"
+            },
+            {
+              "name": "alpha",
+              "type": "number"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "drawTextZoomed": {
+          "notes": "Draws text on the screen with a scale-factor.",
+          "parameters": [
+            {
+              "name": "text",
+              "type": "string",
+              "notes": "The text to draw."
+            },
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The x-coordinate of the top-left area. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The y-coordinate of the top-left area. (In pixels)"
+            },
+            {
+              "name": "scale",
+              "type": "number",
+              "notes": "The scale multiplier. (100% scale is 1.0)"
+            },
+            {
+              "name": "red",
+              "type": "number",
+              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "green",
+              "type": "number",
+              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "blue",
+              "type": "number",
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "alpha",
+              "type": "number",
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+            },
+            {
+              "name": "font",
+              "type": "UIFont",
+              "notes": "The font preset to use. (If nil, UIFont.Small is used)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "getAbsoluteX": {
+          "returns": {
+            "type": "number",
+            "notes": "The x-coordinate of the element in screen-space. (In pixels)"
+          }
+        },
+        "getAbsoluteY": {
+          "returns": {
+            "type": "number",
+            "notes": "The x-coordinate of the element in screen-space. (In pixels)"
+          }
+        },
+        "getBottom": {
+          "returns": {
+            "type": "number",
+            "notes": "The position of the element's x-coordinate plus the element's width. (In pixels)"
+          }
+        },
+        "getCentreX": {
+          "returns": {
+            "type": "number",
+            "notes": "The center-most x-coordinate of the element on the screen. (In pixels)"
+          }
+        },
+        "getCentreY": {
+          "returns": {
+            "type": "number",
+            "notes": "The center-most y-coordinate of the element on the screen. (In pixels)"
+          }
+        },
+        "getChildren": {
+          "returns": {
+            "type": "ISUIElement[]",
+            "notes": "Any child-elements assigned to the element."
+          }
+        },
+        "getController": {
+          "returns": {
+            "type": "any",
+            "notes": "The controller object."
+          }
+        },
+        "getHeight": {
+          "returns": {
+            "type": "number",
+            "notes": "The height of the element. (In pixels)"
+          }
+        },
+        "getIsCaptured": {
+          "returns": {
+            "type": "boolean",
+            "notes": "True if the element is set to capture input."
+          }
+        },
+        "getIsFollowGameWorld": {
+          "returns": {
+            "type": "boolean",
+            "notes": "True if the element follows the offset of the world-camera."
+          }
+        },
+        "getIsVisible": {
+          "returns": {
+            "type": "boolean",
+            "notes": "True if the element is visible."
+          }
+        },
+        "getJavaObject": {
+          "notes": "This object operates the java-side of the UI engine for Project Zomboid.",
+          "returns": {
+            "type": "UIElement",
+            "notes": "The internal element instance."
+          }
+        },
+        "getKeepOnScreen": {
+          "returns": {
+            "type": "boolean",
+            "notes": "True if the element is set to stay on the screen, even when not active."
+          }
+        },
+        "getMaxDrawHeight": {
+          "returns": {
+            "type": "number",
+            "notes": "The maximum height the element will draw anything."
+          }
+        },
+        "getMaxDrawWidth": {
+          "returns": {
+            "type": "number",
+            "notes": "The maximum width the element will draw anything."
+          }
+        },
+        "getMouseX": {
+          "returns": {
+            "type": "number",
+            "notes": "The mouse's x-coordinate, relative to the left-most x-coordinate of the element on the screen. (In pixels)"
+          }
+        },
+        "getMouseY": {
+          "returns": {
+            "type": "number",
+            "notes": "The mouse's y-coordinate, relative to the top-most y-coordinate of the element on the screen. (In pixels)"
+          }
+        },
+        "getParent": {
+          "returns": {
+            "type": "ISUIElement",
+            "notes": "The parent element, or **nil** if not assigned a parent."
+          }
+        },
+        "getRenderThisPlayerOnly": {
+          "returns": {
+            "type": "boolean",
+            "notes": "The player's index that should only be rendered. (-1 if not set)"
+          }
+        },
+        "getRight": {
+          "returns": {
+            "type": "number",
+            "notes": "The position of the element's x-coordinate plus the element's width. (In pixels)"
+          }
+        },
+        "getScrollAreaHeight": {
+          "returns": {
+            "type": "number",
+            "notes": "The accurate height of the element, taking into account the area taken up by the horizontal scrollbar."
+          }
+        },
+        "getScrollAreaWidth": {
+          "returns": {
+            "type": "number",
+            "notes": "The accurate width of the element, taking into account the area taken up by the vertical scrollbar."
+          }
+        },
+        "getScrollChildren": {
+          "returns": {
+            "type": "boolean",
+            "notes": "True if the children of the element should be scrolled."
+          }
+        },
+        "getScrollHeight": {
+          "returns": {
+            "type": "number",
+            "notes": "The height of the scrollbar pane. (In pixels)"
+          }
+        },
+        "getScrollWidth": {
+          "returns": {
+            "type": "number",
+            "notes": "The width of the scrollbar pane. (In pixels)"
+          }
+        },
+        "getScrollWithParent": {
+          "returns": {
+            "type": "boolean",
+            "notes": "True if the element should be scrolled with its parent element."
+          }
+        },
+        "getUIName": {
+          "returns": {
+            "type": "string",
+            "notes": "The formal UI name for the element."
+          }
+        },
+        "getWidth": {
+          "returns": {
+            "type": "number",
+            "notes": "The width of the element. (In pixels)"
+          }
+        },
+        "getX": {
+          "returns": {
+            "type": "number",
+            "notes": "The x-coordinate of the element on the screen. (In pixels)"
+          }
+        },
+        "getXScroll": {
+          "returns": {
+            "type": "number",
+            "notes": "The offset of the element's horizontal scrollbar. (In pixels) "
+          }
+        },
+        "getY": {
+          "returns": {
+            "type": "void",
+            "notes": "The y-coordinate of the element on the screen. (In pixels)"
+          }
+        },
+        "getYScroll": {
+          "returns": {
+            "type": "number",
+            "notes": "The offset of the element's vertical scrollbar. (In pixels) "
+          }
+        },
+        "ignoreHeightChange": {
+          "notes": "Internally sets the element's next updated width value, ignoring the change.",
+          "returns": {
+            "type": "nil",
+            "notes": "**NOTE**: The method returns but nothing is actually returned."
+          }
+        },
+        "ignoreWidthChange": {
+          "notes": "Internally sets the element's next updated width value, ignoring the change.",
+          "returns": {
+            "type": "nil",
+            "notes": "**NOTE**: The method returns but nothing is actually returned."
+          }
+        },
+        "initialise": {
+          "notes": "Initializes the element, assigning the next value of **ISUIElement.IDMax**.",
+          "returns": {
+            "type": "void"
+          }
+        },
+        "instantiate": {
+          "notes": "Instantiates the internal Java object instance of the element. All initial dimensions are set and children are created.",
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "isEnabled": {
+          "returns": {
+            "type": "boolean",
+            "notes": "True if the element is set enabled."
+          }
+        },
+        "isFollowGameWorld": {
+          "returns": {
+            "type": "boolean",
+            "notes": "True if the element follows the offset of the world-camera."
+          }
+        },
+        "isMouseOver": {
+          "returns": {
+            "type": "boolean",
+            "notes": "True if the mouse is inside the box boundaries of the element."
+          }
+        },
+        "isReallyVisible": {
+          "returns": {
+            "type": "boolean",
+            "notes": "True if the element ***really*** is visible."
+          }
+        },
+        "isRemoved": {
+          "returns": {
+            "type": "boolean",
+            "notes": "True if the element is flagged for removal on the next update tick."
+          }
+        },
+        "isVisible": {
+          "returns": {
+            "type": "boolean",
+            "notes": "True if the element is visible."
+          }
+        },
+        "isVScrollBarVisible": {
+          "returns": {
+            "type": "boolean",
+            "notes": "True if vertical scrollbars are enabled and the height of the contents of the element are greater than the scrollbar's height."
+          }
+        },
+        "onFocus": {
+          "notes": "Triggered when the element is focused from a MouseEvent.",
+          "parameters": [
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The mouse's x-coordinate. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The mouse's y-coordinate. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "onGainJoypadFocus": {
+          "notes": "Triggered when a joypad gains focus.",
+          "parameters": [
+            {
+              "name": "joypadData",
+              "type": "JoypadData",
+              "notes": "The joypad."
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "onJoypadDirDown": {
+          "notes": "Triggered when the down-direction of the arrow-pad of the joypad is pressed.",
+          "parameters": [
+            {
+              "name": "joypadData",
+              "type": "JoypadData"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "onJoypadDirLeft": {
+          "notes": "Triggered when the left-direction of the arrow-pad of the joypad is pressed.",
+          "parameters": [
+            {
+              "name": "joypadData",
+              "type": "JoypadData"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "onJoypadDirRight": {
+          "notes": "Triggered when the right-direction of the arrow-pad of the joypad is pressed.",
+          "parameters": [
+            {
+              "name": "joypadData",
+              "type": "JoypadData"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "onJoypadDirUp": {
+          "notes": "Triggered when the up-direction of the arrow-pad of the joypad is pressed.",
+          "parameters": [
+            {
+              "name": "joypadData",
+              "type": "JoypadData"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "onJoypadDown": {
+          "notes": "Triggered when a button for a focused joypad is pressed. ",
+          "parameters": [
+            {
+              "name": "button",
+              "type": "number"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "onLoseJoypadFocus": {
+          "notes": "Triggered when a focused joypad loses focus.",
+          "parameters": [
+            {
+              "name": "joypadData",
+              "type": "JoypadData",
+              "notes": "The joypad."
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "onMouseDownOutside": {
+          "notes": "Triggered when the left-mouse-button is pressed outside of the element's box-boundary.",
+          "parameters": [
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The mouse's x-coordinate. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The mouse's y-coordinate. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "onMouseMove": {
+          "notes": "Triggered when the mouse moves inside the element's box-boundary.",
+          "parameters": [
+            {
+              "name": "deltaX",
+              "type": "number",
+              "notes": "The delta (b - a), the mouse's x-coordinate moved from the last update. (In pixels)"
+            },
+            {
+              "name": "deltaY",
+              "type": "number",
+              "notes": "The delta (b - a), the mouse's y-coordinate moved from the last update. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "onMouseMoveOutside": {
+          "notes": "Triggered when the mouse moves outside the element's box-boundary.",
+          "parameters": [
+            {
+              "name": "deltaX",
+              "type": "number",
+              "notes": "The delta (b - a), the mouse's x-coordinate moved from the last update. (In pixels)"
+            },
+            {
+              "name": "deltaY",
+              "type": "number",
+              "notes": "The delta (b - a), the mouse's y-coordinate moved from the last update. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "onMouseUp": {
+          "notes": "Triggered when the left-mouse-button is released over the element.",
+          "parameters": [
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The x-coordinate of the mouse relative to the element."
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The y-coordinate of the mouse relative to the element."
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "onMouseUpOutside": {
+          "notes": "Triggered when the left-mouse-button is released outside of the element's box-boundary.",
+          "parameters": [
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The mouse's x-coordinate. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The mouse's y-coordinate. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "onMouseWheel": {
+          "notes": "Triggered when the mouse-wheel moves over the element.",
+          "parameters": [
+            {
+              "name": "delta",
+              "type": "number",
+              "notes": "The change (or offset) of the mouse-wheel. Signage of the value identifies the direction of the mouse-wheel. "
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "onResize": {
+          "notes": "Triggered when the element resizes.",
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "onRightMouseDown": {
+          "notes": "Triggered when the right-mouse-button is pressed inside the element's box-boundary.",
+          "parameters": [
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The mouse's x-coordinate. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The mouse's y-coordinate. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "onRightMouseDownOutside": {
+          "notes": "Triggered when the right-mouse-button is pressed outside of the element's box-boundary.",
+          "parameters": [
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The mouse's x-coordinate. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The mouse's y-coordinate. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "onRightMouseUp": {
+          "notes": "Triggered when the right-mouse-button is released inside the element's box-boundary.",
+          "parameters": [
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The mouse's x-coordinate. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The mouse's y-coordinate. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "onRightMouseUpOutside": {
+          "notes": "Triggered when the right-mouse-button is released outside of the element's box-boundary.",
+          "parameters": [
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The mouse's x-coordinate. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The mouse's y-coordinate. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "prerender": {
+          "notes": "Triggered before rendering the element. All render-based calculations go here.",
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "recalcSize": {
+          "notes": "Triggers **self.javaObject:onResize()**.",
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "removeChild": {
+          "notes": "Removes a child from the element.",
+          "parameters": [
+            {
+              "name": "child",
+              "type": "ISUIElement",
+              "notes": "The child to remove."
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "removeFromUIManager": {
+          "notes": "Removes the element reference from the UIManager instance.",
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "render": {
+          "notes": "Triggered when rendering the element. All render calls go here.\\n**NOTE**: This is called in the game's render thread. All render calls fired outside of this call are ignored.",
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "repaintStencilRect": {
+          "notes": "Repaints the stencil at the given box-boundary.",
+          "parameters": [
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The left-most x-coordinate of the stencil. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The top-most y-coordinate of the stencil. (In pixels)"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "notes": "The width of the stencil. (In pixels)"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "notes": "The height of the stencil. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "resumeStencil": {
+          "notes": "Resumes (or starts) the stencil for the set box boundary of the element. Anything drawn through or outside the box boundaries of the element is clipped & stenciled out of the frame buffer.",
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "setAlwaysOnTop": {
+          "notes": "Sets the element to render at the top of any stack of elements.",
+          "parameters": [
+            {
+              "name": "flag",
+              "type": "boolean",
+              "notes": "The flag to set."
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "setAnchorBottom": {
+          "parameters": [
+            {
+              "name": "flag",
+              "type": "boolean",
+              "notes": "If true, the element anchors to the bottom its parent element."
+            }
+          ],
+          "returns": {
+            "type": "void"
+          }
+        },
+        "setAnchorLeft": {
+          "parameters": [
+            {
+              "name": "flag",
+              "type": "boolean",
+              "notes": "If true, the element anchors to the left-side of its parent element."
+            }
+          ],
+          "returns": {
+            "type": "void"
+          }
+        },
+        "setAnchorRight": {
+          "parameters": [
+            {
+              "name": "flag",
+              "type": "boolean",
+              "notes": "If true, the element anchors to the right-side of its parent element."
+            }
+          ],
+          "returns": {
+            "type": "void"
+          }
+        },
+        "setAnchorTop": {
+          "parameters": [
+            {
+              "name": "flag",
+              "type": "boolean",
+              "notes": "If true, the element anchors to the top of its parent element."
+            }
+          ],
+          "returns": {
+            "type": "void"
+          }
+        },
+        "setCapture": {
+          "notes": "(Something to do with mouse input capturing)",
+          "parameters": [
+            {
+              "name": "flag",
+              "type": "boolean"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "setController": {
+          "notes": "Sets the controller object for the element.",
+          "parameters": [
+            {
+              "name": "controller",
+              "type": "any",
+              "notes": "The controller object."
+            }
+          ],
+          "returns": {
+            "type": "void"
+          }
+        },
+        "setEnabled": {
+          "notes": "Sets the enabled-state of the element. If disabled, the element will not update or render either itself or its children.",
+          "parameters": [
+            {
+              "name": "flag",
+              "type": "boolean",
+              "notes": "The flag to set."
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "setFollowGameWorld": {
+          "notes": "Sets the element's flag for following the game's world offset when the player moves their camera.",
+          "parameters": [
+            {
+              "name": "flag",
+              "type": "boolean",
+              "notes": "The flag to set."
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "setForceCursorVisible": {
+          "notes": "Sets whether the cursor is forced to render if over the element.",
+          "parameters": [
+            {
+              "name": "flag",
+              "type": "boolean",
+              "notes": "The flag to set."
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "setHeight": {
+          "notes": "Sets the height of the element on the screen. (In pixels)\\n**NOTE**: If the element is set to stay on the screen, the height is capped.",
+          "parameters": [
+            {
+              "name": "height",
+              "type": "number",
+              "notes": "The height to set. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "setHeightAndParentHeight": {
+          "notes": "Sets the height of the element and all parent elements up to their root element. (In pixels)",
+          "parameters": [
+            {
+              "name": "height",
+              "type": "number",
+              "notes": "The height to set. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "setMaxDrawHeight": {
+          "notes": "Sets the maximum height the element will draw anything.",
+          "parameters": [
+            {
+              "name": "height",
+              "type": "number",
+              "notes": "The height to set. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "setMaxDrawWidth": {
+          "notes": "Sets the maximum width the element will draw anything.",
+          "parameters": [
+            {
+              "name": "width",
+              "type": "number",
+              "notes": "The height to set. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "setOnMouseDoubleClick": {
+          "parameters": [
+            {
+              "name": "target",
+              "type": "ISUIElement",
+              "notes": "The target clicked."
+            },
+            {
+              "name": "callback",
+              "type": "fun(item: ISUIElement): void",
+              "notes": "The callback to trigger on the MouseEvent."
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "setRemoved": {
+          "notes": "Sets the element flagged for removal on the next update tick.",
+          "parameters": [
+            {
+              "name": "flag",
+              "type": "boolean",
+              "notes": "The flag to set."
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "setRenderThisPlayerOnly": {
+          "notes": "Sets the player's index that should only be rendered. (-1 if unset)",
+          "parameters": [
+            {
+              "name": "value",
+              "type": "number",
+              "notes": "The player's index to set. (0 - 3)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "setScrollChildren": {
+          "notes": "Sets whether the children of the element should be scrolled.",
+          "parameters": [
+            {
+              "name": "flag",
+              "type": "boolean",
+              "notes": "The flag to set."
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "setScrollHeight": {
+          "notes": "Sets the height of the scrollbar pane.",
+          "parameters": [
+            {
+              "name": "value",
+              "type": "number",
+              "notes": "The value to set. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "setScrollWidth": {
+          "notes": "Sets the width of the scrollbar pane.",
+          "parameters": [
+            {
+              "name": "value",
+              "type": "number",
+              "notes": "The value to set. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "setScrollWithParent": {
+          "notes": "Sets whether the element should be scrolled with its parent element.",
+          "parameters": [
+            {
+              "name": "flag",
+              "type": "boolean",
+              "notes": "The flag to set."
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "setStencilRect": {
+          "notes": "Sets the box-boundary of the element's stencil. Anything drawn through or outside this boundary is clipped in the frame buffer.",
+          "parameters": [
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The left-most x-coordinate. (In pixels)"
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The top-most y-coordinate. (In pixels)"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "notes": "The width of the stencil. (In pixels)"
+            },
+            {
+              "name": "height",
+              "type": "number",
+              "notes": "The height of the stencil. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "setUIName": {
+          "notes": "Sets the formal UI name for the element.",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "string",
+              "notes": "The name to set."
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "setVisible": {
+          "notes": "Sets the element visible. When visible, elements update and render.",
+          "parameters": [
+            {
+              "name": "flag",
+              "type": "boolean",
+              "notes": "The flag to set."
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "setWantKeyEvents": {
+          "notes": "Sets whether the element should receive keyboard events.",
+          "parameters": [
+            {
+              "name": "flag",
+              "type": "boolean",
+              "notes": "The flag to set."
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "setWidth": {
+          "notes": "Sets the width of the element on the screen. (In pixels)\\n**NOTE**: If the element is set to stay on the screen, the width is capped.",
+          "parameters": [
+            {
+              "name": "width",
+              "type": "number",
+              "notes": "The width to set. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "setWidthAndParentWidth": {
+          "notes": "Sets the width of the element and all parent elements up to their root element. (In pixels)",
+          "parameters": [
+            {
+              "name": "width",
+              "type": "number",
+              "notes": "The width to set. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "setX": {
+          "notes": "Sets the x-coordinate of the element on the screen. (In pixels)\\n**NOTE**: If the element is set to stay on the screen, the maximum x coordinate is capped.",
+          "parameters": [
+            {
+              "name": "x",
+              "type": "number",
+              "notes": "The x-coordinate to set. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "void"
+          }
+        },
+        "setXScroll": {
+          "notes": "Sets the x-offset of the horizontal scrollbar and the contents of the scrollbar-pane. If the given value falls outside the range of the horizontal scrollbar and its contents, the value set will be clamped to the range. ",
+          "parameters": [
+            {
+              "name": "value",
+              "type": "number",
+              "notes": "The value to set. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "setY": {
+          "notes": "Sets the y-coordinate of the element on the screen. (In pixels)\\n**NOTE**: If the element is set to stay on the screen, the maximum y coordinate is capped.",
+          "parameters": [
+            {
+              "name": "y",
+              "type": "number",
+              "notes": "The y-coordinate to set. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "void"
+          }
+        },
+        "setYScroll": {
+          "notes": "Sets the y-offset of the vertical scrollbar and the contents of the scrollbar-pane. If the given value falls outside the range of the vertical scrollbar and its contents, the value set will be clamped to the range. ",
+          "parameters": [
+            {
+              "name": "value",
+              "type": "number",
+              "notes": "The value to set. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "shrinkX": {
+          "notes": "Shrinks the element's width by a given value.",
+          "parameters": [
+            {
+              "name": "value",
+              "type": "number",
+              "notes": "The value to shrink the width. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "shrinkY": {
+          "notes": "Shrinks the element's height by a given value.",
+          "parameters": [
+            {
+              "name": "value",
+              "type": "number",
+              "notes": "The height to shrink. (In pixels)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "stayOnSplitScreen": {
+          "notes": "Sets if the element stays on a split-screen for a player, clamping the element between the ranges for the player's screen-space.\\n**NOTE**: If the amount of players is one, then the method does nothing.",
+          "parameters": [
+            {
+              "name": "playerIndex",
+              "type": "number",
+              "notes": "The player's index value. (between 0 and 3)"
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "suspendStencil": {
+          "notes": "Suspends (or halts) the stencil used to clip render / draw calls from rendering outside the set box boundary of the element. Once suspended, anything drawn outside the boundary will show.",
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "toString": {
+          "returns": {
+            "type": "string",
+            "notes": "A formally-wrapped for **tostring(self)** using the** getUIName()** to formally name the printed result. "
+          }
+        },
+        "update": {
+          "notes": "Triggered every updated tick in the game's simulation.",
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "updateScrollbars": {
+          "notes": "Updates the horizontal and vertical scrollbars, clamping the vertical scrollbar if outside of the content-range.",
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "wrapInCollapsableWindow": {
+          "notes": "Wraps the element in a window class instance. (By Default **ISCollapsableWindow**)",
+          "parameters": [
+            {
+              "name": "title",
+              "type": "string",
+              "notes": "The title of the window."
+            },
+            {
+              "name": "isResizable",
+              "type": "boolean",
+              "notes": "True if the window can be resized by the player."
+            },
+            {
+              "name": "subClass",
+              "type": "any",
+              "notes": "If set, the class object is used instead. If nil, **ISCollapsableWindow** is used."
+            }
+          ],
+          "returns": {
+            "type": "ISCollapsableWindow | any",
+            "notes": "The instance of the wrapping class."
+          }
+        }
+      },
+      "mutable": false
+    }
+  }
+}
