@@ -1,0 +1,102 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "luaClasses": {
+    "JoypadData": {
+      "extends": "ISBaseObject",
+      "fields": {
+        "controller": {
+          "type": "JoypadControllerData",
+          "notes": "The controller-reference.",
+          "defaultValue": "nil"
+        },
+        "focus": {
+          "type": "ISUIElement",
+          "notes": "The ISUIElement currently focused.",
+          "defaultValue": "nil"
+        },
+        "id": {
+          "type": "number",
+          "defaultValue": "-1"
+        },
+        "inMainMenu": {
+          "type": "boolean",
+          "notes": "True if the game is currently in the main menu.",
+          "defaultValue": "false"
+        },
+        "isActive": {
+          "type": "boolean",
+          "notes": "True if the joypad is currently active.",
+          "defaultValue": "false"
+        },
+        "lastfocus": {
+          "type": "ISUIElement",
+          "notes": "The ISUIElement last focused by the joypad.",
+          "defaultValue": "nil"
+        },
+        "listBox": {
+          "type": "ISJoypadListBox",
+          "defaultValue": "nil"
+        },
+        "player": {
+          "type": "number",
+          "notes": "The index of the player. (0-3)",
+          "defaultValue": "nil"
+        },
+        "prevfocus": {
+          "type": "ISUIElement",
+          "notes": "The previously-focused ISUIElement.",
+          "defaultValue": "nil"
+        },
+        "prevprevfocus": {
+          "type": "ISUIElement",
+          "notes": "The previously, previously focused ISUIElement. (Why isn't this an array??)"
+        }
+      },
+      "constructor": {},
+      "methods": {
+        "clearController": {
+          "notes": "Clears any assigned controller-data instance from the joypad-data instance.",
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "isConnected": {
+          "returns": {
+            "type": "boolean",
+            "notes": "True if the Joypad is connected to a controller."
+          }
+        },
+        "setActive": {
+          "notes": "Sets the controller's active status.",
+          "parameters": [
+            {
+              "name": "flag",
+              "type": "boolean",
+              "notes": "The flag to set."
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        },
+        "setController": {
+          "notes": "Assigns a controller-data instance to the joypad-data instance.",
+          "parameters": [
+            {
+              "name": "controller",
+              "type": "JoypadControllerData",
+              "notes": "The controller associating with the joypad-data."
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": ""
+          }
+        }
+      },
+      "mutable": false
+    }
+  }
+}
