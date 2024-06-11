@@ -7,125 +7,155 @@
         "IDMax": {
           "type": "number",
           "notes": "The next ID to use for a new ISUIElement instance.",
-          "defaultValue": "1"
+          "defaultValue": "1",
+          "nullable": false
         }
       },
       "fields": {
         "anchorBottom": {
           "type": "boolean",
-          "notes": "If true, the element is anchored to the bottom of its parent element."
+          "notes": "If true, the element is anchored to the bottom of its parent element.",
+          "nullable": false
         },
         "anchorLeft": {
           "type": "boolean",
-          "notes": "If true, the element is anchored to the left of its parent element."
+          "notes": "If true, the element is anchored to the left of its parent element.",
+          "nullable": false
         },
         "anchorRight": {
           "type": "boolean",
-          "notes": "If true, the element is anchored to the right of its parent element."
+          "notes": "If true, the element is anchored to the right of its parent element.",
+          "nullable": false
         },
         "anchorTop": {
           "type": "boolean",
-          "notes": "If true, the element is anchored to the top of its parent element."
+          "notes": "If true, the element is anchored to the top of its parent element.",
+          "nullable": false
         },
         "children": {
           "type": "table<number, ISUIElement>",
-          "notes": "The registered child elements of the element, registered using self.ID as their key."
+          "notes": "The registered child elements of the element, registered using self.ID as their key.",
+          "nullable": false
         },
         "controller": {
           "type": "any",
-          "notes": "Unknown. Not sure if **org.lwjglx.input.Controller**."
+          "notes": "Unknown. Not sure if **org.lwjglx.input.Controller**.",
+          "nullable": false
         },
         "dock": {
           "type": "string",
-          "notes": "Some possibly deprecated legacy field."
+          "notes": "Some possibly deprecated legacy field.",
+          "nullable": false
         },
         "enabled": {
           "type": "boolean",
-          "notes": "If true, the element is active."
+          "notes": "If true, the element is active.",
+          "nullable": false
         },
         "forceCursorVisible": {
           "type": "boolean",
-          "notes": "If true, the cursor will stay visible when inside the element's box-boundary."
+          "notes": "If true, the cursor will stay visible when inside the element's box-boundary.",
+          "nullable": false
         },
         "height": {
           "type": "double",
-          "notes": "The height of the UI element. (In pixels)"
+          "notes": "The height of the UI element. (In pixels)",
+          "nullable": false
         },
         "hscroll": {
           "type": "ISScrollBar",
-          "notes": "The element's horizontal scrollbar."
+          "notes": "The element's horizontal scrollbar.",
+          "nullable": false
         },
         "ID": {
           "type": "int",
-          "notes": "The internal ID of the UI element. This is used to store elements in their parent-element's children array."
+          "notes": "The internal ID of the UI element. This is used to store elements in their parent-element's children array.",
+          "nullable": false
         },
         "javaObject": {
           "type": "UIElement",
-          "notes": "The Java instance of the UI element. This is used to communicate with the game's UI engine."
+          "notes": "The Java instance of the UI element. This is used to communicate with the game's UI engine.",
+          "nullable": false
         },
         "joyfocus": {
           "type": "Joypad",
-          "notes": "The actively-focused Joypad object."
+          "notes": "The actively-focused Joypad object.",
+          "nullable": false
         },
         "keepOnScreen": {
           "type": "boolean",
-          "notes": "If true, the element will stay on the screen regardless of its state."
+          "notes": "If true, the element will stay on the screen regardless of its state.",
+          "nullable": false
         },
         "minimumHeight": {
           "type": "number",
-          "notes": "The minimum height of the UI element. (In pixels)"
+          "notes": "The minimum height of the UI element. (In pixels)",
+          "nullable": false
         },
         "minimumWidth": {
           "type": "number",
-          "notes": "The minimum width of the UI element. (In pixels)"
+          "notes": "The minimum width of the UI element. (In pixels)",
+          "nullable": false
         },
         "onMouseDoubleClick": {
           "type": "fun(): void",
-          "notes": "A callback function for double clicking."
+          "notes": "A callback function for double clicking.",
+          "nullable": false
         },
         "parent": {
           "type": "ISUIElement",
-          "notes": "If not nil, the parent of the element will be stored here."
+          "notes": "If not nil, the parent of the element will be stored here.",
+          "nullable": false
         },
         "removed": {
           "type": "boolean",
-          "notes": "True if the UI element is flagged for removal from the UI manager."
+          "notes": "True if the UI element is flagged for removal from the UI manager.",
+          "nullable": false
         },
         "scrollwidth": {
           "type": "number",
-          "notes": "The set scroll-width of the element's scroll pane."
+          "notes": "The set scroll-width of the element's scroll pane.",
+          "nullable": false
         },
         "target": {
           "type": "any",
-          "notes": "(Related to 'onMouseDoubleClick')"
+          "notes": "(Related to 'onMouseDoubleClick')",
+          "nullable": false
         },
         "visibleFunction": {
           "type": "fun(visibleTarget: ISUIElement, fromElement: ISUIElement): void;",
-          "notes": "An optional function to be invoked when self.setVisible() is invoked. Passes two ISUIElements as parameters."
+          "notes": "An optional function to be invoked when self.setVisible() is invoked. Passes two ISUIElements as parameters.",
+          "nullable": false
         },
         "visibleTarget": {
           "type": "ISUIElement",
-          "notes": "The element-target or reference to self.visibleFunction when the visibility of the element is changed."
+          "notes": "The element-target or reference to self.visibleFunction when the visibility of the element is changed.",
+          "nullable": false
         },
         "vscroll": {
           "type": "ISScrollBar",
-          "notes": "The element's vertical scrollbar."
+          "notes": "The element's vertical scrollbar.",
+          "nullable": false
         },
         "wantKeyEvents": {
           "type": "boolean",
-          "notes": "If true, keyboard-events are broadcasted to the element."
+          "notes": "If true, keyboard-events are broadcasted to the element.",
+          "nullable": false
         },
         "width": {
           "type": "number",
-          "notes": "The width of the UI element. (In pixels)"
+          "notes": "The width of the UI element. (In pixels)",
+          "nullable": false
         },
         "x": {
           "type": "number",
-          "notes": "The x coordinate on the screen. (In pixels)"
+          "notes": "The x coordinate on the screen. (In pixels)",
+          "nullable": false
         },
         "y": {
           "type": "number",
-          "notes": "The y coordinate on the screen. (In pixels)"
+          "notes": "The y coordinate on the screen. (In pixels)",
+          "nullable": false
         }
       },
       "constructor": {
@@ -133,22 +163,30 @@
           {
             "name": "x",
             "type": "number",
-            "notes": "The x coordinate on the screen. (In pixels)"
+            "notes": "The x coordinate on the screen. (In pixels)",
+            "optional": false,
+            "nullable": false
           },
           {
             "name": "y",
             "type": "number",
-            "notes": "The y coordinate on the screen. (In pixels)"
+            "notes": "The y coordinate on the screen. (In pixels)",
+            "optional": false,
+            "nullable": false
           },
           {
             "name": "width",
             "type": "number",
-            "notes": "The width of the UI element. (In pixels)"
+            "notes": "The width of the UI element. (In pixels)",
+            "optional": false,
+            "nullable": false
           },
           {
             "name": "height",
             "type": "number",
-            "notes": "The height of the UI element. (In pixels)"
+            "notes": "The height of the UI element. (In pixels)",
+            "optional": false,
+            "nullable": false
           }
         ]
       },
@@ -156,7 +194,8 @@
         "__toString__": {
           "returns": {
             "type": "string",
-            "notes": "A formally-wrapped for **tostring(self)** using the** getUIName()** to formally name the printed result. "
+            "notes": "A formally-wrapped for **tostring(self)** using the** getUIName()** to formally name the printed result. ",
+            "nullable": false
           }
         },
         "addChild": {
@@ -165,11 +204,14 @@
             {
               "name": "other",
               "type": "ISUIElement",
-              "notes": "The UI element to add as a child to this UI element."
+              "notes": "The UI element to add as a child to this UI element.",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
-            "type": "void"
+            "type": "void",
+            "nullable": false
           }
         },
         "addScrollBars": {
@@ -178,31 +220,37 @@
             {
               "name": "addHorizontal",
               "type": "boolean",
-              "notes": "If true, the ISUIElement will also have a horizontal scrollbar."
+              "notes": "If true, the ISUIElement will also have a horizontal scrollbar.",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
-            "type": "void"
+            "type": "void",
+            "nullable": false
           }
         },
         "addToUIManager": {
           "notes": "Adds this UI element to the UI manager for the game.",
           "returns": {
-            "type": "void"
+            "type": "void",
+            "nullable": false
           }
         },
         "backMost": {
           "notes": "Moves the element to the back-most drawn on the stack of elements to render.",
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "bringToTop": {
           "notes": "Brings the element to the top of the rendering stack.",
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "clampStencilRectToParent": {
@@ -211,55 +259,68 @@
             {
               "name": "x",
               "type": "number",
-              "notes": "The left-most x-coordinate. (In pixels)"
+              "notes": "The left-most x-coordinate. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The top-most y-coordinate. (In pixels)"
+              "notes": "The top-most y-coordinate. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "width",
               "type": "number",
-              "notes": "The width of the stencil. (In pixels)"
+              "notes": "The width of the stencil. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "height",
               "type": "number",
-              "notes": "The height of the stencil. (In pixels)"
+              "notes": "The height of the stencil. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "[number, number, number, number]",
-            "notes": "x, y, width, height"
+            "notes": "x, y, width, height",
+            "nullable": false
           }
         },
         "clearChildren": {
           "notes": "Clears all registered child-elements from the element.",
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "clearMaxDrawHeight": {
           "notes": "Clears the maximum draw height of the element.",
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "clearMaxDrawWidth": {
           "notes": "Clears the maximum draw width of the element.",
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "clearStencilRect": {
           "notes": "Clears the set box-boundary for the element.",
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "containsPoint": {
@@ -268,17 +329,22 @@
             {
               "name": "x",
               "type": "number",
-              "notes": "The x-coordinate to test. (In pixels)"
+              "notes": "The x-coordinate to test. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The y-coordinate to test. (In pixels)"
+              "notes": "The y-coordinate to test. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": "True if the coordinates are inside the element's box-boundary."
+            "notes": "True if the coordinates are inside the element's box-boundary.",
+            "nullable": false
           }
         },
         "containsPointLocal": {
@@ -287,24 +353,30 @@
             {
               "name": "x",
               "type": "number",
-              "notes": "The x-coordinate to test. (In pixels)"
+              "notes": "The x-coordinate to test. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The y-coordinate to test. (In pixels)"
+              "notes": "The y-coordinate to test. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": "True if the coordinates are inside the element's local box-boundary."
+            "notes": "True if the coordinates are inside the element's local box-boundary.",
+            "nullable": false
           }
         },
         "createChildren": {
           "notes": "Fired when the element is instantiated. Create initial child elements here.",
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "drawLine2": {
@@ -313,47 +385,64 @@
             {
               "name": "x1",
               "type": "number",
-              "notes": "The x-coordinate of the starting point of the line. (In pixels)"
+              "notes": "The x-coordinate of the starting point of the line. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y1",
               "type": "number",
-              "notes": "The y-coordinate of the starting point of the line. (In pixels)"
+              "notes": "The y-coordinate of the starting point of the line. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "x2",
               "type": "number",
-              "notes": "The x-coordinate of the ending point of the line. (In pixels)"
+              "notes": "The x-coordinate of the ending point of the line. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y2",
               "type": "number",
-              "notes": "The y-coordinate of the ending point of the line. (In pixels)"
+              "notes": "The y-coordinate of the ending point of the line. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "alpha",
               "type": "number",
-              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "red",
               "type": "number",
-              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+              "notes": "The value of the red color channel. (0.0 -> 1.0)",
+              "optional": true,
+              "nullable": false
             },
             {
               "name": "green",
               "type": "number",
-              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+              "notes": "The value of the green color channel. (0.0 -> 1.0)",
+              "optional": true,
+              "nullable": false
             },
             {
               "name": "blue",
               "type": "number",
-              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)",
+              "optional": true,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "drawProgressBar": {
@@ -362,37 +451,50 @@
             {
               "name": "x",
               "type": "number",
-              "notes": "The x-coordinate of the top-left of the progress-bar. (In pixels)"
+              "notes": "The x-coordinate of the top-left of the progress-bar. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The x-coordinate of the top-left of the progress-bar. (In pixels)"
+              "notes": "The x-coordinate of the top-left of the progress-bar. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "width",
               "type": "number",
-              "notes": "The width of the progress-bar. (In pixels)"
+              "notes": "The width of the progress-bar. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "height",
               "type": "number",
-              "notes": "The height of the progress-bar. (In pixels)"
+              "notes": "The height of the progress-bar. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "percentage",
               "type": "number",
-              "notes": "A value between 0.0 (0%) to 1.0. (100%)"
+              "notes": "A value between 0.0 (0%) to 1.0. (100%)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "foregroundColor",
-              "type": "{ r: number, g: number, b: number, a: number }",
-              "notes": "A primitive RGBA object to color the foreground.  "
+              "type": "ProgressBarColor",
+              "notes": "A primitive RGBA object to color the foreground.  ",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "drawRect": {
@@ -401,47 +503,64 @@
             {
               "name": "x",
               "type": "number",
-              "notes": "The x-coordinate of the top-left area. (In pixels)"
+              "notes": "The x-coordinate of the top-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The y-coordinate of the top-left area. (In pixels)"
+              "notes": "The y-coordinate of the top-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "width",
               "type": "number",
-              "notes": "The width of the area to draw. (In pixels)"
+              "notes": "The width of the area to draw. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "height",
               "type": "number",
-              "notes": "The height of the area to draw. (In pixels)"
+              "notes": "The height of the area to draw. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "alpha",
               "type": "number",
-              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "red",
               "type": "number",
-              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+              "notes": "The value of the red color channel. (0.0 -> 1.0)",
+              "optional": true,
+              "nullable": false
             },
             {
               "name": "green",
               "type": "number",
-              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+              "notes": "The value of the green color channel. (0.0 -> 1.0)",
+              "optional": true,
+              "nullable": false
             },
             {
               "name": "blue",
               "type": "number",
-              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)",
+              "optional": true,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "drawRectBorder": {
@@ -450,47 +569,64 @@
             {
               "name": "x",
               "type": "number",
-              "notes": "The x-coordinate of the top-left area. (In pixels)"
+              "notes": "The x-coordinate of the top-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The y-coordinate of the top-left area. (In pixels)"
+              "notes": "The y-coordinate of the top-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "width",
               "type": "number",
-              "notes": "The width of the area to draw. (In pixels)"
+              "notes": "The width of the area to draw. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "height",
               "type": "number",
-              "notes": "The height of the area to draw. (In pixels)"
+              "notes": "The height of the area to draw. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "alpha",
               "type": "number",
-              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "red",
               "type": "number",
-              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+              "notes": "The value of the red color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "green",
               "type": "number",
-              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+              "notes": "The value of the green color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "blue",
               "type": "number",
-              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "drawRectBorderStatic": {
@@ -499,47 +635,64 @@
             {
               "name": "x",
               "type": "number",
-              "notes": "The x-coordinate of the top-left area. (In pixels)"
+              "notes": "The x-coordinate of the top-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The y-coordinate of the top-left area. (In pixels)"
+              "notes": "The y-coordinate of the top-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "width",
               "type": "number",
-              "notes": "The width of the area to draw. (In pixels)"
+              "notes": "The width of the area to draw. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "height",
               "type": "number",
-              "notes": "The height of the area to draw. (In pixels)"
+              "notes": "The height of the area to draw. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "alpha",
               "type": "number",
-              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "red",
               "type": "number",
-              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+              "notes": "The value of the red color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "green",
               "type": "number",
-              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+              "notes": "The value of the green color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "blue",
               "type": "number",
-              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "drawRectStatic": {
@@ -548,47 +701,64 @@
             {
               "name": "x",
               "type": "number",
-              "notes": "The x-coordinate of the top-left area. (In pixels)"
+              "notes": "The x-coordinate of the top-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The y-coordinate of the top-left area. (In pixels)"
+              "notes": "The y-coordinate of the top-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "width",
               "type": "number",
-              "notes": "The width of the area to draw. (In pixels)"
+              "notes": "The width of the area to draw. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "height",
               "type": "number",
-              "notes": "The height of the area to draw. (In pixels)"
+              "notes": "The height of the area to draw. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "alpha",
               "type": "number",
-              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "red",
               "type": "number",
-              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+              "notes": "The value of the red color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "green",
               "type": "number",
-              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+              "notes": "The value of the green color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "blue",
               "type": "number",
-              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "drawText": {
@@ -597,47 +767,64 @@
             {
               "name": "text",
               "type": "string",
-              "notes": "The text to draw."
+              "notes": "The text to draw.",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "x",
               "type": "number",
-              "notes": "The x-coordinate of the top-left area. (In pixels)"
+              "notes": "The x-coordinate of the top-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The y-coordinate of the top-left area. (In pixels)"
+              "notes": "The y-coordinate of the top-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "red",
               "type": "number",
-              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+              "notes": "The value of the red color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "green",
               "type": "number",
-              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+              "notes": "The value of the green color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "blue",
               "type": "number",
-              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "alpha",
               "type": "number",
-              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "font",
               "type": "UIFont",
-              "notes": "The font preset to use. (If nil, UIFont.Small is used)"
+              "notes": "The font preset to use. (If nil, UIFont.Small is used)",
+              "optional": true,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "drawTextCentre": {
@@ -646,47 +833,64 @@
             {
               "name": "text",
               "type": "string",
-              "notes": "The text to draw."
+              "notes": "The text to draw.",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "x",
               "type": "number",
-              "notes": "The x-coordinate of the center area. (In pixels)"
+              "notes": "The x-coordinate of the center area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The y-coordinate of the center area. (In pixels)"
+              "notes": "The y-coordinate of the center area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "red",
               "type": "number",
-              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+              "notes": "The value of the red color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "green",
               "type": "number",
-              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+              "notes": "The value of the green color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "blue",
               "type": "number",
-              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "alpha",
               "type": "number",
-              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "font",
               "type": "UIFont",
-              "notes": "The font preset to use. (If nil, UIFont.Small is used)"
+              "notes": "The font preset to use. (If nil, UIFont.Small is used)",
+              "optional": true,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "drawTextCentreStatic": {
@@ -695,47 +899,64 @@
             {
               "name": "text",
               "type": "string",
-              "notes": "The text to draw."
+              "notes": "The text to draw.",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "x",
               "type": "number",
-              "notes": "The x-coordinate of the center area. (In pixels)"
+              "notes": "The x-coordinate of the center area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The y-coordinate of the center area. (In pixels)"
+              "notes": "The y-coordinate of the center area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "red",
               "type": "number",
-              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+              "notes": "The value of the red color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "green",
               "type": "number",
-              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+              "notes": "The value of the green color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "blue",
               "type": "number",
-              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "alpha",
               "type": "number",
-              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "font",
               "type": "UIFont",
-              "notes": "The font preset to use. (If nil, UIFont.Small is used)"
+              "notes": "The font preset to use. (If nil, UIFont.Small is used)",
+              "optional": true,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "drawTextRight": {
@@ -744,47 +965,64 @@
             {
               "name": "text",
               "type": "string",
-              "notes": "The text to draw."
+              "notes": "The text to draw.",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "x",
               "type": "number",
-              "notes": " The x-coordinate of the top-right area."
+              "notes": " The x-coordinate of the top-right area.",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": " The y-coordinate of the top-right area."
+              "notes": " The y-coordinate of the top-right area.",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "red",
               "type": "number",
-              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+              "notes": "The value of the red color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "green",
               "type": "number",
-              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+              "notes": "The value of the green color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "blue",
               "type": "number",
-              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "alpha",
               "type": "number",
-              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "font",
               "type": "UIFont",
-              "notes": "The font preset to use. (If nil, UIFont.Small is used)"
+              "notes": "The font preset to use. (If nil, UIFont.Small is used)",
+              "optional": true,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "drawTextRightStatic": {
@@ -793,47 +1031,64 @@
             {
               "name": "text",
               "type": "string",
-              "notes": "The text to draw."
+              "notes": "The text to draw.",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "x",
               "type": "number",
-              "notes": "The x-coordinate of the top-right area. (In pixels)"
+              "notes": "The x-coordinate of the top-right area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The y-coordinate of the top-right area. (In pixels)"
+              "notes": "The y-coordinate of the top-right area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "red",
               "type": "number",
-              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+              "notes": "The value of the red color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "green",
               "type": "number",
-              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+              "notes": "The value of the green color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "blue",
               "type": "number",
-              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "alpha",
               "type": "number",
-              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "font",
               "type": "UIFont",
-              "notes": "The font preset to use. (If nil, UIFont.Small is used)"
+              "notes": "The font preset to use. (If nil, UIFont.Small is used)",
+              "optional": true,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "drawTextStatic": {
@@ -842,47 +1097,64 @@
             {
               "name": "text",
               "type": "string",
-              "notes": "The text to draw."
+              "notes": "The text to draw.",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "x",
               "type": "number",
-              "notes": "The x-coordinate of the top-left area. (In pixels)"
+              "notes": "The x-coordinate of the top-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The y-coordinate of the top-left area. (In pixels)"
+              "notes": "The y-coordinate of the top-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "red",
               "type": "number",
-              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+              "notes": "The value of the red color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "green",
               "type": "number",
-              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+              "notes": "The value of the green color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "blue",
               "type": "number",
-              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "alpha",
               "type": "number",
-              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "font",
               "type": "UIFont",
-              "notes": "The font preset to use. (If nil, UIFont.Small is used)"
+              "notes": "The font preset to use. (If nil, UIFont.Small is used)",
+              "optional": true,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "drawTextUntrimmed": {
@@ -891,47 +1163,64 @@
             {
               "name": "text",
               "type": "string",
-              "notes": "The text to draw."
+              "notes": "The text to draw.",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "x",
               "type": "number",
-              "notes": "The x-coordinate of the top-left area. (In pixels)"
+              "notes": "The x-coordinate of the top-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The y-coordinate of the top-left area. (In pixels)"
+              "notes": "The y-coordinate of the top-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "red",
               "type": "number",
-              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+              "notes": "The value of the red color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "green",
               "type": "number",
-              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+              "notes": "The value of the green color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "blue",
               "type": "number",
-              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "alpha",
               "type": "number",
-              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "font",
               "type": "UIFont",
-              "notes": "The font preset to use. (If nil, UIFont.Small is used)"
+              "notes": "The font preset to use. (If nil, UIFont.Small is used)",
+              "optional": true,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "drawTexture": {
@@ -940,41 +1229,56 @@
             {
               "name": "texture",
               "type": "Texture",
-              "notes": "The texture to draw. If null, the color will be the texture."
+              "notes": "The texture to draw. If null, the color will be the texture.",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "x",
               "type": "number",
-              "notes": "The x coordinate on the screen to draw the left of the texture. (In pixels)"
+              "notes": "The x coordinate on the screen to draw the left of the texture. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The y coordinate on the screen to draw the top of the texture. (In pixels)"
-            },
-            {
-              "name": "red",
-              "type": "number",
-              "notes": "The red color value to draw. (Range: 0.0 -> 1.0)"
-            },
-            {
-              "name": "green",
-              "type": "number",
-              "notes": "The green color value to draw. (Range: 0.0 -> 1.0)"
-            },
-            {
-              "name": "blue",
-              "type": "number",
-              "notes": "The blue color value to draw. (Range: 0.0 -> 1.0)"
+              "notes": "The y coordinate on the screen to draw the top of the texture. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "alpha",
               "type": "number",
-              "notes": "The alpha value to draw. (Range: 0.0 -> 1.0)"
+              "notes": "The alpha channel. (Range: 0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
+            },
+            {
+              "name": "red",
+              "type": "number",
+              "notes": "The red color channel. (Range: 0.0 -> 1.0)",
+              "optional": true,
+              "nullable": false
+            },
+            {
+              "name": "green",
+              "type": "number",
+              "notes": "The blue color channel. (Range: 0.0 -> 1.0)",
+              "optional": true,
+              "nullable": false
+            },
+            {
+              "name": "blue",
+              "type": "number",
+              "notes": "The blue color channel. (Range: 0.0 -> 1.0)",
+              "optional": true,
+              "nullable": false
             }
           ],
           "returns": {
-            "type": "void"
+            "type": "void",
+            "nullable": false
           }
         },
         "drawTextureAllPoint": {
@@ -983,72 +1287,99 @@
             {
               "name": "texture",
               "type": "Texture",
-              "notes": "The texture to draw. If **nil** is provided, the color passed is rendered."
+              "notes": "The texture to draw. If **nil** is provided, the color passed is rendered.",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "topLeftX",
               "type": "number",
-              "notes": "The x-coordinate of the top-left area. (In pixels)"
+              "notes": "The x-coordinate of the top-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "topLeftY",
               "type": "number",
-              "notes": "The y-coordinate of the top-left area. (In pixels)"
+              "notes": "The y-coordinate of the top-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "topRightX",
               "type": "number",
-              "notes": "The x-coordinate of the top-right area. (In pixels)"
+              "notes": "The x-coordinate of the top-right area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "topRightY",
               "type": "number",
-              "notes": "The y-coordinate of the top-right area. (In pixels)"
+              "notes": "The y-coordinate of the top-right area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "bottomRightX",
               "type": "number",
-              "notes": "The x-coordinate of the bottom-right area. (In pixels)"
+              "notes": "The x-coordinate of the bottom-right area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "bottomRightY",
               "type": "number",
-              "notes": "The y-coordinate of the bottom-right area. (In pixels)"
+              "notes": "The y-coordinate of the bottom-right area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "bottomLeftX",
               "type": "number",
-              "notes": "The x-coordinate of the bottom-left area. (In pixels)"
+              "notes": "The x-coordinate of the bottom-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "bottomLeftY",
               "type": "number",
-              "notes": "The y-coordinate of the bottom-left area. (In pixels)"
+              "notes": "The y-coordinate of the bottom-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "red",
               "type": "number",
-              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+              "notes": "The value of the red color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "green",
               "type": "number",
-              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+              "notes": "The value of the green color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "blue",
               "type": "number",
-              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "alpha",
               "type": "number",
-              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "DrawTextureAngle": {
@@ -1056,25 +1387,34 @@
           "parameters": [
             {
               "name": "texture",
-              "type": "Texture"
+              "type": "Texture",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "centerX",
-              "type": "number"
+              "type": "number",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "centerY",
-              "type": "number"
+              "type": "number",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "angle",
               "type": "number",
-              "notes": "The angle of rotation. (In degrees)"
+              "notes": "The angle of rotation. (In degrees)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "drawTextureScaled": {
@@ -1083,52 +1423,71 @@
             {
               "name": "texture",
               "type": "Texture",
-              "notes": "The texture to draw. If **nil** is provided, the color passed is rendered."
+              "notes": "The texture to draw. If **nil** is provided, the color passed is rendered.",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "x",
               "type": "number",
-              "notes": "The x-coordinate of the top-left area. (In pixels)"
+              "notes": "The x-coordinate of the top-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The y-coordinate of the top-left area. (In pixels)"
+              "notes": "The y-coordinate of the top-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "width",
               "type": "number",
-              "notes": "The width of the area to draw. (In pixels)"
+              "notes": "The width of the area to draw. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "height",
               "type": "number",
-              "notes": "The height of the area to draw. (In pixels)"
+              "notes": "The height of the area to draw. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "alpha",
               "type": "number",
-              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "red",
               "type": "number",
-              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+              "notes": "The value of the red color channel. (0.0 -> 1.0)",
+              "optional": true,
+              "nullable": false
             },
             {
               "name": "green",
               "type": "number",
-              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+              "notes": "The value of the green color channel. (0.0 -> 1.0)",
+              "optional": true,
+              "nullable": false
             },
             {
               "name": "blue",
               "type": "number",
-              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)",
+              "optional": true,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "drawTextureScaledAspect": {
@@ -1137,52 +1496,71 @@
             {
               "name": "texture",
               "type": "Texture",
-              "notes": "The texture to draw."
+              "notes": "The texture to draw.",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "x",
               "type": "number",
-              "notes": "The x-coordinate of the center area. (In pixels)"
+              "notes": "The x-coordinate of the center area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The y-coordinate of the center area. (In pixels)"
+              "notes": "The y-coordinate of the center area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "width",
               "type": "number",
-              "notes": "The width of the area to draw. (In pixels)"
+              "notes": "The width of the area to draw. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "height",
               "type": "number",
-              "notes": "The height of the area to draw. (In pixels)"
+              "notes": "The height of the area to draw. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "alpha",
               "type": "number",
-              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "red",
               "type": "number",
-              "notes": "(Optional) The value of the red color channel. (0.0 -> 1.0)"
+              "notes": "(Optional) The value of the red color channel. (0.0 -> 1.0)",
+              "optional": true,
+              "nullable": false
             },
             {
               "name": "green",
               "type": "number",
-              "notes": "(Optional) The value of the green color channel. (0.0 -> 1.0)"
+              "notes": "(Optional) The value of the green color channel. (0.0 -> 1.0)",
+              "optional": true,
+              "nullable": false
             },
             {
               "name": "blue",
               "type": "number",
-              "notes": "(Optional) The value of the blue color channel. (0.0 -> 1.0)"
+              "notes": "(Optional) The value of the blue color channel. (0.0 -> 1.0)",
+              "optional": true,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "drawTextureScaledAspect2": {
@@ -1191,52 +1569,71 @@
             {
               "name": "texture",
               "type": "Texture",
-              "notes": "The texture to draw.\\nNOTE: If the texture is nil, nothing will render."
+              "notes": "The texture to draw.\\nNOTE: If the texture is nil, nothing will render.",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "x",
               "type": "number",
-              "notes": "The x-coordinate of the top-left area. (In pixels)"
+              "notes": "The x-coordinate of the top-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The y-coordinate of the top-left area. (In pixels)"
+              "notes": "The y-coordinate of the top-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "width",
               "type": "number",
-              "notes": "The width of the area to draw. (In pixels)"
+              "notes": "The width of the area to draw. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "height",
               "type": "number",
-              "notes": "The height of the area to draw. (In pixels)"
+              "notes": "The height of the area to draw. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "alpha",
               "type": "number",
-              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "red",
               "type": "number",
-              "notes": "(Optional) The value of the red color channel. (0.0 -> 1.0)"
+              "notes": "(Optional) The value of the red color channel. (0.0 -> 1.0)",
+              "optional": true,
+              "nullable": false
             },
             {
               "name": "green",
               "type": "number",
-              "notes": "(Optional) The value of the green color channel. (0.0 -> 1.0)"
+              "notes": "(Optional) The value of the green color channel. (0.0 -> 1.0)",
+              "optional": true,
+              "nullable": false
             },
             {
               "name": "blue",
               "type": "number",
-              "notes": "(Optional) The value of the blue color channel. (0.0 -> 1.0)"
+              "notes": "(Optional) The value of the blue color channel. (0.0 -> 1.0)",
+              "optional": true,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "drawTextureScaledStatic": {
@@ -1245,52 +1642,71 @@
             {
               "name": "texture",
               "type": "Texture",
-              "notes": "The texture to draw. If nil is provided, the color passed is rendered."
+              "notes": "The texture to draw. If nil is provided, the color passed is rendered.",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "x",
               "type": "number",
-              "notes": "The x-coordinate of the top-left area. (In pixels)"
+              "notes": "The x-coordinate of the top-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The y-coordinate of the top-left area. (In pixels)"
+              "notes": "The y-coordinate of the top-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "width",
               "type": "number",
-              "notes": "The width of the area to draw. (In pixels)"
+              "notes": "The width of the area to draw. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "height",
               "type": "number",
-              "notes": "The height of the area to draw. (In pixels)"
+              "notes": "The height of the area to draw. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "alpha",
               "type": "number",
-              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "red",
               "type": "number",
-              "notes": "(Optional) The value of the red color channel. (0.0 -> 1.0)"
+              "notes": "(Optional) The value of the red color channel. (0.0 -> 1.0)",
+              "optional": true,
+              "nullable": false
             },
             {
               "name": "green",
               "type": "number",
-              "notes": "(Optional) The value of the green color channel. (0.0 -> 1.0)"
+              "notes": "(Optional) The value of the green color channel. (0.0 -> 1.0)",
+              "optional": true,
+              "nullable": false
             },
             {
               "name": "blue",
               "type": "number",
-              "notes": "(Optional) The value of the blue color channel. (0.0 -> 1.0)"
+              "notes": "(Optional) The value of the blue color channel. (0.0 -> 1.0)",
+              "optional": true,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "drawTextureScaledUniform": {
@@ -1299,47 +1715,64 @@
             {
               "name": "texture",
               "type": "Texture",
-              "notes": "The texture to draw."
+              "notes": "The texture to draw.",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "x",
               "type": "number",
-              "notes": "The x-coordinate of the top-left area. (In pixels)"
+              "notes": "The x-coordinate of the top-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The y-coordinate of the top-left area. (In pixels)"
+              "notes": "The y-coordinate of the top-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "scale",
               "type": "number",
-              "notes": "The scale multiplier. (100% scale is **1.0**)"
+              "notes": "The scale multiplier. (100% scale is **1.0**)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "alpha",
               "type": "number",
-              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "red",
               "type": "number",
-              "notes": "(Optional) The value of the red color channel. (0.0 -> 1.0)"
+              "notes": "(Optional) The value of the red color channel. (0.0 -> 1.0)",
+              "optional": true,
+              "nullable": false
             },
             {
               "name": "green",
               "type": "number",
-              "notes": "(Optional) The value of the green color channel. (0.0 -> 1.0)"
+              "notes": "(Optional) The value of the green color channel. (0.0 -> 1.0)",
+              "optional": true,
+              "nullable": false
             },
             {
               "name": "blue",
               "type": "number",
-              "notes": "(Optional) The value of the blue color channel. (0.0 -> 1.0)"
+              "notes": "(Optional) The value of the blue color channel. (0.0 -> 1.0)",
+              "optional": true,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "drawTextureStatic": {
@@ -1347,126 +1780,179 @@
           "parameters": [
             {
               "name": "texture",
-              "type": "Texture"
+              "type": "Texture",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "x",
-              "type": "number"
+              "type": "number",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
-              "type": "number"
+              "type": "number",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "alpha",
-              "type": "number"
+              "type": "number",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "red",
-              "type": "number"
+              "type": "number",
+              "optional": true,
+              "nullable": false
             },
             {
               "name": "green",
-              "type": "number"
+              "type": "number",
+              "optional": true,
+              "nullable": false
             },
             {
               "name": "blue",
-              "type": "number"
+              "type": "number",
+              "optional": true,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "drawTextureTiledX": {
-          "notes": "TODO: Document.",
+          "notes": "**NOTE**: If red, green, blue, and alpha are not provided, they will be filled as the color **white**.",
           "parameters": [
             {
               "name": "texture",
-              "type": "Texture"
+              "type": "Texture",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "x",
-              "type": "number"
+              "type": "number",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
-              "type": "number"
+              "type": "number",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "width",
-              "type": "number"
+              "type": "number",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "height",
-              "type": "number"
+              "type": "number",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "red",
-              "type": "number"
+              "type": "number",
+              "optional": true,
+              "nullable": false
             },
             {
               "name": "green",
-              "type": "number"
+              "type": "number",
+              "optional": true,
+              "nullable": false
             },
             {
               "name": "blue",
-              "type": "number"
+              "type": "number",
+              "optional": true,
+              "nullable": false
             },
             {
               "name": "alpha",
-              "type": "number"
+              "type": "number",
+              "optional": true,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "drawTextureTiledY": {
-          "notes": "TODO: Document.",
+          "notes": "**NOTE**: If red, green, blue, and alpha are not provided, they will be filled as the color **white**.",
           "parameters": [
             {
               "name": "texture",
-              "type": "Texture"
+              "type": "Texture",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "x",
-              "type": "number"
+              "type": "number",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
-              "type": "number"
+              "type": "number",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "width",
-              "type": "number"
+              "type": "number",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "height",
-              "type": "number"
+              "type": "number",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "red",
-              "type": "number"
+              "type": "number",
+              "optional": true,
+              "nullable": false
             },
             {
               "name": "green",
-              "type": "number"
+              "type": "number",
+              "optional": true,
+              "nullable": false
             },
             {
               "name": "blue",
-              "type": "number"
+              "type": "number",
+              "optional": true,
+              "nullable": false
             },
             {
               "name": "alpha",
-              "type": "number"
+              "type": "number",
+              "optional": true,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "drawTextZoomed": {
@@ -1475,314 +1961,376 @@
             {
               "name": "text",
               "type": "string",
-              "notes": "The text to draw."
+              "notes": "The text to draw.",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "x",
               "type": "number",
-              "notes": "The x-coordinate of the top-left area. (In pixels)"
+              "notes": "The x-coordinate of the top-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The y-coordinate of the top-left area. (In pixels)"
+              "notes": "The y-coordinate of the top-left area. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "scale",
               "type": "number",
-              "notes": "The scale multiplier. (100% scale is 1.0)"
+              "notes": "The scale multiplier. (100% scale is 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "red",
               "type": "number",
-              "notes": "The value of the red color channel. (0.0 -> 1.0)"
+              "notes": "The value of the red color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "green",
               "type": "number",
-              "notes": "The value of the green color channel. (0.0 -> 1.0)"
+              "notes": "The value of the green color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "blue",
               "type": "number",
-              "notes": "The value of the blue color channel. (0.0 -> 1.0)"
+              "notes": "The value of the blue color channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "alpha",
               "type": "number",
-              "notes": "The value of the alpha channel. (0.0 -> 1.0)"
+              "notes": "The value of the alpha channel. (0.0 -> 1.0)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "font",
               "type": "UIFont",
-              "notes": "The font preset to use. (If nil, UIFont.Small is used)"
+              "notes": "The font preset to use. (If nil, UIFont.Small is used)",
+              "optional": true,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "getAbsoluteX": {
           "returns": {
             "type": "number",
-            "notes": "The x-coordinate of the element in screen-space. (In pixels)"
+            "notes": "The x-coordinate of the element in screen-space. (In pixels)",
+            "nullable": false
           }
         },
         "getAbsoluteY": {
           "returns": {
             "type": "number",
-            "notes": "The x-coordinate of the element in screen-space. (In pixels)"
+            "notes": "The x-coordinate of the element in screen-space. (In pixels)",
+            "nullable": false
           }
         },
         "getBottom": {
           "returns": {
             "type": "number",
-            "notes": "The position of the element's x-coordinate plus the element's width. (In pixels)"
+            "notes": "The position of the element's x-coordinate plus the element's width. (In pixels)",
+            "nullable": false
           }
         },
         "getCentreX": {
           "returns": {
             "type": "number",
-            "notes": "The center-most x-coordinate of the element on the screen. (In pixels)"
+            "notes": "The center-most x-coordinate of the element on the screen. (In pixels)",
+            "nullable": false
           }
         },
         "getCentreY": {
           "returns": {
             "type": "number",
-            "notes": "The center-most y-coordinate of the element on the screen. (In pixels)"
+            "notes": "The center-most y-coordinate of the element on the screen. (In pixels)",
+            "nullable": false
           }
         },
         "getChildren": {
           "returns": {
             "type": "ISUIElement[]",
-            "notes": "Any child-elements assigned to the element."
+            "notes": "Any child-elements assigned to the element.",
+            "nullable": false
           }
         },
         "getController": {
           "returns": {
             "type": "any",
-            "notes": "The controller object."
+            "notes": "The controller object.",
+            "nullable": false
           }
         },
         "getHeight": {
           "returns": {
             "type": "number",
-            "notes": "The height of the element. (In pixels)"
+            "notes": "The height of the element. (In pixels)",
+            "nullable": false
           }
         },
         "getIsCaptured": {
           "returns": {
             "type": "boolean",
-            "notes": "True if the element is set to capture input."
+            "notes": "True if the element is set to capture input.",
+            "nullable": false
           }
         },
         "getIsFollowGameWorld": {
           "returns": {
             "type": "boolean",
-            "notes": "True if the element follows the offset of the world-camera."
+            "notes": "True if the element follows the offset of the world-camera.",
+            "nullable": false
           }
         },
         "getIsVisible": {
           "returns": {
             "type": "boolean",
-            "notes": "True if the element is visible."
+            "notes": "True if the element is visible.",
+            "nullable": false
           }
         },
         "getJavaObject": {
           "notes": "This object operates the java-side of the UI engine for Project Zomboid.",
           "returns": {
             "type": "UIElement",
-            "notes": "The internal element instance."
+            "notes": "The internal element instance.",
+            "nullable": false
           }
         },
         "getKeepOnScreen": {
           "returns": {
             "type": "boolean",
-            "notes": "True if the element is set to stay on the screen, even when not active."
+            "notes": "True if the element is set to stay on the screen, even when not active.",
+            "nullable": false
           }
         },
         "getMaxDrawHeight": {
           "returns": {
             "type": "number",
-            "notes": "The maximum height the element will draw anything."
+            "notes": "The maximum height the element will draw anything.",
+            "nullable": false
           }
         },
         "getMaxDrawWidth": {
           "returns": {
             "type": "number",
-            "notes": "The maximum width the element will draw anything."
+            "notes": "The maximum width the element will draw anything.",
+            "nullable": false
           }
         },
         "getMouseX": {
           "returns": {
             "type": "number",
-            "notes": "The mouse's x-coordinate, relative to the left-most x-coordinate of the element on the screen. (In pixels)"
+            "notes": "The mouse's x-coordinate, relative to the left-most x-coordinate of the element on the screen. (In pixels)",
+            "nullable": false
           }
         },
         "getMouseY": {
           "returns": {
             "type": "number",
-            "notes": "The mouse's y-coordinate, relative to the top-most y-coordinate of the element on the screen. (In pixels)"
+            "notes": "The mouse's y-coordinate, relative to the top-most y-coordinate of the element on the screen. (In pixels)",
+            "nullable": false
           }
         },
         "getParent": {
           "returns": {
             "type": "ISUIElement",
-            "notes": "The parent element, or **nil** if not assigned a parent."
+            "notes": "The parent element, or **nil** if not assigned a parent.",
+            "nullable": false
           }
         },
         "getRenderThisPlayerOnly": {
           "returns": {
             "type": "boolean",
-            "notes": "The player's index that should only be rendered. (-1 if not set)"
+            "notes": "The player's index that should only be rendered. (-1 if not set)",
+            "nullable": false
           }
         },
         "getRight": {
           "returns": {
             "type": "number",
-            "notes": "The position of the element's x-coordinate plus the element's width. (In pixels)"
+            "notes": "The position of the element's x-coordinate plus the element's width. (In pixels)",
+            "nullable": false
           }
         },
         "getScrollAreaHeight": {
           "returns": {
             "type": "number",
-            "notes": "The accurate height of the element, taking into account the area taken up by the horizontal scrollbar."
+            "notes": "The accurate height of the element, taking into account the area taken up by the horizontal scrollbar.",
+            "nullable": false
           }
         },
         "getScrollAreaWidth": {
           "returns": {
             "type": "number",
-            "notes": "The accurate width of the element, taking into account the area taken up by the vertical scrollbar."
+            "notes": "The accurate width of the element, taking into account the area taken up by the vertical scrollbar.",
+            "nullable": false
           }
         },
         "getScrollChildren": {
           "returns": {
             "type": "boolean",
-            "notes": "True if the children of the element should be scrolled."
+            "notes": "True if the children of the element should be scrolled.",
+            "nullable": false
           }
         },
         "getScrollHeight": {
           "returns": {
             "type": "number",
-            "notes": "The height of the scrollbar pane. (In pixels)"
+            "notes": "The height of the scrollbar pane. (In pixels)",
+            "nullable": false
           }
         },
         "getScrollWidth": {
           "returns": {
             "type": "number",
-            "notes": "The width of the scrollbar pane. (In pixels)"
+            "notes": "The width of the scrollbar pane. (In pixels)",
+            "nullable": false
           }
         },
         "getScrollWithParent": {
           "returns": {
             "type": "boolean",
-            "notes": "True if the element should be scrolled with its parent element."
+            "notes": "True if the element should be scrolled with its parent element.",
+            "nullable": false
           }
         },
         "getUIName": {
           "returns": {
             "type": "string",
-            "notes": "The formal UI name for the element."
+            "notes": "The formal UI name for the element.",
+            "nullable": false
           }
         },
         "getWidth": {
           "returns": {
             "type": "number",
-            "notes": "The width of the element. (In pixels)"
+            "notes": "The width of the element. (In pixels)",
+            "nullable": false
           }
         },
         "getX": {
           "returns": {
             "type": "number",
-            "notes": "The x-coordinate of the element on the screen. (In pixels)"
+            "notes": "The x-coordinate of the element on the screen. (In pixels)",
+            "nullable": false
           }
         },
         "getXScroll": {
           "returns": {
             "type": "number",
-            "notes": "The offset of the element's horizontal scrollbar. (In pixels) "
+            "notes": "The offset of the element's horizontal scrollbar. (In pixels) ",
+            "nullable": false
           }
         },
         "getY": {
           "returns": {
             "type": "void",
-            "notes": "The y-coordinate of the element on the screen. (In pixels)"
+            "notes": "The y-coordinate of the element on the screen. (In pixels)",
+            "nullable": false
           }
         },
         "getYScroll": {
           "returns": {
             "type": "number",
-            "notes": "The offset of the element's vertical scrollbar. (In pixels) "
+            "notes": "The offset of the element's vertical scrollbar. (In pixels) ",
+            "nullable": false
           }
         },
         "ignoreHeightChange": {
           "notes": "Internally sets the element's next updated width value, ignoring the change.",
           "returns": {
             "type": "nil",
-            "notes": "**NOTE**: The method returns but nothing is actually returned."
+            "notes": "**NOTE**: The method returns but nothing is actually returned.",
+            "nullable": false
           }
         },
         "ignoreWidthChange": {
           "notes": "Internally sets the element's next updated width value, ignoring the change.",
           "returns": {
             "type": "nil",
-            "notes": "**NOTE**: The method returns but nothing is actually returned."
+            "notes": "**NOTE**: The method returns but nothing is actually returned.",
+            "nullable": false
           }
         },
         "initialise": {
           "notes": "Initializes the element, assigning the next value of **ISUIElement.IDMax**.",
           "returns": {
-            "type": "void"
+            "type": "void",
+            "nullable": false
           }
         },
         "instantiate": {
           "notes": "Instantiates the internal Java object instance of the element. All initial dimensions are set and children are created.",
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "isEnabled": {
           "returns": {
             "type": "boolean",
-            "notes": "True if the element is set enabled."
+            "notes": "True if the element is set enabled.",
+            "nullable": false
           }
         },
         "isFollowGameWorld": {
           "returns": {
             "type": "boolean",
-            "notes": "True if the element follows the offset of the world-camera."
+            "notes": "True if the element follows the offset of the world-camera.",
+            "nullable": false
           }
         },
         "isMouseOver": {
           "returns": {
             "type": "boolean",
-            "notes": "True if the mouse is inside the box boundaries of the element."
+            "notes": "True if the mouse is inside the box boundaries of the element.",
+            "nullable": false
           }
         },
         "isReallyVisible": {
           "returns": {
             "type": "boolean",
-            "notes": "True if the element ***really*** is visible."
+            "notes": "True if the element ***really*** is visible.",
+            "nullable": false
           }
         },
         "isRemoved": {
           "returns": {
             "type": "boolean",
-            "notes": "True if the element is flagged for removal on the next update tick."
+            "notes": "True if the element is flagged for removal on the next update tick.",
+            "nullable": false
           }
         },
         "isVisible": {
           "returns": {
             "type": "boolean",
-            "notes": "True if the element is visible."
+            "notes": "True if the element is visible.",
+            "nullable": false
           }
         },
         "isVScrollBarVisible": {
           "returns": {
             "type": "boolean",
-            "notes": "True if vertical scrollbars are enabled and the height of the contents of the element are greater than the scrollbar's height."
+            "notes": "True if vertical scrollbars are enabled and the height of the contents of the element are greater than the scrollbar's height.",
+            "nullable": false
           }
         },
         "onFocus": {
@@ -1791,17 +2339,22 @@
             {
               "name": "x",
               "type": "number",
-              "notes": "The mouse's x-coordinate. (In pixels)"
+              "notes": "The mouse's x-coordinate. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The mouse's y-coordinate. (In pixels)"
+              "notes": "The mouse's y-coordinate. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "onGainJoypadFocus": {
@@ -1810,12 +2363,15 @@
             {
               "name": "joypadData",
               "type": "JoypadData",
-              "notes": "The joypad."
+              "notes": "The joypad.",
+              "optional": true,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "onJoypadDirDown": {
@@ -1823,12 +2379,15 @@
           "parameters": [
             {
               "name": "joypadData",
-              "type": "JoypadData"
+              "type": "JoypadData",
+              "optional": true,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "onJoypadDirLeft": {
@@ -1836,12 +2395,15 @@
           "parameters": [
             {
               "name": "joypadData",
-              "type": "JoypadData"
+              "type": "JoypadData",
+              "optional": true,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "onJoypadDirRight": {
@@ -1849,12 +2411,15 @@
           "parameters": [
             {
               "name": "joypadData",
-              "type": "JoypadData"
+              "type": "JoypadData",
+              "optional": true,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "onJoypadDirUp": {
@@ -1862,12 +2427,15 @@
           "parameters": [
             {
               "name": "joypadData",
-              "type": "JoypadData"
+              "type": "JoypadData",
+              "optional": true,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "onJoypadDown": {
@@ -1875,12 +2443,15 @@
           "parameters": [
             {
               "name": "button",
-              "type": "number"
+              "type": "number",
+              "optional": true,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "onLoseJoypadFocus": {
@@ -1889,12 +2460,15 @@
             {
               "name": "joypadData",
               "type": "JoypadData",
-              "notes": "The joypad."
+              "notes": "The joypad.",
+              "optional": true,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "onMouseDownOutside": {
@@ -1903,17 +2477,22 @@
             {
               "name": "x",
               "type": "number",
-              "notes": "The mouse's x-coordinate. (In pixels)"
+              "notes": "The mouse's x-coordinate. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The mouse's y-coordinate. (In pixels)"
+              "notes": "The mouse's y-coordinate. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "onMouseMove": {
@@ -1922,17 +2501,22 @@
             {
               "name": "deltaX",
               "type": "number",
-              "notes": "The delta (b - a), the mouse's x-coordinate moved from the last update. (In pixels)"
+              "notes": "The delta (b - a), the mouse's x-coordinate moved from the last update. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "deltaY",
               "type": "number",
-              "notes": "The delta (b - a), the mouse's y-coordinate moved from the last update. (In pixels)"
+              "notes": "The delta (b - a), the mouse's y-coordinate moved from the last update. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "onMouseMoveOutside": {
@@ -1941,17 +2525,22 @@
             {
               "name": "deltaX",
               "type": "number",
-              "notes": "The delta (b - a), the mouse's x-coordinate moved from the last update. (In pixels)"
+              "notes": "The delta (b - a), the mouse's x-coordinate moved from the last update. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "deltaY",
               "type": "number",
-              "notes": "The delta (b - a), the mouse's y-coordinate moved from the last update. (In pixels)"
+              "notes": "The delta (b - a), the mouse's y-coordinate moved from the last update. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "onMouseUp": {
@@ -1960,17 +2549,22 @@
             {
               "name": "x",
               "type": "number",
-              "notes": "The x-coordinate of the mouse relative to the element."
+              "notes": "The x-coordinate of the mouse relative to the element.",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The y-coordinate of the mouse relative to the element."
+              "notes": "The y-coordinate of the mouse relative to the element.",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "onMouseUpOutside": {
@@ -1979,17 +2573,22 @@
             {
               "name": "x",
               "type": "number",
-              "notes": "The mouse's x-coordinate. (In pixels)"
+              "notes": "The mouse's x-coordinate. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The mouse's y-coordinate. (In pixels)"
+              "notes": "The mouse's y-coordinate. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "onMouseWheel": {
@@ -1998,19 +2597,23 @@
             {
               "name": "delta",
               "type": "number",
-              "notes": "The change (or offset) of the mouse-wheel. Signage of the value identifies the direction of the mouse-wheel. "
+              "notes": "The change (or offset) of the mouse-wheel. Signage of the value identifies the direction of the mouse-wheel. ",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "onResize": {
           "notes": "Triggered when the element resizes.",
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "onRightMouseDown": {
@@ -2019,17 +2622,22 @@
             {
               "name": "x",
               "type": "number",
-              "notes": "The mouse's x-coordinate. (In pixels)"
+              "notes": "The mouse's x-coordinate. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The mouse's y-coordinate. (In pixels)"
+              "notes": "The mouse's y-coordinate. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "onRightMouseDownOutside": {
@@ -2038,17 +2646,22 @@
             {
               "name": "x",
               "type": "number",
-              "notes": "The mouse's x-coordinate. (In pixels)"
+              "notes": "The mouse's x-coordinate. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The mouse's y-coordinate. (In pixels)"
+              "notes": "The mouse's y-coordinate. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "onRightMouseUp": {
@@ -2057,17 +2670,22 @@
             {
               "name": "x",
               "type": "number",
-              "notes": "The mouse's x-coordinate. (In pixels)"
+              "notes": "The mouse's x-coordinate. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The mouse's y-coordinate. (In pixels)"
+              "notes": "The mouse's y-coordinate. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "onRightMouseUpOutside": {
@@ -2076,31 +2694,38 @@
             {
               "name": "x",
               "type": "number",
-              "notes": "The mouse's x-coordinate. (In pixels)"
+              "notes": "The mouse's x-coordinate. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The mouse's y-coordinate. (In pixels)"
+              "notes": "The mouse's y-coordinate. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "prerender": {
           "notes": "Triggered before rendering the element. All render-based calculations go here.",
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "recalcSize": {
           "notes": "Triggers **self.javaObject:onResize()**.",
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "removeChild": {
@@ -2109,26 +2734,31 @@
             {
               "name": "child",
               "type": "ISUIElement",
-              "notes": "The child to remove."
+              "notes": "The child to remove.",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "removeFromUIManager": {
           "notes": "Removes the element reference from the UIManager instance.",
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "render": {
           "notes": "Triggered when rendering the element. All render calls go here.\\n**NOTE**: This is called in the game's render thread. All render calls fired outside of this call are ignored.",
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "repaintStencilRect": {
@@ -2137,34 +2767,44 @@
             {
               "name": "x",
               "type": "number",
-              "notes": "The left-most x-coordinate of the stencil. (In pixels)"
+              "notes": "The left-most x-coordinate of the stencil. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The top-most y-coordinate of the stencil. (In pixels)"
+              "notes": "The top-most y-coordinate of the stencil. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "width",
               "type": "number",
-              "notes": "The width of the stencil. (In pixels)"
+              "notes": "The width of the stencil. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "height",
               "type": "number",
-              "notes": "The height of the stencil. (In pixels)"
+              "notes": "The height of the stencil. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "resumeStencil": {
           "notes": "Resumes (or starts) the stencil for the set box boundary of the element. Anything drawn through or outside the box boundaries of the element is clipped & stenciled out of the frame buffer.",
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "setAlwaysOnTop": {
@@ -2173,12 +2813,15 @@
             {
               "name": "flag",
               "type": "boolean",
-              "notes": "The flag to set."
+              "notes": "The flag to set.",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "setAnchorBottom": {
@@ -2186,11 +2829,14 @@
             {
               "name": "flag",
               "type": "boolean",
-              "notes": "If true, the element anchors to the bottom its parent element."
+              "notes": "If true, the element anchors to the bottom its parent element.",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
-            "type": "void"
+            "type": "void",
+            "nullable": false
           }
         },
         "setAnchorLeft": {
@@ -2198,11 +2844,14 @@
             {
               "name": "flag",
               "type": "boolean",
-              "notes": "If true, the element anchors to the left-side of its parent element."
+              "notes": "If true, the element anchors to the left-side of its parent element.",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
-            "type": "void"
+            "type": "void",
+            "nullable": false
           }
         },
         "setAnchorRight": {
@@ -2210,11 +2859,14 @@
             {
               "name": "flag",
               "type": "boolean",
-              "notes": "If true, the element anchors to the right-side of its parent element."
+              "notes": "If true, the element anchors to the right-side of its parent element.",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
-            "type": "void"
+            "type": "void",
+            "nullable": false
           }
         },
         "setAnchorTop": {
@@ -2222,11 +2874,14 @@
             {
               "name": "flag",
               "type": "boolean",
-              "notes": "If true, the element anchors to the top of its parent element."
+              "notes": "If true, the element anchors to the top of its parent element.",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
-            "type": "void"
+            "type": "void",
+            "nullable": false
           }
         },
         "setCapture": {
@@ -2234,12 +2889,15 @@
           "parameters": [
             {
               "name": "flag",
-              "type": "boolean"
+              "type": "boolean",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "setController": {
@@ -2248,11 +2906,14 @@
             {
               "name": "controller",
               "type": "any",
-              "notes": "The controller object."
+              "notes": "The controller object.",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
-            "type": "void"
+            "type": "void",
+            "nullable": false
           }
         },
         "setEnabled": {
@@ -2261,12 +2922,15 @@
             {
               "name": "flag",
               "type": "boolean",
-              "notes": "The flag to set."
+              "notes": "The flag to set.",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "setFollowGameWorld": {
@@ -2275,12 +2939,15 @@
             {
               "name": "flag",
               "type": "boolean",
-              "notes": "The flag to set."
+              "notes": "The flag to set.",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "setForceCursorVisible": {
@@ -2289,12 +2956,15 @@
             {
               "name": "flag",
               "type": "boolean",
-              "notes": "The flag to set."
+              "notes": "The flag to set.",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "setHeight": {
@@ -2303,12 +2973,15 @@
             {
               "name": "height",
               "type": "number",
-              "notes": "The height to set. (In pixels)"
+              "notes": "The height to set. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "setHeightAndParentHeight": {
@@ -2317,12 +2990,15 @@
             {
               "name": "height",
               "type": "number",
-              "notes": "The height to set. (In pixels)"
+              "notes": "The height to set. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "setMaxDrawHeight": {
@@ -2331,12 +3007,15 @@
             {
               "name": "height",
               "type": "number",
-              "notes": "The height to set. (In pixels)"
+              "notes": "The height to set. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "setMaxDrawWidth": {
@@ -2345,12 +3024,15 @@
             {
               "name": "width",
               "type": "number",
-              "notes": "The height to set. (In pixels)"
+              "notes": "The height to set. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "setOnMouseDoubleClick": {
@@ -2358,17 +3040,22 @@
             {
               "name": "target",
               "type": "ISUIElement",
-              "notes": "The target clicked."
+              "notes": "The target clicked.",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "callback",
               "type": "fun(item: ISUIElement): void",
-              "notes": "The callback to trigger on the MouseEvent."
+              "notes": "The callback to trigger on the MouseEvent.",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "setRemoved": {
@@ -2377,12 +3064,15 @@
             {
               "name": "flag",
               "type": "boolean",
-              "notes": "The flag to set."
+              "notes": "The flag to set.",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "setRenderThisPlayerOnly": {
@@ -2391,12 +3081,15 @@
             {
               "name": "value",
               "type": "number",
-              "notes": "The player's index to set. (0 - 3)"
+              "notes": "The player's index to set. (0 - 3)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "setScrollChildren": {
@@ -2405,12 +3098,15 @@
             {
               "name": "flag",
               "type": "boolean",
-              "notes": "The flag to set."
+              "notes": "The flag to set.",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "setScrollHeight": {
@@ -2419,12 +3115,15 @@
             {
               "name": "value",
               "type": "number",
-              "notes": "The value to set. (In pixels)"
+              "notes": "The value to set. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "setScrollWidth": {
@@ -2433,12 +3132,15 @@
             {
               "name": "value",
               "type": "number",
-              "notes": "The value to set. (In pixels)"
+              "notes": "The value to set. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "setScrollWithParent": {
@@ -2447,12 +3149,15 @@
             {
               "name": "flag",
               "type": "boolean",
-              "notes": "The flag to set."
+              "notes": "The flag to set.",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "setStencilRect": {
@@ -2461,27 +3166,36 @@
             {
               "name": "x",
               "type": "number",
-              "notes": "The left-most x-coordinate. (In pixels)"
+              "notes": "The left-most x-coordinate. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "y",
               "type": "number",
-              "notes": "The top-most y-coordinate. (In pixels)"
+              "notes": "The top-most y-coordinate. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "width",
               "type": "number",
-              "notes": "The width of the stencil. (In pixels)"
+              "notes": "The width of the stencil. (In pixels)",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "height",
               "type": "number",
-              "notes": "The height of the stencil. (In pixels)"
+              "notes": "The height of the stencil. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "setUIName": {
@@ -2490,12 +3204,15 @@
             {
               "name": "name",
               "type": "string",
-              "notes": "The name to set."
+              "notes": "The name to set.",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "setVisible": {
@@ -2504,12 +3221,15 @@
             {
               "name": "flag",
               "type": "boolean",
-              "notes": "The flag to set."
+              "notes": "The flag to set.",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "setWantKeyEvents": {
@@ -2518,12 +3238,15 @@
             {
               "name": "flag",
               "type": "boolean",
-              "notes": "The flag to set."
+              "notes": "The flag to set.",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "setWidth": {
@@ -2532,12 +3255,15 @@
             {
               "name": "width",
               "type": "number",
-              "notes": "The width to set. (In pixels)"
+              "notes": "The width to set. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "setWidthAndParentWidth": {
@@ -2546,12 +3272,15 @@
             {
               "name": "width",
               "type": "number",
-              "notes": "The width to set. (In pixels)"
+              "notes": "The width to set. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "setX": {
@@ -2560,11 +3289,14 @@
             {
               "name": "x",
               "type": "number",
-              "notes": "The x-coordinate to set. (In pixels)"
+              "notes": "The x-coordinate to set. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
-            "type": "void"
+            "type": "void",
+            "nullable": false
           }
         },
         "setXScroll": {
@@ -2573,12 +3305,15 @@
             {
               "name": "value",
               "type": "number",
-              "notes": "The value to set. (In pixels)"
+              "notes": "The value to set. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "setY": {
@@ -2587,11 +3322,14 @@
             {
               "name": "y",
               "type": "number",
-              "notes": "The y-coordinate to set. (In pixels)"
+              "notes": "The y-coordinate to set. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
-            "type": "void"
+            "type": "void",
+            "nullable": false
           }
         },
         "setYScroll": {
@@ -2600,12 +3338,15 @@
             {
               "name": "value",
               "type": "number",
-              "notes": "The value to set. (In pixels)"
+              "notes": "The value to set. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "shrinkX": {
@@ -2614,12 +3355,15 @@
             {
               "name": "value",
               "type": "number",
-              "notes": "The value to shrink the width. (In pixels)"
+              "notes": "The value to shrink the width. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "shrinkY": {
@@ -2628,12 +3372,15 @@
             {
               "name": "value",
               "type": "number",
-              "notes": "The height to shrink. (In pixels)"
+              "notes": "The height to shrink. (In pixels)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "stayOnSplitScreen": {
@@ -2642,39 +3389,46 @@
             {
               "name": "playerIndex",
               "type": "number",
-              "notes": "The player's index value. (between 0 and 3)"
+              "notes": "The player's index value. (between 0 and 3)",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "suspendStencil": {
           "notes": "Suspends (or halts) the stencil used to clip render / draw calls from rendering outside the set box boundary of the element. Once suspended, anything drawn outside the boundary will show.",
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "toString": {
           "returns": {
             "type": "string",
-            "notes": "A formally-wrapped for **tostring(self)** using the** getUIName()** to formally name the printed result. "
+            "notes": "A formally-wrapped for **tostring(self)** using the** getUIName()** to formally name the printed result. ",
+            "nullable": false
           }
         },
         "update": {
           "notes": "Triggered every updated tick in the game's simulation.",
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "updateScrollbars": {
           "notes": "Updates the horizontal and vertical scrollbars, clamping the vertical scrollbar if outside of the content-range.",
           "returns": {
             "type": "void",
-            "notes": ""
+            "notes": "",
+            "nullable": false
           }
         },
         "wrapInCollapsableWindow": {
@@ -2683,26 +3437,60 @@
             {
               "name": "title",
               "type": "string",
-              "notes": "The title of the window."
+              "notes": "The title of the window.",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "isResizable",
               "type": "boolean",
-              "notes": "True if the window can be resized by the player."
+              "notes": "True if the window can be resized by the player.",
+              "optional": false,
+              "nullable": false
             },
             {
               "name": "subClass",
               "type": "any",
-              "notes": "If set, the class object is used instead. If nil, **ISCollapsableWindow** is used."
+              "notes": "If set, the class object is used instead. If nil, **ISCollapsableWindow** is used.",
+              "optional": false,
+              "nullable": false
             }
           ],
           "returns": {
             "type": "ISCollapsableWindow | any",
-            "notes": "The instance of the wrapping class."
+            "notes": "The instance of the wrapping class.",
+            "nullable": false
           }
         }
       },
       "mutable": false
+    }
+  },
+  "tables": {
+    "ProgressBarColor": {
+      "notes": "A generic color struct with r, g, b, and a values between 0.0 and 1.0.",
+      "fields": {
+        "a": {
+          "type": "number",
+          "notes": "The alpha channel value. (0.0 -> 1.0)",
+          "nullable": false
+        },
+        "b": {
+          "type": "number",
+          "notes": "The blue color channel value. (0.0 -> 1.0)",
+          "nullable": false
+        },
+        "g": {
+          "type": "number",
+          "notes": "The green color channel value. (0.0 -> 1.0)",
+          "nullable": false
+        },
+        "r": {
+          "type": "number",
+          "notes": "The red color channel value. (0.0 -> 1.0)",
+          "nullable": false
+        }
+      }
     }
   }
 }
