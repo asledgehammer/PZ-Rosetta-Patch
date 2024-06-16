@@ -1,0 +1,828 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-iso": {
+      "PlayerHomingPoint": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "plrIndex",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          }
+        ],
+        "extends": "Object",
+        "methods": [
+          {
+            "name": "getA",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "The lerp value for angle adjustment, can be tweaked to be more slowly or faster responding.",
+            "name": "getAngleLerpVal",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getB",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getG",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "Offset the screen target point, for example to point to top of counter by offsetting Y value",
+            "name": "getHomeOnOffsetX",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getHomeOnOffsetY",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "The distance in tiles uppon which the pointer will jump to target (if homeOnTarget is enabled, and the target is onScreen)",
+            "name": "getHomeOnTargetDist",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getID",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "The lerp value for jumping to target (homeOneTarget), can be tweaked to be more slowly or faster responding.",
+            "name": "getMovementLerpVal",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getR",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getRenderHeight",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "The base render position for pointers is the center of the screen, adjust this to have it more at feet or head of character for example.",
+            "name": "getRenderOffsetX",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getRenderOffsetY",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "Render width and height for the pointer texture.",
+            "name": "getRenderWidth",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "The distance in pixels the pointer will hover around the character.",
+            "name": "getStickToCharDist",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getTargetAngle",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "The target position on the map for this pointer.",
+            "name": "getX",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getY",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "Active can be set to false, the pointer will remain but wont be drawn.",
+            "name": "isActive",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "When enabled will ommit angle calculation, custom angle be set with \u0027setTargetAngle\u0027.",
+            "name": "isCustomTargetAngle",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "if enabled the pointer will jump to the target when its in view (and within the \u0027homeOnTargetDist\u0027.",
+            "name": "isHomeOnTargetInView",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "isRemoved",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "When called will remove the pointer next tick",
+            "name": "remove",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "setA",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "a",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setActive",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "active",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setAngleLerpVal",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "angleLerpVal",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setB",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "b",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setCustomTargetAngle",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "customTargetAngle",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setG",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "g",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setHighCounter",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "setHomeOnOffsetX",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "homeOnOffsetX",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setHomeOnOffsetY",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "homeOnOffsetY",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setHomeOnTargetDist",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "homeOnTargetDist",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setHomeOnTargetInView",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "homeOnTargetInView",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setMovementLerpVal",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "movementLerpVal",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setR",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "r",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setRenderHeight",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "renderHeight",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setRenderOffsetX",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "renderOffsetX",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setRenderOffsetY",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "renderOffsetY",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setRenderWidth",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "renderWidth",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setStickToCharDist",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "stickToCharDist",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setTableSurface",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "setTargetAngle",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "targetAngle",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setTexture",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "texname",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setX",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setXOffsetScaled",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "offset",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setY",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setYOffsetScaled",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "offset",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "static"
+        ],
+        "javaType": "class"
+      }
+    }
+  }
+}

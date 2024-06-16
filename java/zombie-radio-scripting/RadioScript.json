@@ -1,0 +1,398 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-radio-scripting": {
+      "RadioScript": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "n",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "loopmin",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "loopmax",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "n",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "loopmin",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "loopmax",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "guid",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          }
+        ],
+        "notes": "Turbo",
+        "extends": "Object",
+        "methods": [
+          {
+            "name": "AddBroadcast",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "broadcast",
+                "type": {
+                  "nullable": true,
+                  "basic": "RadioBroadCast"
+                }
+              }
+            ]
+          },
+          {
+            "name": "AddBroadcast",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "broadcast",
+                "type": {
+                  "nullable": true,
+                  "basic": "RadioBroadCast"
+                }
+              },
+              {
+                "name": "ignoreTimestamps",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "AddExitOption",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "scriptname",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "chance",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "startdelay",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "GetGUID",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "GetName",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "Reset",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "UpdateScript",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "timeStamp",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "clearExitOptions",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getBroadcastList",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ArrayList"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getBroadcastWithID",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "RadioBroadCast"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "guid",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getCurrentBroadcast",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "RadioBroadCast"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getExitOptions",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ArrayList"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getLoopMax",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getLoopMin",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getNextScript",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ExitOption"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getStartDay",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getStartDayStamp",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getValidAirBroadcast",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "RadioBroadCast"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getValidAirBroadcastDebug",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "RadioBroadCast"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "setStartDayStamp",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "day",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "final"
+        ],
+        "javaType": "class"
+      }
+    }
+  }
+}

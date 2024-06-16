@@ -1,0 +1,567 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-iso": {
+      "IsoObjectPicker": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "extends": "Object",
+        "methods": [
+          {
+            "name": "Add",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "width",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "height",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "gridSquare",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGridSquare"
+                }
+              },
+              {
+                "name": "tile",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoObject"
+                }
+              },
+              {
+                "name": "flip",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              },
+              {
+                "name": "scaleX",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "scaleY",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "ContextPick",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ClickObject"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "screenX",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "screenY",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Init",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "Pick",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ClickObject"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "xx",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "yy",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "PickCorpse",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoObject"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "screenX",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "screenY",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "PickDoor",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoObject"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "screenX",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "screenY",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "bTransparent",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "PickHoppable",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoObject"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "screenX",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "screenY",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "PickTarget",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoMovingObject"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "xx",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "yy",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "PickThumpable",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoObject"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "screenX",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "screenY",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "PickTree",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoObject"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "screenX",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "screenY",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "PickVehicle",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "BaseVehicle"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "screenX",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "screenY",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "PickWindow",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoObject"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "screenX",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "screenY",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "PickWindowFrame",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoObject"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "screenX",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "screenY",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "StartRender",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getInstance",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoObjectPicker"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "final"
+        ],
+        "fields": {
+          "dirty": {
+            "deprecated": false,
+            "name": "dirty",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "boolean"
+            }
+          },
+          "yOffSinceDirty": {
+            "deprecated": false,
+            "name": "yOffSinceDirty",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "float"
+            }
+          },
+          "maxcount": {
+            "deprecated": false,
+            "name": "maxcount",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "Instance": {
+            "deprecated": false,
+            "name": "Instance",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "IsoObjectPicker"
+            }
+          },
+          "ThisFrame": {
+            "deprecated": false,
+            "name": "ThisFrame",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "ArrayList"
+            }
+          },
+          "count": {
+            "deprecated": false,
+            "name": "count",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "ClickObjectStore": {
+            "deprecated": false,
+            "name": "ClickObjectStore",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "ClickObject"
+            }
+          },
+          "counter": {
+            "deprecated": false,
+            "name": "counter",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "wasDirty": {
+            "deprecated": false,
+            "name": "wasDirty",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "boolean"
+            }
+          },
+          "xOffSinceDirty": {
+            "deprecated": false,
+            "name": "xOffSinceDirty",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "float"
+            }
+          }
+        },
+        "javaType": "class"
+      }
+    }
+  }
+}

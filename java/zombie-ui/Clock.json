@@ -1,0 +1,151 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-ui": {
+      "Clock": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          }
+        ],
+        "extends": "UIElement",
+        "methods": [
+          {
+            "name": "isDateVisible",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "onMouseDown",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "double"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "double"
+                }
+              }
+            ]
+          },
+          {
+            "name": "render",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "resize",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "final"
+        ],
+        "fields": {
+          "digital": {
+            "deprecated": false,
+            "name": "digital",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "boolean"
+            }
+          },
+          "isAlarmSet": {
+            "deprecated": false,
+            "name": "isAlarmSet",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "boolean"
+            }
+          },
+          "instance": {
+            "deprecated": false,
+            "name": "instance",
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Clock"
+            }
+          },
+          "isAlarmRinging": {
+            "deprecated": false,
+            "name": "isAlarmRinging",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "boolean"
+            }
+          }
+        },
+        "javaType": "class"
+      }
+    }
+  }
+}

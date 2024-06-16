@@ -1,0 +1,136 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-radio-devices": {
+      "PresetEntry": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "n",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "f",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          }
+        ],
+        "notes": "turbo",
+        "extends": "Object",
+        "methods": [
+          {
+            "name": "getFrequency",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getName",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "setFrequency",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "f",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setName",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "n",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "final"
+        ],
+        "fields": {
+          "name": {
+            "deprecated": false,
+            "name": "name",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "String"
+            }
+          },
+          "frequency": {
+            "deprecated": false,
+            "name": "frequency",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          }
+        },
+        "javaType": "class"
+      }
+    }
+  }
+}

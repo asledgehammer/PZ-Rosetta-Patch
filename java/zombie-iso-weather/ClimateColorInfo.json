@@ -1,0 +1,496 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-iso-weather": {
+      "ClimateColorInfo": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "r",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "g",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "b",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "a",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "r",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "g",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "b",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "a",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "r2",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "g2",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "b2",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "a2",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          }
+        ],
+        "notes": "TurboTuTone.  A pair of colors for global light interior and exterior, the alpha of the colors is blend intensity.  When outside the shader is used to apply global light, when inside a room its using a different method (using the weather mask) to do the coloring of outside parts.  This requires separate balancing of colors as using one and the same for both methods doesn\u0027t always look right.",
+        "extends": "Object",
+        "methods": [
+          {
+            "name": "getExterior",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Color"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getInterior",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Color"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "interp",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ClimateColorInfo"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "to",
+                "type": {
+                  "nullable": true,
+                  "basic": "ClimateColorInfo"
+                }
+              },
+              {
+                "name": "t",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "result",
+                "type": {
+                  "nullable": true,
+                  "basic": "ClimateColorInfo"
+                }
+              }
+            ]
+          },
+          {
+            "name": "interp",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ClimateColorInfo"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "source",
+                "type": {
+                  "nullable": true,
+                  "basic": "ClimateColorInfo"
+                }
+              },
+              {
+                "name": "target",
+                "type": {
+                  "nullable": true,
+                  "basic": "ClimateColorInfo"
+                }
+              },
+              {
+                "name": "t",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "resultColorInfo",
+                "type": {
+                  "nullable": true,
+                  "basic": "ClimateColorInfo"
+                }
+              }
+            ]
+          },
+          {
+            "name": "load",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "input",
+                "type": {
+                  "nullable": true,
+                  "basic": "DataInputStream"
+                }
+              },
+              {
+                "name": "worldVersion",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "read",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "input",
+                "type": {
+                  "nullable": true,
+                  "basic": "ByteBuffer"
+                }
+              }
+            ]
+          },
+          {
+            "name": "save",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "output",
+                "type": {
+                  "nullable": true,
+                  "basic": "DataOutputStream"
+                }
+              }
+            ]
+          },
+          {
+            "name": "scale",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "val",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setExterior",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "other",
+                "type": {
+                  "nullable": true,
+                  "basic": "Color"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setExterior",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "r",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "g",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "b",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "a",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setInterior",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "other",
+                "type": {
+                  "nullable": true,
+                  "basic": "Color"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setInterior",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "r",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "g",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "b",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "a",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setTo",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "other",
+                "type": {
+                  "nullable": true,
+                  "basic": "ClimateColorInfo"
+                }
+              }
+            ]
+          },
+          {
+            "name": "write",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "output",
+                "type": {
+                  "nullable": true,
+                  "basic": "ByteBuffer"
+                }
+              }
+            ]
+          },
+          {
+            "name": "writeColorInfoConfig",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public"
+        ],
+        "javaType": "class"
+      }
+    }
+  }
+}

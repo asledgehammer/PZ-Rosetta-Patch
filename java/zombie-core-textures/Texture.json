@@ -1,0 +1,3013 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-core-textures": {
+      "Texture": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "path",
+                "type": {
+                  "nullable": true,
+                  "basic": "AssetPath"
+                }
+              },
+              {
+                "name": "manager",
+                "type": {
+                  "nullable": true,
+                  "basic": "AssetManager"
+                }
+              },
+              {
+                "name": "params",
+                "type": {
+                  "nullable": true,
+                  "basic": "TextureAssetParams"
+                }
+              }
+            ]
+          },
+          {
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "data",
+                "type": {
+                  "nullable": true,
+                  "basic": "TextureID"
+                }
+              },
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "LOADS and crete a texture from a file",
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "relative path",
+                "name": "file",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "b",
+                "type": {
+                  "nullable": true,
+                  "basic": "BufferedInputStream"
+                }
+              },
+              {
+                "name": "bDoMask",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              },
+              {
+                "name": "format",
+                "type": {
+                  "nullable": true,
+                  "basic": "PZFileformat"
+                }
+              }
+            ]
+          },
+          {
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "b",
+                "type": {
+                  "nullable": true,
+                  "basic": "BufferedInputStream"
+                }
+              },
+              {
+                "name": "bDoMask",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "file",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "bDelete",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              },
+              {
+                "name": "bUseAlpha",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "palette",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "palette",
+                "type": {
+                  "nullable": true,
+                  "basic": "int[]"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "LOADS and crete a texture from a file",
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "relative path",
+                "name": "file",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "useAlphaChannel",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "create a new empty texture.",
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "size of texture",
+                "name": "width",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "height",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "flags",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "create a new empty texture.",
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "size of texture",
+                "name": "width",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "height",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "flags",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "loads and create a texture from a file and cretes as trasparent the section that have the color equal to the  RGB valued  spefied",
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "relative path",
+                "name": "file",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "red",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "green",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "blue",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "creates a copy of an existent texture",
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "original texture",
+                "name": "t",
+                "type": {
+                  "nullable": true,
+                  "basic": "Texture"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "creates an emptiy texture and adds it to the game engine\u0027s texture list",
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "extends": "Asset",
+        "methods": [
+          {
+            "notes": "Blinds the image",
+            "name": "bind",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "Description copied from interface: ITexture",
+            "name": "bind",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "the texture unit in witch the current TextureObject will be binded",
+                "name": "unit",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "bindNone",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "clearTextures",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "collectAllIcons",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "map",
+                "type": {
+                  "nullable": true,
+                  "basic": "HashMap",
+                  "full": "HashMap\u003cString,String\u003e"
+                }
+              },
+              {
+                "name": "mapFull",
+                "type": {
+                  "nullable": true,
+                  "basic": "HashMap",
+                  "full": "HashMap\u003cString,String\u003e"
+                }
+              }
+            ]
+          },
+          {
+            "name": "copyMaskRegion",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "from",
+                "type": {
+                  "nullable": true,
+                  "basic": "Texture"
+                }
+              },
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "width",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "height",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "creates the mask of collisions",
+            "name": "createMask",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "createMask",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "mask",
+                "type": {
+                  "nullable": true,
+                  "basic": "boolean[]"
+                }
+              }
+            ]
+          },
+          {
+            "name": "createMask",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "mask",
+                "type": {
+                  "nullable": true,
+                  "basic": "BooleanGrid"
+                }
+              }
+            ]
+          },
+          {
+            "name": "createMask",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "buf",
+                "type": {
+                  "nullable": true,
+                  "basic": "WrappedBuffer"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "destroys the image and release all resources",
+            "name": "destroy",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "equals",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "other",
+                "type": {
+                  "nullable": true,
+                  "basic": "Texture"
+                }
+              }
+            ]
+          },
+          {
+            "name": "flipPixels",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "int[]"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "imgPixels",
+                "type": {
+                  "nullable": true,
+                  "basic": "int[]"
+                }
+              },
+              {
+                "name": "imgw",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "imgh",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "forgetTexture",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "returns the texture\u0027s pixel in a ByteBuffer",
+            "name": "getData",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "WrappedBuffer"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getEngineMipmapTexture",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Texture"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "getErrorTexture",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Texture"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "notes": "Description copied from interface: ITexture",
+            "name": "getHeight",
+            "returns": {
+              "notes": "the height of image",
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "Description copied from interface: ITexture",
+            "name": "getHeightHW",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getHeightOrig",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "Description copied from interface: ITexture",
+            "name": "getID",
+            "returns": {
+              "notes": "the ID of image in the Vram",
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "returns the mask of collisions",
+            "name": "getMask",
+            "returns": {
+              "notes": "mask of collisions",
+              "type": {
+                "nullable": true,
+                "basic": "Mask"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getName",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getOffsetX",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getOffsetY",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getRealHeight",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getRealWidth",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getSharedTexture",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Texture"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getSharedTexture",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Texture"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "flags",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getSharedTexture",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Texture"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "palette",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getSharedTexture",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Texture"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "palette",
+                "type": {
+                  "nullable": true,
+                  "basic": "int[]"
+                }
+              },
+              {
+                "name": "paletteName",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getSteamAvatar",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Texture"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "steamID",
+                "type": {
+                  "nullable": false,
+                  "basic": "long"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "gets a texture from it\u0027s name; If the texture isn\u0027t already loaded this method will load it.",
+            "name": "getTexture",
+            "returns": {
+              "notes": "returns the texture from the given name",
+              "type": {
+                "nullable": true,
+                "basic": "Texture"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "notes": "the name of texture",
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getTextureId",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "TextureID"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getType",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "AssetType"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getUVScale",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Vector2"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "uvScale",
+                "type": {
+                  "nullable": true,
+                  "basic": "Vector2"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "indicates if the image will use the alpha channel or note",
+            "name": "getUseAlphaChannel",
+            "returns": {
+              "notes": "if the image will use the alpha channel or note",
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getWhite",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Texture"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "notes": "Description copied from interface: ITexture",
+            "name": "getWidth",
+            "returns": {
+              "notes": "the width of image",
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "Description copied from interface: ITexture",
+            "name": "getWidthHW",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getWidthOrig",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "Description copied from interface: ITexture",
+            "name": "getXEnd",
+            "returns": {
+              "notes": "the end X-coordinate",
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "Description copied from interface: ITexture",
+            "name": "getXStart",
+            "returns": {
+              "notes": "the start X-coordinate",
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "Description copied from interface: ITexture",
+            "name": "getYEnd",
+            "returns": {
+              "notes": "the end Y-coordinate",
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "Description copied from interface: ITexture",
+            "name": "getYStart",
+            "returns": {
+              "notes": "the start Y-coordinate",
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "indicates if the texture has a mask of collisions or not",
+            "name": "isCollisionable",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "returns if the texture is destroyed or not",
+            "name": "isDestroyed",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "Description copied from interface: ITexture",
+            "name": "isSolid",
+            "returns": {
+              "notes": "if the texture is solid or not.",
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "isValid",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "loadMaskRegion",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "cache",
+                "type": {
+                  "nullable": true,
+                  "basic": "ByteBuffer"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "Description copied from interface: ITexture",
+            "name": "makeTransp",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "color used in the test",
+                "name": "red",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "green",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "blue",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "onBeforeReady",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "onTexturePacksChanged",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "processFilePath",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "filePath",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "reload",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "reloadFromFile",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "render",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "width",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "height",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "render",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "render",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "width",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "height",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "r",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "g",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "b",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "a",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "texdModifier",
+                "type": {
+                  "nullable": true,
+                  "basic": "Consumer",
+                  "full": "Consumer\u003cTextureDraw\u003e"
+                }
+              }
+            ]
+          },
+          {
+            "name": "render",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "dr",
+                "type": {
+                  "nullable": true,
+                  "basic": "ObjectRenderEffects"
+                }
+              },
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "width",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "height",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "r",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "g",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "b",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "a",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "texdModifier",
+                "type": {
+                  "nullable": true,
+                  "basic": "Consumer",
+                  "full": "Consumer\u003cTextureDraw\u003e"
+                }
+              }
+            ]
+          },
+          {
+            "name": "renderdiamond",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "width",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "height",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "l",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "u",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "r",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "d",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "rendershader2",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "width",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "height",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "texx",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "texy",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "texWidth",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "texHeight",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "r",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "g",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "b",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "a",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "renderstrip",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "width",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "height",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "r",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "g",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "b",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "a",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "texdModifier",
+                "type": {
+                  "nullable": true,
+                  "basic": "Consumer",
+                  "full": "Consumer\u003cTextureDraw\u003e"
+                }
+              }
+            ]
+          },
+          {
+            "name": "renderwalln",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "width",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "height",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "u",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "d",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "u2",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "d2",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "renderwallnw",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "width",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "height",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "u",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "d",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "u2",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "d2",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "r",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "r2",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "renderwallw",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "width",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "height",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "u",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "d",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "u2",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "d2",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "saveMask",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "saveMaskRegion",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "cache",
+                "type": {
+                  "nullable": true,
+                  "basic": "ByteBuffer"
+                }
+              }
+            ]
+          },
+          {
+            "name": "saveOnRenderThread",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "filename",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "saveToCurrentSavefileDirectory",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "filename",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "saveToZomboidDirectory",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "filename",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "Description copied from interface: ITexture",
+            "name": "setAlphaForeach",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "color used in the test",
+                "name": "red",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "green",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "blue",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "alpha",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setCustomizedTexture",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "sets the texture\u0027s pixel from a ByteBuffer",
+            "name": "setData",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "texture\u0027s pixel data",
+                "name": "data",
+                "type": {
+                  "nullable": true,
+                  "basic": "ByteBuffer"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setHeight",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "height",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "sets the mask of collisions",
+            "name": "setMask",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "the mask of collisions to set",
+                "name": "mask",
+                "type": {
+                  "nullable": true,
+                  "basic": "Mask"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setName",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setNameOnly",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setOffsetX",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "offset",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setOffsetY",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "offset",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setRealHeight",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "realHeight",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setRealWidth",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "realWidth",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "Description copied from interface: ITexture",
+            "name": "setRegion",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "xstart position",
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "width",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "height",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "indicates if the texture contains the alpha channel or not",
+            "name": "setUseAlphaChannel",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "if true, the image will use the alpha channel",
+                "name": "value",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setWidth",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "width",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "split",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Texture"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "xOffset",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "yOffset",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "width",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "height",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "split",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Texture"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "xOffset",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "yOffset",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "width",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "height",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "split",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Texture"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "xOffset",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "yOffset",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "row",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "coloumn",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "width",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "height",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "spaceX",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "spaceY",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "split2D",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Texture"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "xstep",
+                "type": {
+                  "nullable": true,
+                  "basic": "int[]"
+                }
+              },
+              {
+                "name": "ystep",
+                "type": {
+                  "nullable": true,
+                  "basic": "int[]"
+                }
+              }
+            ]
+          },
+          {
+            "name": "splitIcon",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Texture"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "steamAvatarChanged",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "steamID",
+                "type": {
+                  "nullable": false,
+                  "basic": "long"
+                }
+              }
+            ]
+          },
+          {
+            "name": "trygetTexture",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Texture"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          "public"
+        ],
+        "fields": {
+          "BindCount": {
+            "notes": "indicates if all the texture will auto create the masks on load  The auto creation works only with the getTexture() methods",
+            "deprecated": false,
+            "name": "BindCount",
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "lr": {
+            "deprecated": false,
+            "name": "lr",
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "float"
+            }
+          },
+          "xStart": {
+            "notes": "internal texture coordinates  it\u0027s used to get the max border of texture...",
+            "deprecated": false,
+            "name": "xStart",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "float"
+            }
+          },
+          "lastTextureID": {
+            "deprecated": false,
+            "name": "lastTextureID",
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "assetParams": {
+            "deprecated": false,
+            "name": "assetParams",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "TextureAssetParams"
+            }
+          },
+          "yStart": {
+            "notes": "internal texture coordinates  it\u0027s used to get the max border of texture...",
+            "deprecated": false,
+            "name": "yStart",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "float"
+            }
+          },
+          "WarnFailFindTexture": {
+            "deprecated": false,
+            "name": "WarnFailFindTexture",
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "boolean"
+            }
+          },
+          "lastlastTextureID": {
+            "deprecated": false,
+            "name": "lastlastTextureID",
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "offsetX": {
+            "deprecated": false,
+            "name": "offsetX",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "float"
+            }
+          },
+          "totalTextureID": {
+            "deprecated": false,
+            "name": "totalTextureID",
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "nullTextures": {
+            "deprecated": false,
+            "name": "nullTextures",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "HashSet"
+            }
+          },
+          "offsetY": {
+            "deprecated": false,
+            "name": "offsetY",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "float"
+            }
+          },
+          "xEnd": {
+            "notes": "internal texture coordinates  it\u0027s used to get the max border of texture...",
+            "deprecated": false,
+            "name": "xEnd",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "float"
+            }
+          },
+          "la": {
+            "deprecated": false,
+            "name": "la",
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "float"
+            }
+          },
+          "lb": {
+            "deprecated": false,
+            "name": "lb",
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "float"
+            }
+          },
+          "ASSET_TYPE": {
+            "deprecated": false,
+            "name": "ASSET_TYPE",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "AssetType"
+            }
+          },
+          "yEnd": {
+            "notes": "internal texture coordinates  it\u0027s used to get the max border of texture...",
+            "deprecated": false,
+            "name": "yEnd",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "float"
+            }
+          },
+          "lg": {
+            "deprecated": false,
+            "name": "lg",
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "float"
+            }
+          },
+          "flip": {
+            "deprecated": false,
+            "name": "flip",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "boolean"
+            }
+          },
+          "bDoingQuad": {
+            "deprecated": false,
+            "name": "bDoingQuad",
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "boolean"
+            }
+          },
+          "bindAlways": {
+            "deprecated": false,
+            "name": "bindAlways",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "boolean"
+            }
+          }
+        },
+        "javaType": "class"
+      }
+    }
+  }
+}

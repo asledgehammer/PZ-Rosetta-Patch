@@ -1,0 +1,174 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-iso": {
+      "IsoLuaMover": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "table",
+                "type": {
+                  "nullable": true,
+                  "basic": "KahluaTable"
+                }
+              }
+            ]
+          }
+        ],
+        "extends": "IsoGameCharacter",
+        "methods": [
+          {
+            "name": "getObjectName",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "playAnim",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "seconds",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "looped",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              },
+              {
+                "name": "playing",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "render",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "z",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "col",
+                "type": {
+                  "nullable": true,
+                  "basic": "ColorInfo"
+                }
+              },
+              {
+                "name": "bDoAttached",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              },
+              {
+                "name": "bWallLightingPass",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              },
+              {
+                "name": "shader",
+                "type": {
+                  "nullable": true,
+                  "basic": "Shader"
+                }
+              }
+            ]
+          },
+          {
+            "name": "update",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public"
+        ],
+        "fields": {
+          "luaMoverTable": {
+            "deprecated": false,
+            "name": "luaMoverTable",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "KahluaTable"
+            }
+          }
+        },
+        "javaType": "class"
+      }
+    }
+  }
+}

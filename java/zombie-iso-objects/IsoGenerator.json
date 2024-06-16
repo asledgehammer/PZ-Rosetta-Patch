@@ -1,0 +1,718 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-iso-objects": {
+      "IsoGenerator": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "cell",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoCell"
+                }
+              }
+            ]
+          },
+          {
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "item",
+                "type": {
+                  "nullable": true,
+                  "basic": "InventoryItem"
+                }
+              },
+              {
+                "name": "cell",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoCell"
+                }
+              },
+              {
+                "name": "sq",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGridSquare"
+                }
+              }
+            ]
+          },
+          {
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "item",
+                "type": {
+                  "nullable": true,
+                  "basic": "InventoryItem"
+                }
+              },
+              {
+                "name": "cell",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoCell"
+                }
+              },
+              {
+                "name": "sq",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGridSquare"
+                }
+              },
+              {
+                "name": "remote",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          }
+        ],
+        "extends": "IsoObject",
+        "methods": [
+          {
+            "name": "Reset",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "addToWorld",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "chunkLoaded",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "chunk",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoChunk"
+                }
+              }
+            ]
+          },
+          {
+            "name": "failToStart",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getCondition",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getFuel",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getItemsPowered",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ArrayList"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getObjectName",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getTotalPowerUsing",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "isActivated",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "isConnected",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "isPoweringSquare",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "generatorX",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "generatorY",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "generatorZ",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "z",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "load",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "input",
+                "type": {
+                  "nullable": true,
+                  "basic": "ByteBuffer"
+                }
+              },
+              {
+                "name": "WorldVersion",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "IS_DEBUG_SAVE",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "remove",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "removeFromWorld",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "save",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "output",
+                "type": {
+                  "nullable": true,
+                  "basic": "ByteBuffer"
+                }
+              },
+              {
+                "name": "IS_DEBUG_SAVE",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setActivated",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "activated",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setCondition",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "condition",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setConnected",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "connected",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setFuel",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "fuel",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setInfoFromItem",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "item",
+                "type": {
+                  "nullable": true,
+                  "basic": "InventoryItem"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setSurroundingElectricity",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "setTotalPowerUsing",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "totalPowerUsing",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "sync",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "fuel",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "condition",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "connected",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              },
+              {
+                "name": "activated",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "syncIsoObject",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "bRemote",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              },
+              {
+                "name": "val",
+                "type": {
+                  "nullable": false,
+                  "basic": "byte"
+                }
+              },
+              {
+                "name": "source",
+                "type": {
+                  "nullable": true,
+                  "basic": "UdpConnection"
+                }
+              },
+              {
+                "name": "bb",
+                "type": {
+                  "nullable": true,
+                  "basic": "ByteBuffer"
+                }
+              }
+            ]
+          },
+          {
+            "name": "syncIsoObjectSend",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "b",
+                "type": {
+                  "nullable": true,
+                  "basic": "ByteBufferWriter"
+                }
+              }
+            ]
+          },
+          {
+            "name": "update",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "updateGenerator",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "sq",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGridSquare"
+                }
+              }
+            ]
+          },
+          {
+            "name": "updateSurroundingNow",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public"
+        ],
+        "fields": {
+          "connected": {
+            "deprecated": false,
+            "name": "connected",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "boolean"
+            }
+          },
+          "condition": {
+            "deprecated": false,
+            "name": "condition",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "fuel": {
+            "deprecated": false,
+            "name": "fuel",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "float"
+            }
+          },
+          "activated": {
+            "deprecated": false,
+            "name": "activated",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "boolean"
+            }
+          }
+        },
+        "javaType": "class"
+      }
+    }
+  }
+}

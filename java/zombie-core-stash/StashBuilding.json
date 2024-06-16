@@ -1,0 +1,94 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-core-stash": {
+      "StashBuilding": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "stashName",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "buildingX",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "buildingY",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          }
+        ],
+        "extends": "Object",
+        "methods": [
+          {
+            "name": "getName",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "final"
+        ],
+        "fields": {
+          "buildingX": {
+            "deprecated": false,
+            "name": "buildingX",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "buildingY": {
+            "deprecated": false,
+            "name": "buildingY",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "stashName": {
+            "deprecated": false,
+            "name": "stashName",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "String"
+            }
+          }
+        },
+        "javaType": "class"
+      }
+    }
+  }
+}

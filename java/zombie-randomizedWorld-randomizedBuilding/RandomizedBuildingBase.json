@@ -1,0 +1,660 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-randomizedWorld-randomizedBuilding": {
+      "RandomizedBuildingBase": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "extends": "RandomizedWorldBase",
+        "methods": [
+          {
+            "name": "ChunkLoaded",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "building",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoBuilding"
+                }
+              }
+            ]
+          },
+          {
+            "name": "addBarricade",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "sq",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGridSquare"
+                }
+              },
+              {
+                "name": "numPlanks",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "addRandomRangedWeapon",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "HandWeapon"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "container",
+                "type": {
+                  "nullable": true,
+                  "basic": "ItemContainer"
+                }
+              },
+              {
+                "name": "addBulletsInGun",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              },
+              {
+                "name": "addBoxInContainer",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              },
+              {
+                "name": "attachPart",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "addWorldItem",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "InventoryItem"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "item",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "sq",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGridSquare"
+                }
+              },
+              {
+                "name": "xoffset",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "yoffset",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "zoffset",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "addWorldItem",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "InventoryItem"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "item",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "sq",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGridSquare"
+                }
+              },
+              {
+                "name": "xoffset",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "yoffset",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "zoffset",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "worldZ",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "addWorldItem",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "InventoryItem"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "item",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "sq",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGridSquare"
+                }
+              },
+              {
+                "name": "obj",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoObject"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "If you specify a outfit, make sure it works for both gender! (or force  femaleChance to 0 or 1 if it\u0027s gender-specific)",
+            "name": "addZombies",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ArrayList"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "buildingDef",
+                "name": "def",
+                "type": {
+                  "nullable": true,
+                  "basic": "BuildingDef"
+                }
+              },
+              {
+                "name": "totalZombies",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "outfit",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "femaleChance",
+                "type": {
+                  "nullable": true,
+                  "basic": "Integer"
+                }
+              },
+              {
+                "name": "room",
+                "type": {
+                  "nullable": true,
+                  "basic": "RoomDef"
+                }
+              }
+            ]
+          },
+          {
+            "name": "addZombiesOnSquare",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ArrayList"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "totalZombies",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "outfit",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "femaleChance",
+                "type": {
+                  "nullable": true,
+                  "basic": "Integer"
+                }
+              },
+              {
+                "name": "square",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGridSquare"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getChance",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getDoor",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoDoor"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "sq",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGridSquare"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getMinimumDays",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getMinimumRooms",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getWindow",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoWindow"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "sq",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGridSquare"
+                }
+              }
+            ]
+          },
+          {
+            "name": "init",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "initAllRBMapChance",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "isAlwaysDo",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "isTableFor3DItems",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "obj",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoObject"
+                }
+              },
+              {
+                "name": "sq",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGridSquare"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "Don\u0027t do any building change in a player\u0027s building Also check if the  building have a bathroom, a kitchen and a bedroom  This is ignored for the alwaysDo building (so i can do stuff in spiffo, pizzawhirled, etc..)",
+            "name": "isValid",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "def",
+                "type": {
+                  "nullable": true,
+                  "basic": "BuildingDef"
+                }
+              },
+              {
+                "name": "force",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "randomizeBuilding",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "def",
+                "type": {
+                  "nullable": true,
+                  "basic": "BuildingDef"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setAlwaysDo",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "alwaysDo",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setChance",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "chance",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setMinimumDays",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "minimumDays",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setMinimumRooms",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "minimumRooms",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "spawnItemsInContainers",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "def",
+                "type": {
+                  "nullable": true,
+                  "basic": "BuildingDef"
+                }
+              },
+              {
+                "name": "distribName",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "chance",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          "public"
+        ],
+        "javaType": "class"
+      }
+    }
+  }
+}

@@ -1,0 +1,817 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-iso": {
+      "RoomDef": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "ID",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          }
+        ],
+        "extends": "Object",
+        "methods": [
+          {
+            "name": "CalculateBounds",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "Dispose",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "calculateMetaID",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "long"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "cellX",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "cellY",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "forEachChunk",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "consumer",
+                "type": {
+                  "nullable": true,
+                  "basic": "BiConsumer",
+                  "full": "BiConsumer\u003cRoomDef,IsoChunk\u003e"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getArea",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getAreaOverlapping",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "chunk",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoChunk"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getAreaOverlapping",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "w",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "h",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getBuilding",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "BuildingDef"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getClosestPoint",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "closestXY",
+                "type": {
+                  "nullable": true,
+                  "basic": "Vector2f"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getFreeSquare",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoGridSquare"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getH",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getID",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getIsoRoom",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoRoom"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getMetaObjects",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ArrayList"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getName",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getObjects",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ArrayList"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getProceduralSpawnedContainer",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "HashMap"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getRandomSquare",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoGridSquare"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "predicate",
+                "type": {
+                  "nullable": true,
+                  "basic": "Predicate",
+                  "full": "Predicate\u003cIsoGridSquare\u003e"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getRects",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ArrayList"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getW",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getX",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getX2",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getY",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getY2",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getZ",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "intersects",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "w",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "h",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "isEmptyOutside",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "isExplored",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "isInside",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "z",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "isRoofFixed",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "refreshSquares",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "setBuilding",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "def",
+                "type": {
+                  "nullable": true,
+                  "basic": "BuildingDef"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setExplored",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "explored",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setRoofFixed",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "b",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "final"
+        ],
+        "fields": {
+          "IndoorZombies": {
+            "deprecated": false,
+            "name": "IndoorZombies",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "area": {
+            "deprecated": false,
+            "name": "area",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "level": {
+            "deprecated": false,
+            "name": "level",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "metaID": {
+            "deprecated": false,
+            "name": "metaID",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "long"
+            }
+          },
+          "bExplored": {
+            "deprecated": false,
+            "name": "bExplored",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "boolean"
+            }
+          },
+          "objects": {
+            "deprecated": false,
+            "name": "objects",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "ArrayList"
+            }
+          },
+          "spawnCount": {
+            "deprecated": false,
+            "name": "spawnCount",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "bDoneSpawn": {
+            "deprecated": false,
+            "name": "bDoneSpawn",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "boolean"
+            }
+          },
+          "building": {
+            "deprecated": false,
+            "name": "building",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BuildingDef"
+            }
+          },
+          "bLightsActive": {
+            "deprecated": false,
+            "name": "bLightsActive",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "boolean"
+            }
+          },
+          "name": {
+            "deprecated": false,
+            "name": "name",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "String"
+            }
+          },
+          "x": {
+            "deprecated": false,
+            "name": "x",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "y": {
+            "deprecated": false,
+            "name": "y",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "y2": {
+            "deprecated": false,
+            "name": "y2",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "rects": {
+            "deprecated": false,
+            "name": "rects",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "ArrayList"
+            }
+          },
+          "x2": {
+            "deprecated": false,
+            "name": "x2",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "ID": {
+            "deprecated": false,
+            "name": "ID",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          }
+        },
+        "javaType": "class"
+      }
+    }
+  }
+}

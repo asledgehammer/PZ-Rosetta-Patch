@@ -1,0 +1,182 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-ui": {
+      "Layout": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "extends": "Object",
+        "methods": [
+          {
+            "name": "addItem",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "LayoutItem"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "free",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "render",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "left",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "top",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "ui",
+                "type": {
+                  "nullable": true,
+                  "basic": "ObjectTooltip"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setMinLabelWidth",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "minWidth",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setMinValueWidth",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "minWidth",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "static"
+        ],
+        "fields": {
+          "next": {
+            "deprecated": false,
+            "name": "next",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Layout"
+            }
+          },
+          "minLabelWidth": {
+            "deprecated": false,
+            "name": "minLabelWidth",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "minValueWidth": {
+            "deprecated": false,
+            "name": "minValueWidth",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "items": {
+            "deprecated": false,
+            "name": "items",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "ArrayList"
+            }
+          },
+          "nextPadY": {
+            "deprecated": false,
+            "name": "nextPadY",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          }
+        },
+        "javaType": "class"
+      }
+    }
+  }
+}

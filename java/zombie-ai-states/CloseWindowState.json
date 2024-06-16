@@ -1,0 +1,162 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-ai-states": {
+      "CloseWindowState": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "extends": "State",
+        "methods": [
+          {
+            "name": "animEvent",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "owner",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              },
+              {
+                "name": "event",
+                "type": {
+                  "nullable": true,
+                  "basic": "AnimEvent"
+                }
+              }
+            ]
+          },
+          {
+            "name": "enter",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "owner",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              }
+            ]
+          },
+          {
+            "name": "execute",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "owner",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              }
+            ]
+          },
+          {
+            "name": "exit",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "owner",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getWindow",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoWindow"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "owner",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              }
+            ]
+          },
+          {
+            "name": "instance",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "CloseWindowState"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "isDoingActionThatCanBeCancelled",
+            "returns": {
+              "notes": "TRUE if this state handles the \"Cancel Action\" key or the B controller button.",
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "final"
+        ],
+        "javaType": "class"
+      }
+    }
+  }
+}

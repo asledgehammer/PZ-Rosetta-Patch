@@ -1,0 +1,593 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-iso-areas": {
+      "IsoRoom": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "extends": "Object",
+        "methods": [
+          {
+            "name": "CreateBuilding",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoBuilding"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "cell",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoCell"
+                }
+              }
+            ]
+          },
+          {
+            "name": "addSquare",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "sq",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGridSquare"
+                }
+              }
+            ]
+          },
+          {
+            "name": "createLights",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "active",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getBuilding",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoBuilding"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getContainer",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ArrayList"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getFreeTile",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoGridSquare"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getLightSwitches",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ArrayList"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getName",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getRandomFreeSquare",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoGridSquare"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getRandomSquare",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoGridSquare"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getRoomDef",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "RoomDef"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getSquares",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ArrayList"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getTileList",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Vector"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getWaterSources",
+            "returns": {
+              "notes": "the WaterSources",
+              "type": {
+                "nullable": true,
+                "basic": "ArrayList"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getWindows",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ArrayList"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "hasLightSwitches",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "hasWater",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "isInside",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "z",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "onSee",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "refreshSquares",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "removeSquare",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "sq",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGridSquare"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setWaterSources",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "the WaterSources to set",
+                "name": "WaterSources",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cIsoObject\u003e"
+                }
+              }
+            ]
+          },
+          {
+            "name": "spawnZombies",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "useWater",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "final"
+        ],
+        "fields": {
+          "Squares": {
+            "deprecated": false,
+            "name": "Squares",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "ArrayList"
+            }
+          },
+          "TileList": {
+            "deprecated": false,
+            "name": "TileList",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Vector"
+            }
+          },
+          "def": {
+            "deprecated": false,
+            "name": "def",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "RoomDef"
+            }
+          },
+          "Containers": {
+            "deprecated": false,
+            "name": "Containers",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "ArrayList"
+            }
+          },
+          "WaterSources": {
+            "deprecated": false,
+            "name": "WaterSources",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "ArrayList"
+            }
+          },
+          "roomLights": {
+            "deprecated": false,
+            "name": "roomLights",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "ArrayList"
+            }
+          },
+          "Windows": {
+            "deprecated": false,
+            "name": "Windows",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "ArrayList"
+            }
+          },
+          "Beds": {
+            "deprecated": false,
+            "name": "Beds",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Vector"
+            }
+          },
+          "transparentWalls": {
+            "deprecated": false,
+            "name": "transparentWalls",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "building": {
+            "deprecated": false,
+            "name": "building",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "IsoBuilding"
+            }
+          },
+          "layer": {
+            "deprecated": false,
+            "name": "layer",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "seen": {
+            "deprecated": false,
+            "name": "seen",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "Exits": {
+            "deprecated": false,
+            "name": "Exits",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Vector"
+            }
+          },
+          "bounds": {
+            "deprecated": false,
+            "name": "bounds",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Rectangle"
+            }
+          },
+          "visited": {
+            "deprecated": false,
+            "name": "visited",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "rects": {
+            "deprecated": false,
+            "name": "rects",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "ArrayList"
+            }
+          },
+          "lightSwitches": {
+            "deprecated": false,
+            "name": "lightSwitches",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "ArrayList"
+            }
+          },
+          "RoomDef": {
+            "deprecated": false,
+            "name": "RoomDef",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "String"
+            }
+          }
+        },
+        "javaType": "class"
+      }
+    }
+  }
+}

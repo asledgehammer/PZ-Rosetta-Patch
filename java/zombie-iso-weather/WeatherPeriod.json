@@ -1,0 +1,1028 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-iso-weather": {
+      "WeatherPeriod": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "climmgr",
+                "type": {
+                  "nullable": true,
+                  "basic": "ClimateManager"
+                }
+              },
+              {
+                "name": "ts",
+                "type": {
+                  "nullable": true,
+                  "basic": "ThunderStorm"
+                }
+              }
+            ]
+          }
+        ],
+        "notes": "TurboTuTone.",
+        "extends": "Object",
+        "methods": [
+          {
+            "name": "createAndAddModdedStage",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "WeatherStage"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "moddedID",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "duration",
+                "type": {
+                  "nullable": false,
+                  "basic": "double"
+                }
+              }
+            ]
+          },
+          {
+            "name": "createAndAddStage",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "WeatherStage"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "typeid",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "duration",
+                "type": {
+                  "nullable": false,
+                  "basic": "double"
+                }
+              }
+            ]
+          },
+          {
+            "name": "endCreateModdedPeriod",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getCloudColor",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ClimateColorInfo"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getCloudColorBlizzard",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ClimateColorInfo"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getCloudColorBlueish",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ClimateColorInfo"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getCloudColorGreenish",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ClimateColorInfo"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getCloudColorPurplish",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ClimateColorInfo"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getCloudColorReddish",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ClimateColorInfo"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getCloudColorTropical",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ClimateColorInfo"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getCurrentStage",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "WeatherStage"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getCurrentStageID",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getCurrentStrength",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getDuration",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "double"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getFrontCache",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "AirFront"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getFrontType",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getMaxTemperatureInfluence",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "getPrecipitationFinal",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getPrintStuff",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getRainThreshold",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getStageForWorldAge",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "WeatherStage"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "worldAgeHours",
+                "type": {
+                  "nullable": false,
+                  "basic": "double"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getStageProgress",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getTotalProgress",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getTotalStrength",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getWeatherNoise",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "double"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getWeatherStages",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ArrayList"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getWindAngleDegrees",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "hasBlizzard",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "hasHeavyRain",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "hasStorm",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "hasTropical",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "initSimulationDebug",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "front",
+                "type": {
+                  "nullable": true,
+                  "basic": "AirFront"
+                }
+              },
+              {
+                "name": "hoursSinceStart",
+                "type": {
+                  "nullable": false,
+                  "basic": "double"
+                }
+              }
+            ]
+          },
+          {
+            "name": "initSimulationDebug",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "front",
+                "type": {
+                  "nullable": true,
+                  "basic": "AirFront"
+                }
+              },
+              {
+                "name": "hoursSinceStart",
+                "type": {
+                  "nullable": false,
+                  "basic": "double"
+                }
+              },
+              {
+                "name": "doThisStageOnly",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "singleStageDuration",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "isBlizzard",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "isRunning",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "isThunderStorm",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "isTropicalStorm",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "load",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "input",
+                "type": {
+                  "nullable": true,
+                  "basic": "DataInputStream"
+                }
+              },
+              {
+                "name": "worldVersion",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "readNetWeatherData",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "input",
+                "type": {
+                  "nullable": true,
+                  "basic": "ByteBuffer"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "IO",
+            "name": "save",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "output",
+                "type": {
+                  "nullable": true,
+                  "basic": "DataOutputStream"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setCloudColor",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "cloudcol",
+                "type": {
+                  "nullable": true,
+                  "basic": "ClimateColorInfo"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setDummy",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "b",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setKateBobStormCoords",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setKateBobStormProgress",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "progress",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setPrintStuff",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "b",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "startCreateModdedPeriod",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "warmFront",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              },
+              {
+                "name": "strength",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "angle",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "stopWeatherPeriod",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "update",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "hoursSinceStart",
+                "type": {
+                  "nullable": false,
+                  "basic": "double"
+                }
+              }
+            ]
+          },
+          {
+            "name": "writeNetWeatherData",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "output",
+                "type": {
+                  "nullable": true,
+                  "basic": "ByteBuffer"
+                }
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          "public"
+        ],
+        "fields": {
+          "STAGE_MODDED": {
+            "deprecated": false,
+            "name": "STAGE_MODDED",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "STAGE_BLIZZARD": {
+            "deprecated": false,
+            "name": "STAGE_BLIZZARD",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "STAGE_MODERATE": {
+            "deprecated": false,
+            "name": "STAGE_MODERATE",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "FRONT_STRENGTH_THRESHOLD": {
+            "deprecated": false,
+            "name": "FRONT_STRENGTH_THRESHOLD",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "float"
+            }
+          },
+          "STAGE_DRIZZLE": {
+            "deprecated": false,
+            "name": "STAGE_DRIZZLE",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "STAGE_INTERMEZZO": {
+            "deprecated": false,
+            "name": "STAGE_INTERMEZZO",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "STAGE_MAX": {
+            "deprecated": false,
+            "name": "STAGE_MAX",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "STAGE_TROPICAL_STORM": {
+            "deprecated": false,
+            "name": "STAGE_TROPICAL_STORM",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "STAGE_HEAVY_PRECIP": {
+            "deprecated": false,
+            "name": "STAGE_HEAVY_PRECIP",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "STAGE_SHOWERS": {
+            "deprecated": false,
+            "name": "STAGE_SHOWERS",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "STAGE_START": {
+            "deprecated": false,
+            "name": "STAGE_START",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "STAGE_CLEARING": {
+            "deprecated": false,
+            "name": "STAGE_CLEARING",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "STAGE_KATEBOB_STORM": {
+            "deprecated": false,
+            "name": "STAGE_KATEBOB_STORM",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "STAGE_STORM": {
+            "deprecated": false,
+            "name": "STAGE_STORM",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          }
+        },
+        "javaType": "class"
+      }
+    }
+  }
+}

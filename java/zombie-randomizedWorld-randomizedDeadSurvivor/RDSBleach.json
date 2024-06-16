@@ -1,0 +1,46 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-randomizedWorld-randomizedDeadSurvivor": {
+      "RDSBleach": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "notes": "Create a dead survivor in the kitchen with empty bleach bottle around him",
+        "extends": "RandomizedDeadSurvivorBase",
+        "methods": [
+          {
+            "name": "randomizeDeadSurvivor",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "def",
+                "type": {
+                  "nullable": true,
+                  "basic": "BuildingDef"
+                }
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "final"
+        ],
+        "javaType": "class"
+      }
+    }
+  }
+}

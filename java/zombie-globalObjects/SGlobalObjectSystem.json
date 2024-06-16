@@ -1,0 +1,392 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-globalObjects": {
+      "SGlobalObjectSystem": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          }
+        ],
+        "extends": "GlobalObjectSystem",
+        "methods": [
+          {
+            "name": "OnIsoObjectChangedItself",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "isoObject",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoObject"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Reset",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "addGlobalObjectOnClient",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "globalObject",
+                "type": {
+                  "nullable": true,
+                  "basic": "SGlobalObject"
+                }
+              }
+            ]
+          },
+          {
+            "name": "chunkLoaded",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "wx",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "wy",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getInitialStateForClient",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "KahluaTable"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "load",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "bb",
+                "type": {
+                  "nullable": true,
+                  "basic": "ByteBuffer"
+                }
+              },
+              {
+                "name": "WorldVersion",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "load",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "loadedWorldVersion",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "receiveClientCommand",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "command",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "playerObj",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoPlayer"
+                }
+              },
+              {
+                "name": "args",
+                "type": {
+                  "nullable": true,
+                  "basic": "KahluaTable"
+                }
+              }
+            ]
+          },
+          {
+            "name": "removeGlobalObjectOnClient",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "globalObject",
+                "type": {
+                  "nullable": true,
+                  "basic": "SGlobalObject"
+                }
+              }
+            ]
+          },
+          {
+            "name": "save",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "bb",
+                "type": {
+                  "nullable": true,
+                  "basic": "ByteBuffer"
+                }
+              }
+            ]
+          },
+          {
+            "name": "save",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "sendCommand",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "command",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "args",
+                "type": {
+                  "nullable": true,
+                  "basic": "KahluaTable"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setModDataKeys",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "keys",
+                "type": {
+                  "nullable": true,
+                  "basic": "KahluaTable"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setObjectModDataKeys",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "keys",
+                "type": {
+                  "nullable": true,
+                  "basic": "KahluaTable"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setObjectSyncKeys",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "keys",
+                "type": {
+                  "nullable": true,
+                  "basic": "KahluaTable"
+                }
+              }
+            ]
+          },
+          {
+            "name": "update",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "updateGlobalObjectOnClient",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "globalObject",
+                "type": {
+                  "nullable": true,
+                  "basic": "SGlobalObject"
+                }
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "final"
+        ],
+        "javaType": "class"
+      }
+    }
+  }
+}

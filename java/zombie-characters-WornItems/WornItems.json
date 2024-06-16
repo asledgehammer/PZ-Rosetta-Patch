@@ -1,0 +1,355 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-characters-WornItems": {
+      "WornItems": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "group",
+                "type": {
+                  "nullable": true,
+                  "basic": "BodyLocationGroup"
+                }
+              }
+            ]
+          },
+          {
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "other",
+                "type": {
+                  "nullable": true,
+                  "basic": "WornItems"
+                }
+              }
+            ]
+          }
+        ],
+        "extends": "Object",
+        "methods": [
+          {
+            "name": "addItemsToItemContainer",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "container",
+                "type": {
+                  "nullable": true,
+                  "basic": "ItemContainer"
+                }
+              }
+            ]
+          },
+          {
+            "name": "clear",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "contains",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "item",
+                "type": {
+                  "nullable": true,
+                  "basic": "InventoryItem"
+                }
+              }
+            ]
+          },
+          {
+            "name": "copyFrom",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "other",
+                "type": {
+                  "nullable": true,
+                  "basic": "WornItems"
+                }
+              }
+            ]
+          },
+          {
+            "name": "forEach",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "c",
+                "type": {
+                  "nullable": true,
+                  "basic": "Consumer",
+                  "full": "Consumer\u003cWornItem\u003e"
+                }
+              }
+            ]
+          },
+          {
+            "name": "get",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "WornItem"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "index",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getBodyLocationGroup",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "BodyLocationGroup"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getItem",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "InventoryItem"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "location",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getItemByIndex",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "InventoryItem"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "index",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getItemVisuals",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "itemVisuals",
+                "type": {
+                  "nullable": true,
+                  "basic": "ItemVisuals"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getLocation",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "item",
+                "type": {
+                  "nullable": true,
+                  "basic": "InventoryItem"
+                }
+              }
+            ]
+          },
+          {
+            "name": "isEmpty",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "remove",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "item",
+                "type": {
+                  "nullable": true,
+                  "basic": "InventoryItem"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setFromItemVisuals",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "itemVisuals",
+                "type": {
+                  "nullable": true,
+                  "basic": "ItemVisuals"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setItem",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "location",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "item",
+                "type": {
+                  "nullable": true,
+                  "basic": "InventoryItem"
+                }
+              }
+            ]
+          },
+          {
+            "name": "size",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "final"
+        ],
+        "javaType": "class"
+      }
+    }
+  }
+}

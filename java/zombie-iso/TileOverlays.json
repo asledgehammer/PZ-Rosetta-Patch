@@ -1,0 +1,134 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-iso": {
+      "TileOverlays": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "extends": "Object",
+        "methods": [
+          {
+            "name": "Reset",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "addOverlays",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "overlayMap",
+                "type": {
+                  "nullable": true,
+                  "basic": "KahluaTableImpl"
+                }
+              }
+            ]
+          },
+          {
+            "name": "fixTableTopOverlays",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "square",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGridSquare"
+                }
+              }
+            ]
+          },
+          {
+            "name": "hasOverlays",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "obj",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoObject"
+                }
+              }
+            ]
+          },
+          {
+            "name": "updateTileOverlaySprite",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "obj",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoObject"
+                }
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          "public"
+        ],
+        "fields": {
+          "instance": {
+            "deprecated": false,
+            "name": "instance",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "TileOverlays"
+            }
+          }
+        },
+        "javaType": "class"
+      }
+    }
+  }
+}

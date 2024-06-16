@@ -1,0 +1,149 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-ai-sadisticAIDirector": {
+      "SleepingEvent": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "extends": "Object",
+        "methods": [
+          {
+            "name": "setPlayerFallAsleep",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "chr",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoPlayer"
+                }
+              },
+              {
+                "name": "sleepingTime",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "update",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "chr",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoPlayer"
+                }
+              }
+            ]
+          },
+          {
+            "name": "wakeUp",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "chr",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              }
+            ]
+          },
+          {
+            "name": "wakeUp",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "chr",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              },
+              {
+                "name": "remote",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "final"
+        ],
+        "fields": {
+          "instance": {
+            "deprecated": false,
+            "name": "instance",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "SleepingEvent"
+            }
+          },
+          "zombiesInvasion": {
+            "deprecated": false,
+            "name": "zombiesInvasion",
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "boolean"
+            }
+          }
+        },
+        "javaType": "class"
+      }
+    }
+  }
+}

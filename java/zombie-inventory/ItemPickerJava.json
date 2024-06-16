@@ -1,0 +1,526 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-inventory": {
+      "ItemPickerJava": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "extends": "Object",
+        "methods": [
+          {
+            "name": "InitSandboxLootSettings",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "Parse",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "doOverlaySprite",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "sq",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGridSquare"
+                }
+              }
+            ]
+          },
+          {
+            "name": "doRollItem",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "containerDist",
+                "type": {
+                  "nullable": true,
+                  "basic": "ItemPickerContainer"
+                }
+              },
+              {
+                "name": "container",
+                "type": {
+                  "nullable": true,
+                  "basic": "ItemContainer"
+                }
+              },
+              {
+                "name": "zombieDensity",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "character",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              },
+              {
+                "name": "doItemContainer",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              },
+              {
+                "name": "isJunk",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              },
+              {
+                "name": "roomDist",
+                "type": {
+                  "nullable": true,
+                  "basic": "ItemPickerRoom"
+                }
+              }
+            ]
+          },
+          {
+            "name": "fillContainer",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "container",
+                "type": {
+                  "nullable": true,
+                  "basic": "ItemContainer"
+                }
+              },
+              {
+                "name": "player",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoPlayer"
+                }
+              }
+            ]
+          },
+          {
+            "name": "fillContainerType",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "roomDist",
+                "type": {
+                  "nullable": true,
+                  "basic": "ItemPickerRoom"
+                }
+              },
+              {
+                "name": "container",
+                "type": {
+                  "nullable": true,
+                  "basic": "ItemContainer"
+                }
+              },
+              {
+                "name": "roomName",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "character",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getItemContainer",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ItemPickerContainer"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "room",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "container",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "proceduralName",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "junk",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getLootModifier",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "itemname",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "rollContainerItem",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "bag",
+                "type": {
+                  "nullable": true,
+                  "basic": "InventoryContainer"
+                }
+              },
+              {
+                "name": "character",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              },
+              {
+                "name": "containerDist",
+                "type": {
+                  "nullable": true,
+                  "basic": "ItemPickerContainer"
+                }
+              }
+            ]
+          },
+          {
+            "name": "rollItem",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "containerDist",
+                "type": {
+                  "nullable": true,
+                  "basic": "ItemPickerContainer"
+                }
+              },
+              {
+                "name": "container",
+                "type": {
+                  "nullable": true,
+                  "basic": "ItemContainer"
+                }
+              },
+              {
+                "name": "doItemContainer",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              },
+              {
+                "name": "character",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              },
+              {
+                "name": "roomDist",
+                "type": {
+                  "nullable": true,
+                  "basic": "ItemPickerRoom"
+                }
+              }
+            ]
+          },
+          {
+            "name": "tryAddItemToContainer",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "InventoryItem"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "container",
+                "type": {
+                  "nullable": true,
+                  "basic": "ItemContainer"
+                }
+              },
+              {
+                "name": "itemType",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "containerDist",
+                "type": {
+                  "nullable": true,
+                  "basic": "ItemPickerContainer"
+                }
+              }
+            ]
+          },
+          {
+            "name": "updateOverlaySprite",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "obj",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoObject"
+                }
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "final"
+        ],
+        "fields": {
+          "WeaponUpgrades": {
+            "deprecated": false,
+            "name": "WeaponUpgrades",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "ArrayList"
+            }
+          },
+          "VehicleDistributions": {
+            "deprecated": false,
+            "name": "VehicleDistributions",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "THashMap",
+              "full": "gnu.trove.map.hash.THashMap\u003c"
+            }
+          },
+          "rooms": {
+            "deprecated": false,
+            "name": "rooms",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "THashMap",
+              "full": "gnu.trove.map.hash.THashMap\u003c"
+            }
+          },
+          "ProceduralDistributions": {
+            "deprecated": false,
+            "name": "ProceduralDistributions",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "THashMap",
+              "full": "gnu.trove.map.hash.THashMap\u003c"
+            }
+          },
+          "NoContainerFillRooms": {
+            "deprecated": false,
+            "name": "NoContainerFillRooms",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "ArrayList"
+            }
+          },
+          "containers": {
+            "deprecated": false,
+            "name": "containers",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "THashMap",
+              "full": "gnu.trove.map.hash.THashMap\u003c"
+            }
+          },
+          "zombieDensityCap": {
+            "deprecated": false,
+            "name": "zombieDensityCap",
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "float"
+            }
+          },
+          "WeaponUpgradeMap": {
+            "deprecated": false,
+            "name": "WeaponUpgradeMap",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "HashMap"
+            }
+          }
+        },
+        "javaType": "class"
+      }
+    }
+  }
+}

@@ -1,0 +1,804 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-inventory": {
+      "RecipeManager": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "extends": "Object",
+        "methods": [
+          {
+            "name": "DoesUseItemUp",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "itemToUse",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "recipe",
+                "type": {
+                  "nullable": true,
+                  "basic": "Recipe"
+                }
+              }
+            ]
+          },
+          {
+            "name": "DoesWipeUseDelta",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "itemToUse",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "itemToMake",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "GetMovableRecipeTool",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "InventoryItem"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "isPrimary",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              },
+              {
+                "name": "recipe",
+                "type": {
+                  "nullable": true,
+                  "basic": "Recipe"
+                }
+              },
+              {
+                "name": "selectedItem",
+                "type": {
+                  "nullable": true,
+                  "basic": "InventoryItem"
+                }
+              },
+              {
+                "name": "chr",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              },
+              {
+                "name": "containers",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cItemContainer\u003e"
+                }
+              }
+            ]
+          },
+          {
+            "name": "HasAllRequiredItems",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "recipe",
+                "type": {
+                  "nullable": true,
+                  "basic": "Recipe"
+                }
+              },
+              {
+                "name": "chr",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              },
+              {
+                "name": "selectedItem",
+                "type": {
+                  "nullable": true,
+                  "basic": "InventoryItem"
+                }
+              },
+              {
+                "name": "containers",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cItemContainer\u003e"
+                }
+              }
+            ]
+          },
+          {
+            "name": "IsItemDestroyed",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "itemToUse",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "recipe",
+                "type": {
+                  "nullable": true,
+                  "basic": "Recipe"
+                }
+              }
+            ]
+          },
+          {
+            "name": "IsRecipeValid",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "recipe",
+                "type": {
+                  "nullable": true,
+                  "basic": "Recipe"
+                }
+              },
+              {
+                "name": "chr",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              },
+              {
+                "name": "item",
+                "type": {
+                  "nullable": true,
+                  "basic": "InventoryItem"
+                }
+              },
+              {
+                "name": "containers",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cItemContainer\u003e"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Loaded",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "LoadedAfterLua",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "PerformMakeItem",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "InventoryItem"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "recipe",
+                "type": {
+                  "nullable": true,
+                  "basic": "Recipe"
+                }
+              },
+              {
+                "name": "selectedItem",
+                "type": {
+                  "nullable": true,
+                  "basic": "InventoryItem"
+                }
+              },
+              {
+                "name": "chr",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              },
+              {
+                "name": "containers",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cItemContainer\u003e"
+                }
+              }
+            ]
+          },
+          {
+            "name": "UseAmount",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "sourceFullType",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "recipe",
+                "type": {
+                  "nullable": true,
+                  "basic": "Recipe"
+                }
+              },
+              {
+                "name": "chr",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getAllEvolvedRecipes",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ArrayList"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "getAvailableItemsAll",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ArrayList"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "recipe",
+                "type": {
+                  "nullable": true,
+                  "basic": "Recipe"
+                }
+              },
+              {
+                "name": "chr",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              },
+              {
+                "name": "containers",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cItemContainer\u003e"
+                }
+              },
+              {
+                "name": "selectedItem",
+                "type": {
+                  "nullable": true,
+                  "basic": "InventoryItem"
+                }
+              },
+              {
+                "name": "ignoreItems",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cInventoryItem\u003e"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getAvailableItemsNeeded",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ArrayList"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "recipe",
+                "type": {
+                  "nullable": true,
+                  "basic": "Recipe"
+                }
+              },
+              {
+                "name": "chr",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              },
+              {
+                "name": "containers",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cItemContainer\u003e"
+                }
+              },
+              {
+                "name": "selectedItem",
+                "type": {
+                  "nullable": true,
+                  "basic": "InventoryItem"
+                }
+              },
+              {
+                "name": "ignoreItems",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cInventoryItem\u003e"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getDismantleRecipeFor",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Recipe"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "item",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getEvolvedRecipe",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ArrayList"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "baseItem",
+                "type": {
+                  "nullable": true,
+                  "basic": "InventoryItem"
+                }
+              },
+              {
+                "name": "chr",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              },
+              {
+                "name": "containers",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cItemContainer\u003e"
+                }
+              },
+              {
+                "name": "need1ingredient",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getKnownRecipesNumber",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "chr",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getNumberOfTimesRecipeCanBeDone",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "recipe",
+                "type": {
+                  "nullable": true,
+                  "basic": "Recipe"
+                }
+              },
+              {
+                "name": "chr",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              },
+              {
+                "name": "containers",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cItemContainer\u003e"
+                }
+              },
+              {
+                "name": "selectedItem",
+                "type": {
+                  "nullable": true,
+                  "basic": "InventoryItem"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getSourceItemsAll",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ArrayList"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "recipe",
+                "type": {
+                  "nullable": true,
+                  "basic": "Recipe"
+                }
+              },
+              {
+                "name": "sourceIndex",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "chr",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              },
+              {
+                "name": "containers",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cItemContainer\u003e"
+                }
+              },
+              {
+                "name": "selectedItem",
+                "type": {
+                  "nullable": true,
+                  "basic": "InventoryItem"
+                }
+              },
+              {
+                "name": "ignoreItems",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cInventoryItem\u003e"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getSourceItemsNeeded",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ArrayList"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "recipe",
+                "type": {
+                  "nullable": true,
+                  "basic": "Recipe"
+                }
+              },
+              {
+                "name": "sourceIndex",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "chr",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              },
+              {
+                "name": "containers",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cItemContainer\u003e"
+                }
+              },
+              {
+                "name": "selectedItem",
+                "type": {
+                  "nullable": true,
+                  "basic": "InventoryItem"
+                }
+              },
+              {
+                "name": "ignoreItems",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cInventoryItem\u003e"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getUniqueRecipeItems",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ArrayList"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "item",
+                "type": {
+                  "nullable": true,
+                  "basic": "InventoryItem"
+                }
+              },
+              {
+                "name": "chr",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              },
+              {
+                "name": "containers",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cItemContainer\u003e"
+                }
+              }
+            ]
+          },
+          {
+            "name": "hasHeat",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "recipe",
+                "type": {
+                  "nullable": true,
+                  "basic": "Recipe"
+                }
+              },
+              {
+                "name": "item",
+                "type": {
+                  "nullable": true,
+                  "basic": "InventoryItem"
+                }
+              },
+              {
+                "name": "containers",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cItemContainer\u003e"
+                }
+              },
+              {
+                "name": "chr",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "final"
+        ],
+        "javaType": "class"
+      }
+    }
+  }
+}

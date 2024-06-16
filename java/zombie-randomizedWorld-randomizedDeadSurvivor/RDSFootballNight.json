@@ -1,0 +1,75 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-randomizedWorld-randomizedDeadSurvivor": {
+      "RDSFootballNight": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "notes": "Create some zombies in sports outfits with crisps, alcohol \u0026 cigarettes lying around",
+        "extends": "RandomizedDeadSurvivorBase",
+        "methods": [
+          {
+            "notes": "Description copied from class: RandomizedBuildingBase",
+            "name": "isValid",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "def",
+                "type": {
+                  "nullable": true,
+                  "basic": "BuildingDef"
+                }
+              },
+              {
+                "name": "force",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "randomizeDeadSurvivor",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "def",
+                "type": {
+                  "nullable": true,
+                  "basic": "BuildingDef"
+                }
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "final"
+        ],
+        "javaType": "class"
+      }
+    }
+  }
+}

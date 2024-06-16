@@ -1,0 +1,114 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-iso-objects-interfaces": {
+      "BarricadeAble": {
+        "methods": [
+          {
+            "name": "getBarricadeForCharacter",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoBarricade"
+              }
+            },
+            "parameters": [
+              {
+                "name": "chr",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getBarricadeOnOppositeSquare",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoBarricade"
+              }
+            }
+          },
+          {
+            "name": "getBarricadeOnSameSquare",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoBarricade"
+              }
+            }
+          },
+          {
+            "name": "getBarricadeOppositeCharacter",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoBarricade"
+              }
+            },
+            "parameters": [
+              {
+                "name": "chr",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getNorth",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            }
+          },
+          {
+            "name": "getOppositeSquare",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoGridSquare"
+              }
+            }
+          },
+          {
+            "name": "getSquare",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoGridSquare"
+              }
+            }
+          },
+          {
+            "name": "isBarricadeAllowed",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            }
+          },
+          {
+            "name": "isBarricaded",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            }
+          }
+        ],
+        "modifiers": [
+          "public"
+        ],
+        "javaType": "interface"
+      }
+    }
+  }
+}

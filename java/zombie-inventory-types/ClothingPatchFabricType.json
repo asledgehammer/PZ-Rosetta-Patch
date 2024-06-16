@@ -1,0 +1,173 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-inventory-types": {
+      "ClothingPatchFabricType": {
+        "extends": "Enum",
+        "methods": [
+          {
+            "name": "fromIndex",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ClothingPatchFabricType"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "index",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "fromType",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ClothingPatchFabricType"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "type",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getType",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "Returns an array containing the constants of this enum class, in the order they are declared.",
+            "name": "values",
+            "returns": {
+              "notes": "an array containing the constants of this enum class, in the order they are declared",
+              "type": {
+                "nullable": true,
+                "basic": "ClothingPatchFabricType"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "static"
+        ],
+        "fields": {
+          "maxBiteDef": {
+            "deprecated": false,
+            "name": "maxBiteDef",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "maxScratchDef": {
+            "deprecated": false,
+            "name": "maxScratchDef",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "Leather": {
+            "deprecated": false,
+            "name": "Leather",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "ClothingPatchFabricType"
+            }
+          },
+          "index": {
+            "deprecated": false,
+            "name": "index",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "Cotton": {
+            "deprecated": false,
+            "name": "Cotton",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "ClothingPatchFabricType"
+            }
+          },
+          "Denim": {
+            "deprecated": false,
+            "name": "Denim",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "ClothingPatchFabricType"
+            }
+          },
+          "type": {
+            "deprecated": false,
+            "name": "type",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "String"
+            }
+          }
+        },
+        "javaType": "enum"
+      }
+    }
+  }
+}

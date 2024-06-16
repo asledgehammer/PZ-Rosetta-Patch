@@ -1,0 +1,828 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-characterTextures": {
+      "BloodClothingType": {
+        "extends": "Enum",
+        "methods": [
+          {
+            "notes": "Should be used only for debug, use Clothing.addPatch for gameplay stuff",
+            "name": "addBasicPatch",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "part",
+                "type": {
+                  "nullable": true,
+                  "basic": "BloodBodyPartType"
+                }
+              },
+              {
+                "name": "humanVisual",
+                "type": {
+                  "nullable": true,
+                  "basic": "HumanVisual"
+                }
+              },
+              {
+                "name": "itemVisuals",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cItemVisual\u003e"
+                }
+              }
+            ]
+          },
+          {
+            "name": "addBlood",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "count",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "humanVisual",
+                "type": {
+                  "nullable": true,
+                  "basic": "HumanVisual"
+                }
+              },
+              {
+                "name": "itemVisuals",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cItemVisual\u003e"
+                }
+              },
+              {
+                "name": "allLayers",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "addBlood",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "part",
+                "type": {
+                  "nullable": true,
+                  "basic": "BloodBodyPartType"
+                }
+              },
+              {
+                "name": "humanVisual",
+                "type": {
+                  "nullable": true,
+                  "basic": "HumanVisual"
+                }
+              },
+              {
+                "name": "itemVisuals",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cItemVisual\u003e"
+                }
+              },
+              {
+                "name": "allLayers",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "addBlood",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "part",
+                "type": {
+                  "nullable": true,
+                  "basic": "BloodBodyPartType"
+                }
+              },
+              {
+                "name": "intensity",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "humanVisual",
+                "type": {
+                  "nullable": true,
+                  "basic": "HumanVisual"
+                }
+              },
+              {
+                "name": "itemVisuals",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cItemVisual\u003e"
+                }
+              },
+              {
+                "name": "allLayers",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "addDirt",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "part",
+                "type": {
+                  "nullable": true,
+                  "basic": "BloodBodyPartType"
+                }
+              },
+              {
+                "name": "humanVisual",
+                "type": {
+                  "nullable": true,
+                  "basic": "HumanVisual"
+                }
+              },
+              {
+                "name": "itemVisuals",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cItemVisual\u003e"
+                }
+              },
+              {
+                "name": "allLayers",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "addDirt",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "part",
+                "type": {
+                  "nullable": true,
+                  "basic": "BloodBodyPartType"
+                }
+              },
+              {
+                "name": "intensity",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "humanVisual",
+                "type": {
+                  "nullable": true,
+                  "basic": "HumanVisual"
+                }
+              },
+              {
+                "name": "itemVisuals",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cItemVisual\u003e"
+                }
+              },
+              {
+                "name": "allLayers",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "addHole",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "part",
+                "type": {
+                  "nullable": true,
+                  "basic": "BloodBodyPartType"
+                }
+              },
+              {
+                "name": "humanVisual",
+                "type": {
+                  "nullable": true,
+                  "basic": "HumanVisual"
+                }
+              },
+              {
+                "name": "itemVisuals",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cItemVisual\u003e"
+                }
+              }
+            ]
+          },
+          {
+            "name": "addHole",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "part",
+                "type": {
+                  "nullable": true,
+                  "basic": "BloodBodyPartType"
+                }
+              },
+              {
+                "name": "humanVisual",
+                "type": {
+                  "nullable": true,
+                  "basic": "HumanVisual"
+                }
+              },
+              {
+                "name": "itemVisuals",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cItemVisual\u003e"
+                }
+              },
+              {
+                "name": "allLayers",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "calcTotalBloodLevel",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "clothing",
+                "type": {
+                  "nullable": true,
+                  "basic": "Clothing"
+                }
+              }
+            ]
+          },
+          {
+            "name": "calcTotalDirtLevel",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "clothing",
+                "type": {
+                  "nullable": true,
+                  "basic": "Clothing"
+                }
+              }
+            ]
+          },
+          {
+            "name": "fromString",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "BloodClothingType"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "str",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getCoveredPartCount",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "bloodClothingType",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cBloodClothingType\u003e"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getCoveredParts",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ArrayList"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "bloodClothingType",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cBloodClothingType\u003e"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getCoveredParts",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ArrayList"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "bloodClothingType",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cBloodClothingType\u003e"
+                }
+              },
+              {
+                "name": "result",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cBloodBodyPartType\u003e"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "Returns an array containing the constants of this enum class, in the order they are declared.",
+            "name": "values",
+            "returns": {
+              "notes": "an array containing the constants of this enum class, in the order they are declared",
+              "type": {
+                "nullable": true,
+                "basic": "BloodClothingType"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public"
+        ],
+        "fields": {
+          "Hands": {
+            "deprecated": false,
+            "name": "Hands",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodClothingType"
+            }
+          },
+          "LowerArms": {
+            "deprecated": false,
+            "name": "LowerArms",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodClothingType"
+            }
+          },
+          "Head": {
+            "deprecated": false,
+            "name": "Head",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodClothingType"
+            }
+          },
+          "Jacket": {
+            "deprecated": false,
+            "name": "Jacket",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodClothingType"
+            }
+          },
+          "LongJacket": {
+            "deprecated": false,
+            "name": "LongJacket",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodClothingType"
+            }
+          },
+          "ShortsShort": {
+            "deprecated": false,
+            "name": "ShortsShort",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodClothingType"
+            }
+          },
+          "FullHelmet": {
+            "deprecated": false,
+            "name": "FullHelmet",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodClothingType"
+            }
+          },
+          "Bag": {
+            "deprecated": false,
+            "name": "Bag",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodClothingType"
+            }
+          },
+          "JumperNoSleeves": {
+            "deprecated": false,
+            "name": "JumperNoSleeves",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodClothingType"
+            }
+          },
+          "Apron": {
+            "deprecated": false,
+            "name": "Apron",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodClothingType"
+            }
+          },
+          "Shoes": {
+            "deprecated": false,
+            "name": "Shoes",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodClothingType"
+            }
+          },
+          "UpperArms": {
+            "deprecated": false,
+            "name": "UpperArms",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodClothingType"
+            }
+          },
+          "Trousers": {
+            "deprecated": false,
+            "name": "Trousers",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodClothingType"
+            }
+          },
+          "Jumper": {
+            "deprecated": false,
+            "name": "Jumper",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodClothingType"
+            }
+          },
+          "ShirtLongSleeves": {
+            "deprecated": false,
+            "name": "ShirtLongSleeves",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodClothingType"
+            }
+          },
+          "UpperBody": {
+            "deprecated": false,
+            "name": "UpperBody",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodClothingType"
+            }
+          },
+          "Shirt": {
+            "deprecated": false,
+            "name": "Shirt",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodClothingType"
+            }
+          },
+          "Groin": {
+            "deprecated": false,
+            "name": "Groin",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodClothingType"
+            }
+          },
+          "LowerLegs": {
+            "deprecated": false,
+            "name": "LowerLegs",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodClothingType"
+            }
+          },
+          "LowerBody": {
+            "deprecated": false,
+            "name": "LowerBody",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodClothingType"
+            }
+          },
+          "Neck": {
+            "deprecated": false,
+            "name": "Neck",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodClothingType"
+            }
+          },
+          "UpperLegs": {
+            "deprecated": false,
+            "name": "UpperLegs",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodClothingType"
+            }
+          },
+          "ShirtNoSleeves": {
+            "deprecated": false,
+            "name": "ShirtNoSleeves",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodClothingType"
+            }
+          }
+        },
+        "javaType": "enum"
+      }
+    }
+  }
+}

@@ -1,0 +1,495 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-iso": {
+      "IsoDirections": {
+        "extends": "Enum",
+        "methods": [
+          {
+            "name": "RotLeft",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoDirections"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "time",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RotLeft",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoDirections"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "RotLeft",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoDirections"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "dir",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoDirections"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RotRight",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoDirections"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "time",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "RotRight",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoDirections"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "RotRight",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoDirections"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "dir",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoDirections"
+                }
+              }
+            ]
+          },
+          {
+            "name": "ToVector",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Vector2"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "cardinalFromAngle",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoDirections"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "angle",
+                "type": {
+                  "nullable": true,
+                  "basic": "Vector2"
+                }
+              }
+            ]
+          },
+          {
+            "name": "fromAngle",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoDirections"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "angleRadians",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "fromAngle",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoDirections"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "angle",
+                "type": {
+                  "nullable": true,
+                  "basic": "Vector2"
+                }
+              }
+            ]
+          },
+          {
+            "name": "fromAngle",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoDirections"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "angleX",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "angleY",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "fromAngleActual",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoDirections"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "angle",
+                "type": {
+                  "nullable": true,
+                  "basic": "Vector2"
+                }
+              }
+            ]
+          },
+          {
+            "name": "fromIndex",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoDirections"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "index",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "generateTables",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "getRandom",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoDirections"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "index",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "reverse",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoDirections"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "dir",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoDirections"
+                }
+              }
+            ]
+          },
+          {
+            "name": "toAngle",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "toCompassString",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "Returns an array containing the constants of this enum class, in the order they are declared.",
+            "name": "values",
+            "returns": {
+              "notes": "an array containing the constants of this enum class, in the order they are declared",
+              "type": {
+                "nullable": true,
+                "basic": "IsoDirections"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public"
+        ],
+        "fields": {
+          "SE": {
+            "deprecated": false,
+            "name": "SE",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "IsoDirections"
+            }
+          },
+          "S": {
+            "deprecated": false,
+            "name": "S",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "IsoDirections"
+            }
+          },
+          "SW": {
+            "deprecated": false,
+            "name": "SW",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "IsoDirections"
+            }
+          },
+          "E": {
+            "deprecated": false,
+            "name": "E",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "IsoDirections"
+            }
+          },
+          "Max": {
+            "deprecated": false,
+            "name": "Max",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "IsoDirections"
+            }
+          },
+          "NE": {
+            "deprecated": false,
+            "name": "NE",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "IsoDirections"
+            }
+          },
+          "W": {
+            "deprecated": false,
+            "name": "W",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "IsoDirections"
+            }
+          },
+          "NW": {
+            "deprecated": false,
+            "name": "NW",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "IsoDirections"
+            }
+          },
+          "N": {
+            "deprecated": false,
+            "name": "N",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "IsoDirections"
+            }
+          }
+        },
+        "javaType": "enum"
+      }
+    }
+  }
+}

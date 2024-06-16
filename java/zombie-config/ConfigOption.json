@@ -1,0 +1,201 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-config": {
+      "ConfigOption": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          }
+        ],
+        "extends": "Object",
+        "methods": [
+          {
+            "name": "getName",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getTooltip",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public",
+              "abstract"
+            ]
+          },
+          {
+            "name": "getType",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public",
+              "abstract"
+            ]
+          },
+          {
+            "name": "getValueAsLuaString",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getValueAsObject",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Object"
+              }
+            },
+            "modifiers": [
+              "public",
+              "abstract"
+            ]
+          },
+          {
+            "name": "getValueAsString",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public",
+              "abstract"
+            ]
+          },
+          {
+            "name": "isValidString",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public",
+              "abstract"
+            ],
+            "parameters": [
+              {
+                "name": "s",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "parse",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "abstract"
+            ],
+            "parameters": [
+              {
+                "name": "s",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "resetToDefault",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "abstract"
+            ]
+          },
+          {
+            "name": "setDefaultToCurrentValue",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "abstract"
+            ]
+          },
+          {
+            "name": "setValueFromObject",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "abstract"
+            ],
+            "parameters": [
+              {
+                "name": "o",
+                "type": {
+                  "nullable": true,
+                  "basic": "Object"
+                }
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "abstract"
+        ],
+        "javaType": "class"
+      }
+    }
+  }
+}

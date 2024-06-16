@@ -1,0 +1,211 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-inventory": {
+      "FixingManager": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "extends": "Object",
+        "methods": [
+          {
+            "name": "fixItem",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "InventoryItem"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "brokenItem",
+                "type": {
+                  "nullable": true,
+                  "basic": "InventoryItem"
+                }
+              },
+              {
+                "name": "chr",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              },
+              {
+                "name": "fixing",
+                "type": {
+                  "nullable": true,
+                  "basic": "Fixing"
+                }
+              },
+              {
+                "name": "fixer",
+                "type": {
+                  "nullable": true,
+                  "basic": "Fixer"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getChanceOfFail",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "double"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "brokenItem",
+                "type": {
+                  "nullable": true,
+                  "basic": "InventoryItem"
+                }
+              },
+              {
+                "name": "chr",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              },
+              {
+                "name": "fixing",
+                "type": {
+                  "nullable": true,
+                  "basic": "Fixing"
+                }
+              },
+              {
+                "name": "fixer",
+                "type": {
+                  "nullable": true,
+                  "basic": "Fixer"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getCondRepaired",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "double"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "brokenItem",
+                "type": {
+                  "nullable": true,
+                  "basic": "InventoryItem"
+                }
+              },
+              {
+                "name": "chr",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              },
+              {
+                "name": "fixing",
+                "type": {
+                  "nullable": true,
+                  "basic": "Fixing"
+                }
+              },
+              {
+                "name": "fixer",
+                "type": {
+                  "nullable": true,
+                  "basic": "Fixer"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getFixes",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ArrayList"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "item",
+                "type": {
+                  "nullable": true,
+                  "basic": "InventoryItem"
+                }
+              }
+            ]
+          },
+          {
+            "name": "useFixer",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "chr",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              },
+              {
+                "name": "fixer",
+                "type": {
+                  "nullable": true,
+                  "basic": "Fixer"
+                }
+              },
+              {
+                "name": "brokenItem",
+                "type": {
+                  "nullable": true,
+                  "basic": "InventoryItem"
+                }
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "final"
+        ],
+        "javaType": "class"
+      }
+    }
+  }
+}

@@ -1,0 +1,343 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-iso-objects": {
+      "ObjectRenderEffects": {
+        "notes": "TurboTuTone.",
+        "extends": "Object",
+        "methods": [
+          {
+            "name": "add",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "other",
+                "type": {
+                  "nullable": true,
+                  "basic": "ObjectRenderEffects"
+                }
+              }
+            ]
+          },
+          {
+            "name": "alloc",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ObjectRenderEffects"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "copyMainFromOther",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "other",
+                "type": {
+                  "nullable": true,
+                  "basic": "ObjectRenderEffects"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getNew",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ObjectRenderEffects"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "parent",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoObject"
+                }
+              },
+              {
+                "name": "t",
+                "type": {
+                  "nullable": true,
+                  "basic": "RenderEffectType"
+                }
+              },
+              {
+                "name": "reuseEqualType",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getNew",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ObjectRenderEffects"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "parent",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoObject"
+                }
+              },
+              {
+                "name": "t",
+                "type": {
+                  "nullable": true,
+                  "basic": "RenderEffectType"
+                }
+              },
+              {
+                "name": "reuseEqualType",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              },
+              {
+                "name": "dontAdd",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getNextWindEffect",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ObjectRenderEffects"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "windType",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "isTreeLike",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "init",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "release",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "o",
+                "type": {
+                  "nullable": true,
+                  "basic": "ObjectRenderEffects"
+                }
+              }
+            ]
+          },
+          {
+            "name": "update",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "updateStatic",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public"
+        ],
+        "fields": {
+          "y1": {
+            "deprecated": false,
+            "name": "y1",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "double"
+            }
+          },
+          "x1": {
+            "deprecated": false,
+            "name": "x1",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "double"
+            }
+          },
+          "y2": {
+            "deprecated": false,
+            "name": "y2",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "double"
+            }
+          },
+          "ENABLED": {
+            "deprecated": false,
+            "name": "ENABLED",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "boolean"
+            }
+          },
+          "x2": {
+            "deprecated": false,
+            "name": "x2",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "double"
+            }
+          },
+          "y3": {
+            "deprecated": false,
+            "name": "y3",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "double"
+            }
+          },
+          "x3": {
+            "deprecated": false,
+            "name": "x3",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "double"
+            }
+          },
+          "y4": {
+            "deprecated": false,
+            "name": "y4",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "double"
+            }
+          },
+          "x4": {
+            "deprecated": false,
+            "name": "x4",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "double"
+            }
+          }
+        },
+        "javaType": "class"
+      }
+    }
+  }
+}

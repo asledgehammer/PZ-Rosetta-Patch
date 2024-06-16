@@ -1,0 +1,504 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-characters-Moodles": {
+      "MoodleType": {
+        "extends": "Enum",
+        "methods": [
+          {
+            "name": "FromIndex",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "MoodleType"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "index",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "FromString",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "MoodleType"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "str",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "GoodBadNeutral",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "MT",
+                "type": {
+                  "nullable": true,
+                  "basic": "MoodleType"
+                }
+              }
+            ]
+          },
+          {
+            "name": "ToIndex",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "MT",
+                "type": {
+                  "nullable": true,
+                  "basic": "MoodleType"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getDescriptionText",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "MT",
+                "type": {
+                  "nullable": true,
+                  "basic": "MoodleType"
+                }
+              },
+              {
+                "name": "Level",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getDisplayName",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "MT",
+                "type": {
+                  "nullable": true,
+                  "basic": "MoodleType"
+                }
+              },
+              {
+                "name": "Level",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "Returns an array containing the constants of this enum class, in the order they are declared.",
+            "name": "values",
+            "returns": {
+              "notes": "an array containing the constants of this enum class, in the order they are declared",
+              "type": {
+                "nullable": true,
+                "basic": "MoodleType"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public"
+        ],
+        "fields": {
+          "CantSprint": {
+            "deprecated": false,
+            "name": "CantSprint",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "MoodleType"
+            }
+          },
+          "Panic": {
+            "deprecated": false,
+            "name": "Panic",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "MoodleType"
+            }
+          },
+          "MAX": {
+            "deprecated": false,
+            "name": "MAX",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "MoodleType"
+            }
+          },
+          "Angry": {
+            "deprecated": false,
+            "name": "Angry",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "MoodleType"
+            }
+          },
+          "Wet": {
+            "deprecated": false,
+            "name": "Wet",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "MoodleType"
+            }
+          },
+          "HasACold": {
+            "deprecated": false,
+            "name": "HasACold",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "MoodleType"
+            }
+          },
+          "Unhappy": {
+            "deprecated": false,
+            "name": "Unhappy",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "MoodleType"
+            }
+          },
+          "Tired": {
+            "deprecated": false,
+            "name": "Tired",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "MoodleType"
+            }
+          },
+          "Bleeding": {
+            "deprecated": false,
+            "name": "Bleeding",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "MoodleType"
+            }
+          },
+          "Bored": {
+            "deprecated": false,
+            "name": "Bored",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "MoodleType"
+            }
+          },
+          "Pain": {
+            "deprecated": false,
+            "name": "Pain",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "MoodleType"
+            }
+          },
+          "HeavyLoad": {
+            "deprecated": false,
+            "name": "HeavyLoad",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "MoodleType"
+            }
+          },
+          "Endurance": {
+            "deprecated": false,
+            "name": "Endurance",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "MoodleType"
+            }
+          },
+          "Thirst": {
+            "deprecated": false,
+            "name": "Thirst",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "MoodleType"
+            }
+          },
+          "Dead": {
+            "deprecated": false,
+            "name": "Dead",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "MoodleType"
+            }
+          },
+          "Zombie": {
+            "deprecated": false,
+            "name": "Zombie",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "MoodleType"
+            }
+          },
+          "FoodEaten": {
+            "deprecated": false,
+            "name": "FoodEaten",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "MoodleType"
+            }
+          },
+          "Injured": {
+            "deprecated": false,
+            "name": "Injured",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "MoodleType"
+            }
+          },
+          "Hungry": {
+            "deprecated": false,
+            "name": "Hungry",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "MoodleType"
+            }
+          },
+          "Stress": {
+            "deprecated": false,
+            "name": "Stress",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "MoodleType"
+            }
+          },
+          "Windchill": {
+            "deprecated": false,
+            "name": "Windchill",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "MoodleType"
+            }
+          },
+          "Drunk": {
+            "deprecated": false,
+            "name": "Drunk",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "MoodleType"
+            }
+          },
+          "Sick": {
+            "deprecated": false,
+            "name": "Sick",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "MoodleType"
+            }
+          },
+          "Hyperthermia": {
+            "deprecated": false,
+            "name": "Hyperthermia",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "MoodleType"
+            }
+          },
+          "Hypothermia": {
+            "deprecated": false,
+            "name": "Hypothermia",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "MoodleType"
+            }
+          }
+        },
+        "javaType": "enum"
+      }
+    }
+  }
+}

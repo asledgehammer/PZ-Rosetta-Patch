@@ -1,0 +1,85 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-scripting-objects": {
+      "Fixer": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "skills",
+                "type": {
+                  "nullable": true,
+                  "basic": "LinkedList",
+                  "full": "LinkedList\u003cFixing.FixerSkill\u003e"
+                }
+              },
+              {
+                "name": "numberOfUse",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          }
+        ],
+        "extends": "Object",
+        "methods": [
+          {
+            "name": "getFixerName",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getFixerSkills",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "LinkedList"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getNumberOfUse",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "static",
+          "final"
+        ],
+        "javaType": "class"
+      }
+    }
+  }
+}

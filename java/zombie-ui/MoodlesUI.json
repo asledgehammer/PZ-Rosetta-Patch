@@ -1,0 +1,384 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-ui": {
+      "MoodlesUI": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "extends": "UIElement",
+        "methods": [
+          {
+            "name": "CurrentlyAnimating",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "Nest",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "el",
+                "type": {
+                  "nullable": true,
+                  "basic": "UIElement"
+                }
+              },
+              {
+                "name": "t",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "r",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "b",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "l",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getInstance",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "MoodlesUI"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "onMouseMove",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "dx",
+                "type": {
+                  "nullable": false,
+                  "basic": "double"
+                }
+              },
+              {
+                "name": "dy",
+                "type": {
+                  "nullable": false,
+                  "basic": "double"
+                }
+              }
+            ]
+          },
+          {
+            "name": "onMouseMoveOutside",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "dx",
+                "type": {
+                  "nullable": false,
+                  "basic": "double"
+                }
+              },
+              {
+                "name": "dy",
+                "type": {
+                  "nullable": false,
+                  "basic": "double"
+                }
+              }
+            ]
+          },
+          {
+            "name": "render",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "setCharacter",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "chr",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              }
+            ]
+          },
+          {
+            "name": "update",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "wiggle",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "Moodle",
+                "type": {
+                  "nullable": true,
+                  "basic": "MoodleType"
+                }
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "final"
+        ],
+        "fields": {
+          "clientW": {
+            "deprecated": false,
+            "name": "clientW",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "float"
+            }
+          },
+          "minusRed": {
+            "deprecated": false,
+            "name": "minusRed",
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Texture"
+            }
+          },
+          "chevronUp": {
+            "deprecated": false,
+            "name": "chevronUp",
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Texture"
+            }
+          },
+          "plusGreen": {
+            "deprecated": false,
+            "name": "plusGreen",
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Texture"
+            }
+          },
+          "chevronUpBorder": {
+            "deprecated": false,
+            "name": "chevronUpBorder",
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Texture"
+            }
+          },
+          "chevronDown": {
+            "deprecated": false,
+            "name": "chevronDown",
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Texture"
+            }
+          },
+          "ncclientH": {
+            "deprecated": false,
+            "name": "ncclientH",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "ncclientW": {
+            "deprecated": false,
+            "name": "ncclientW",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "nestedItems": {
+            "deprecated": false,
+            "name": "nestedItems",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Stack"
+            }
+          },
+          "chevronDownBorder": {
+            "deprecated": false,
+            "name": "chevronDownBorder",
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Texture"
+            }
+          },
+          "clientH": {
+            "deprecated": false,
+            "name": "clientH",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "float"
+            }
+          },
+          "Movable": {
+            "deprecated": false,
+            "name": "Movable",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "boolean"
+            }
+          },
+          "plusRed": {
+            "deprecated": false,
+            "name": "plusRed",
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Texture"
+            }
+          },
+          "minusGreen": {
+            "deprecated": false,
+            "name": "minusGreen",
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Texture"
+            }
+          }
+        },
+        "javaType": "class"
+      }
+    }
+  }
+}

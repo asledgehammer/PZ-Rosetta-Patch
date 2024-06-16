@@ -1,0 +1,318 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-randomizedWorld-randomizedZoneStory": {
+      "RandomizedZoneStoryBase": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "extends": "RandomizedWorldBase",
+        "methods": [
+          {
+            "name": "cleanAreaForStory",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "rzs",
+                "type": {
+                  "nullable": true,
+                  "basic": "RandomizedZoneStoryBase"
+                }
+              },
+              {
+                "name": "zone",
+                "type": {
+                  "nullable": true,
+                  "basic": "Zone"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getMinimumHeight",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getMinimumWidth",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "Get a random free square in our story zone",
+            "name": "getRandomFreeSquare",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoGridSquare"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "rzs",
+                "type": {
+                  "nullable": true,
+                  "basic": "RandomizedZoneStoryBase"
+                }
+              },
+              {
+                "name": "zone",
+                "type": {
+                  "nullable": true,
+                  "basic": "Zone"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getRandomFreeSquareFullZone",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoGridSquare"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "rzs",
+                "type": {
+                  "nullable": true,
+                  "basic": "RandomizedZoneStoryBase"
+                }
+              },
+              {
+                "name": "zone",
+                "type": {
+                  "nullable": true,
+                  "basic": "Zone"
+                }
+              }
+            ]
+          },
+          {
+            "name": "initAllRZSMapChance",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "zone",
+                "type": {
+                  "nullable": true,
+                  "basic": "Zone"
+                }
+              }
+            ]
+          },
+          {
+            "name": "isValid",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "zone",
+                "type": {
+                  "nullable": true,
+                  "basic": "Zone"
+                }
+              },
+              {
+                "name": "force",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "isValid",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "isValidForStory",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "zone",
+                "type": {
+                  "nullable": true,
+                  "basic": "Zone"
+                }
+              },
+              {
+                "name": "force",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "randomizeZoneStory",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "zone",
+                "type": {
+                  "nullable": true,
+                  "basic": "Zone"
+                }
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          "public"
+        ],
+        "fields": {
+          "totalChance": {
+            "deprecated": false,
+            "name": "totalChance",
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "chance": {
+            "deprecated": false,
+            "name": "chance",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "baseChance": {
+            "deprecated": false,
+            "name": "baseChance",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "zoneStory": {
+            "deprecated": false,
+            "name": "zoneStory",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "String"
+            }
+          },
+          "alwaysDo": {
+            "deprecated": false,
+            "name": "alwaysDo",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "boolean"
+            }
+          },
+          "zoneType": {
+            "deprecated": false,
+            "name": "zoneType",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "ArrayList"
+            }
+          }
+        },
+        "javaType": "class"
+      }
+    }
+  }
+}

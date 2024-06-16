@@ -1,0 +1,299 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-iso": {
+      "IsoLot": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "extends": "Object",
+        "methods": [
+          {
+            "name": "Dispose",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "get",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoLot"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "cX",
+                "type": {
+                  "nullable": true,
+                  "basic": "Integer"
+                }
+              },
+              {
+                "name": "cY",
+                "type": {
+                  "nullable": true,
+                  "basic": "Integer"
+                }
+              },
+              {
+                "name": "wX",
+                "type": {
+                  "nullable": true,
+                  "basic": "Integer"
+                }
+              },
+              {
+                "name": "wY",
+                "type": {
+                  "nullable": true,
+                  "basic": "Integer"
+                }
+              },
+              {
+                "name": "ch",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoChunk"
+                }
+              }
+            ]
+          },
+          {
+            "name": "load",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "cX",
+                "type": {
+                  "nullable": true,
+                  "basic": "Integer"
+                }
+              },
+              {
+                "name": "cY",
+                "type": {
+                  "nullable": true,
+                  "basic": "Integer"
+                }
+              },
+              {
+                "name": "wX",
+                "type": {
+                  "nullable": true,
+                  "basic": "Integer"
+                }
+              },
+              {
+                "name": "wY",
+                "type": {
+                  "nullable": true,
+                  "basic": "Integer"
+                }
+              },
+              {
+                "name": "ch",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoChunk"
+                }
+              }
+            ]
+          },
+          {
+            "name": "put",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "lot",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoLot"
+                }
+              }
+            ]
+          },
+          {
+            "name": "readInt",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "__in__",
+                "type": {
+                  "nullable": true,
+                  "basic": "RandomAccessFile"
+                }
+              }
+            ]
+          },
+          {
+            "name": "readShort",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "__in__",
+                "type": {
+                  "nullable": true,
+                  "basic": "RandomAccessFile"
+                }
+              }
+            ]
+          },
+          {
+            "name": "readString",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "__in__",
+                "type": {
+                  "nullable": true,
+                  "basic": "BufferedRandomAccessFile"
+                }
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          "public"
+        ],
+        "fields": {
+          "InfoFileNames": {
+            "deprecated": false,
+            "name": "InfoFileNames",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "HashMap"
+            }
+          },
+          "wx": {
+            "deprecated": false,
+            "name": "wx",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "InfoHeaderNames": {
+            "deprecated": false,
+            "name": "InfoHeaderNames",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "ArrayList"
+            }
+          },
+          "wy": {
+            "deprecated": false,
+            "name": "wy",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "InfoHeaders": {
+            "deprecated": false,
+            "name": "InfoHeaders",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "HashMap"
+            }
+          },
+          "pool": {
+            "deprecated": false,
+            "name": "pool",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "ObjectPool"
+            }
+          }
+        },
+        "javaType": "class"
+      }
+    }
+  }
+}

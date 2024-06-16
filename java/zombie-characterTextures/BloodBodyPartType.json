@@ -1,0 +1,405 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-characterTextures": {
+      "BloodBodyPartType": {
+        "notes": "Created by LEMMY on 7/1/2016.",
+        "extends": "Enum",
+        "methods": [
+          {
+            "name": "FromIndex",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "BloodBodyPartType"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "index",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "FromString",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "BloodBodyPartType"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "str",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "ToIndex",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "BPT",
+                "type": {
+                  "nullable": true,
+                  "basic": "BloodBodyPartType"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getCharacterMaskParts",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Part"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getDisplayName",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getDisplayName",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "BPT",
+                "type": {
+                  "nullable": true,
+                  "basic": "BloodBodyPartType"
+                }
+              }
+            ]
+          },
+          {
+            "name": "index",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "Returns an array containing the constants of this enum class, in the order they are declared.",
+            "name": "values",
+            "returns": {
+              "notes": "an array containing the constants of this enum class, in the order they are declared",
+              "type": {
+                "nullable": true,
+                "basic": "BloodBodyPartType"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public"
+        ],
+        "fields": {
+          "LowerLeg_R": {
+            "deprecated": false,
+            "name": "LowerLeg_R",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodBodyPartType"
+            }
+          },
+          "Foot_R": {
+            "deprecated": false,
+            "name": "Foot_R",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodBodyPartType"
+            }
+          },
+          "Head": {
+            "deprecated": false,
+            "name": "Head",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodBodyPartType"
+            }
+          },
+          "Torso_Lower": {
+            "deprecated": false,
+            "name": "Torso_Lower",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodBodyPartType"
+            }
+          },
+          "Torso_Upper": {
+            "deprecated": false,
+            "name": "Torso_Upper",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodBodyPartType"
+            }
+          },
+          "Hand_R": {
+            "deprecated": false,
+            "name": "Hand_R",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodBodyPartType"
+            }
+          },
+          "MAX": {
+            "deprecated": false,
+            "name": "MAX",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodBodyPartType"
+            }
+          },
+          "UpperLeg_L": {
+            "deprecated": false,
+            "name": "UpperLeg_L",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodBodyPartType"
+            }
+          },
+          "UpperLeg_R": {
+            "deprecated": false,
+            "name": "UpperLeg_R",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodBodyPartType"
+            }
+          },
+          "ForeArm_L": {
+            "deprecated": false,
+            "name": "ForeArm_L",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodBodyPartType"
+            }
+          },
+          "ForeArm_R": {
+            "deprecated": false,
+            "name": "ForeArm_R",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodBodyPartType"
+            }
+          },
+          "UpperArm_R": {
+            "deprecated": false,
+            "name": "UpperArm_R",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodBodyPartType"
+            }
+          },
+          "Groin": {
+            "deprecated": false,
+            "name": "Groin",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodBodyPartType"
+            }
+          },
+          "Back": {
+            "deprecated": false,
+            "name": "Back",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodBodyPartType"
+            }
+          },
+          "Foot_L": {
+            "deprecated": false,
+            "name": "Foot_L",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodBodyPartType"
+            }
+          },
+          "UpperArm_L": {
+            "deprecated": false,
+            "name": "UpperArm_L",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodBodyPartType"
+            }
+          },
+          "Hand_L": {
+            "deprecated": false,
+            "name": "Hand_L",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodBodyPartType"
+            }
+          },
+          "LowerLeg_L": {
+            "deprecated": false,
+            "name": "LowerLeg_L",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodBodyPartType"
+            }
+          },
+          "Neck": {
+            "deprecated": false,
+            "name": "Neck",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BloodBodyPartType"
+            }
+          }
+        },
+        "javaType": "enum"
+      }
+    }
+  }
+}

@@ -1,0 +1,565 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-characters-skills": {
+      "Perks": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "extends": "Object",
+        "methods": [
+          {
+            "name": "FromString",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Perk"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "id",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "fromIndex",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Perk"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "value",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getMaxIndex",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "static",
+          "final"
+        ],
+        "fields": {
+          "Blacksmith": {
+            "deprecated": false,
+            "name": "Blacksmith",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Cooking": {
+            "deprecated": false,
+            "name": "Cooking",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Sprinting": {
+            "deprecated": false,
+            "name": "Sprinting",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Blunt": {
+            "deprecated": false,
+            "name": "Blunt",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "MAX": {
+            "deprecated": false,
+            "name": "MAX",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Fishing": {
+            "deprecated": false,
+            "name": "Fishing",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "SmallBlunt": {
+            "deprecated": false,
+            "name": "SmallBlunt",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Passiv": {
+            "deprecated": false,
+            "name": "Passiv",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Firearm": {
+            "deprecated": false,
+            "name": "Firearm",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Electricity": {
+            "deprecated": false,
+            "name": "Electricity",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Agility": {
+            "deprecated": false,
+            "name": "Agility",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Reloading": {
+            "deprecated": false,
+            "name": "Reloading",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Survivalist": {
+            "deprecated": false,
+            "name": "Survivalist",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Woodwork": {
+            "deprecated": false,
+            "name": "Woodwork",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Melting": {
+            "deprecated": false,
+            "name": "Melting",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "MetalWelding": {
+            "deprecated": false,
+            "name": "MetalWelding",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "LongBlade": {
+            "deprecated": false,
+            "name": "LongBlade",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Doctor": {
+            "deprecated": false,
+            "name": "Doctor",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Maintenance": {
+            "deprecated": false,
+            "name": "Maintenance",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Crafting": {
+            "deprecated": false,
+            "name": "Crafting",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Axe": {
+            "deprecated": false,
+            "name": "Axe",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Sneak": {
+            "deprecated": false,
+            "name": "Sneak",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Trapping": {
+            "deprecated": false,
+            "name": "Trapping",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "SmallBlade": {
+            "deprecated": false,
+            "name": "SmallBlade",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Combat": {
+            "deprecated": false,
+            "name": "Combat",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Aiming": {
+            "deprecated": false,
+            "name": "Aiming",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Mechanics": {
+            "deprecated": false,
+            "name": "Mechanics",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Melee": {
+            "deprecated": false,
+            "name": "Melee",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "PlantScavenging": {
+            "deprecated": false,
+            "name": "PlantScavenging",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Lightfoot": {
+            "deprecated": false,
+            "name": "Lightfoot",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Nimble": {
+            "deprecated": false,
+            "name": "Nimble",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "None": {
+            "deprecated": false,
+            "name": "None",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Strength": {
+            "deprecated": false,
+            "name": "Strength",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Tailoring": {
+            "deprecated": false,
+            "name": "Tailoring",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Farming": {
+            "deprecated": false,
+            "name": "Farming",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Fitness": {
+            "deprecated": false,
+            "name": "Fitness",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          },
+          "Spear": {
+            "deprecated": false,
+            "name": "Spear",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Perk"
+            }
+          }
+        },
+        "javaType": "class"
+      }
+    }
+  }
+}

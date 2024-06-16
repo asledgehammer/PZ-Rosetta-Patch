@@ -1,0 +1,73 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-characters": {
+      "SurvivorType": {
+        "extends": "Enum",
+        "methods": [
+          {
+            "notes": "Returns an array containing the constants of this enum class, in the order they are declared.",
+            "name": "values",
+            "returns": {
+              "notes": "an array containing the constants of this enum class, in the order they are declared",
+              "type": {
+                "nullable": true,
+                "basic": "SurvivorType"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "static"
+        ],
+        "fields": {
+          "Neutral": {
+            "deprecated": false,
+            "name": "Neutral",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "SurvivorType"
+            }
+          },
+          "Friendly": {
+            "deprecated": false,
+            "name": "Friendly",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "SurvivorType"
+            }
+          },
+          "Aggressive": {
+            "deprecated": false,
+            "name": "Aggressive",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "SurvivorType"
+            }
+          }
+        },
+        "javaType": "enum"
+      }
+    }
+  }
+}

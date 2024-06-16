@@ -1,0 +1,564 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-ai-states": {
+      "SwipeStatePlayer": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "extends": "State",
+        "methods": [
+          {
+            "name": "CalcAttackVars",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "owner",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoLivingCharacter"
+                }
+              },
+              {
+                "name": "vars",
+                "type": {
+                  "nullable": true,
+                  "basic": "AttackVars"
+                }
+              }
+            ]
+          },
+          {
+            "name": "CalcHitChance",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "owner",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              },
+              {
+                "name": "weapon",
+                "type": {
+                  "nullable": true,
+                  "basic": "HandWeapon"
+                }
+              },
+              {
+                "name": "hitInfo",
+                "type": {
+                  "nullable": true,
+                  "basic": "HitInfo"
+                }
+              }
+            ]
+          },
+          {
+            "name": "CalcHitList",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "owner",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              },
+              {
+                "name": "extraRange",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              },
+              {
+                "name": "attackVars",
+                "type": {
+                  "nullable": true,
+                  "basic": "AttackVars"
+                }
+              },
+              {
+                "name": "hitList",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cHitInfo\u003e"
+                }
+              }
+            ]
+          },
+          {
+            "name": "ConnectSwing",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "owner",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              },
+              {
+                "name": "weapon",
+                "type": {
+                  "nullable": true,
+                  "basic": "HandWeapon"
+                }
+              }
+            ]
+          },
+          {
+            "name": "WeaponLowerCondition",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "weapon",
+                "type": {
+                  "nullable": true,
+                  "basic": "HandWeapon"
+                }
+              },
+              {
+                "name": "owner",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              }
+            ]
+          },
+          {
+            "name": "animEvent",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "owner",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              },
+              {
+                "name": "event",
+                "type": {
+                  "nullable": true,
+                  "basic": "AnimEvent"
+                }
+              }
+            ]
+          },
+          {
+            "name": "calcValidTargets",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "owner",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoLivingCharacter"
+                }
+              },
+              {
+                "name": "weapon",
+                "type": {
+                  "nullable": true,
+                  "basic": "HandWeapon"
+                }
+              },
+              {
+                "name": "extraRange",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              },
+              {
+                "name": "targetsProne",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cHitInfo\u003e"
+                }
+              },
+              {
+                "name": "targetsStanding",
+                "type": {
+                  "nullable": true,
+                  "basic": "ArrayList",
+                  "full": "ArrayList\u003cHitInfo\u003e"
+                }
+              }
+            ]
+          },
+          {
+            "name": "changeWeapon",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "weapon",
+                "type": {
+                  "nullable": true,
+                  "basic": "HandWeapon"
+                }
+              },
+              {
+                "name": "owner",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              }
+            ]
+          },
+          {
+            "name": "checkPVP",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "owner",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              },
+              {
+                "name": "obj",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoMovingObject"
+                }
+              }
+            ]
+          },
+          {
+            "name": "enter",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "owner",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              }
+            ]
+          },
+          {
+            "name": "execute",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "owner",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              }
+            ]
+          },
+          {
+            "name": "exit",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "owner",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getBoneWorldPos",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Vector3"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "target",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoMovingObject"
+                }
+              },
+              {
+                "name": "boneName",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "bonePos",
+                "type": {
+                  "nullable": true,
+                  "basic": "Vector3"
+                }
+              }
+            ]
+          },
+          {
+            "name": "instance",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "SwipeStatePlayer"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "isProne",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "obj",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoMovingObject"
+                }
+              }
+            ]
+          },
+          {
+            "name": "isProneTargetBetter",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "owner",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              },
+              {
+                "name": "bestStanding",
+                "type": {
+                  "nullable": true,
+                  "basic": "HitInfo"
+                }
+              },
+              {
+                "name": "bestProne",
+                "type": {
+                  "nullable": true,
+                  "basic": "HitInfo"
+                }
+              }
+            ]
+          },
+          {
+            "name": "isStanding",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "obj",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoMovingObject"
+                }
+              }
+            ]
+          },
+          {
+            "name": "splash",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "obj",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoMovingObject"
+                }
+              },
+              {
+                "name": "weapon",
+                "type": {
+                  "nullable": true,
+                  "basic": "HandWeapon"
+                }
+              },
+              {
+                "name": "owner",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "final"
+        ],
+        "fields": {
+          "hitInfoPool": {
+            "deprecated": false,
+            "name": "hitInfoPool",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "ObjectPool"
+            }
+          }
+        },
+        "javaType": "class"
+      }
+    }
+  }
+}

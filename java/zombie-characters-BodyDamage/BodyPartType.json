@@ -1,0 +1,653 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-characters-BodyDamage": {
+      "BodyPartType": {
+        "extends": "Enum",
+        "methods": [
+          {
+            "name": "FromIndex",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "BodyPartType"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "index",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "FromString",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "BodyPartType"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "str",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "GetDistToCore",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "bodyPartType",
+                "type": {
+                  "nullable": true,
+                  "basic": "BodyPartType"
+                }
+              }
+            ]
+          },
+          {
+            "name": "GetMaxActionPenalty",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "bodyPartType",
+                "type": {
+                  "nullable": true,
+                  "basic": "BodyPartType"
+                }
+              }
+            ]
+          },
+          {
+            "name": "GetMaxMovementPenalty",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "bodyPartType",
+                "type": {
+                  "nullable": true,
+                  "basic": "BodyPartType"
+                }
+              }
+            ]
+          },
+          {
+            "name": "GetSkinSurface",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "bodyPartType",
+                "type": {
+                  "nullable": true,
+                  "basic": "BodyPartType"
+                }
+              }
+            ]
+          },
+          {
+            "name": "GetUmbrellaMod",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "bodyPartType",
+                "type": {
+                  "nullable": true,
+                  "basic": "BodyPartType"
+                }
+              }
+            ]
+          },
+          {
+            "name": "ToIndex",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "BPT",
+                "type": {
+                  "nullable": true,
+                  "basic": "BodyPartType"
+                }
+              }
+            ]
+          },
+          {
+            "name": "ToString",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "BPT",
+                "type": {
+                  "nullable": true,
+                  "basic": "BodyPartType"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getBandageModel",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getBiteWoundModel",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "female",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getBleedingTimeModifyer",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "index",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getCutWoundModel",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "female",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getDamageModifyer",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "index",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getDisplayName",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "BPT",
+                "type": {
+                  "nullable": true,
+                  "basic": "BodyPartType"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getPainModifyer",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "index",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getRandom",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "BodyPartType"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "getScratchWoundModel",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "female",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "index",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "Returns an array containing the constants of this enum class, in the order they are declared.",
+            "name": "values",
+            "returns": {
+              "notes": "an array containing the constants of this enum class, in the order they are declared",
+              "type": {
+                "nullable": true,
+                "basic": "BodyPartType"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public"
+        ],
+        "fields": {
+          "LowerLeg_R": {
+            "deprecated": false,
+            "name": "LowerLeg_R",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BodyPartType"
+            }
+          },
+          "Foot_R": {
+            "deprecated": false,
+            "name": "Foot_R",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BodyPartType"
+            }
+          },
+          "Head": {
+            "deprecated": false,
+            "name": "Head",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BodyPartType"
+            }
+          },
+          "Torso_Lower": {
+            "deprecated": false,
+            "name": "Torso_Lower",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BodyPartType"
+            }
+          },
+          "Torso_Upper": {
+            "deprecated": false,
+            "name": "Torso_Upper",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BodyPartType"
+            }
+          },
+          "Hand_R": {
+            "deprecated": false,
+            "name": "Hand_R",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BodyPartType"
+            }
+          },
+          "MAX": {
+            "deprecated": false,
+            "name": "MAX",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BodyPartType"
+            }
+          },
+          "UpperLeg_L": {
+            "deprecated": false,
+            "name": "UpperLeg_L",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BodyPartType"
+            }
+          },
+          "UpperLeg_R": {
+            "deprecated": false,
+            "name": "UpperLeg_R",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BodyPartType"
+            }
+          },
+          "ForeArm_L": {
+            "deprecated": false,
+            "name": "ForeArm_L",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BodyPartType"
+            }
+          },
+          "ForeArm_R": {
+            "deprecated": false,
+            "name": "ForeArm_R",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BodyPartType"
+            }
+          },
+          "UpperArm_R": {
+            "deprecated": false,
+            "name": "UpperArm_R",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BodyPartType"
+            }
+          },
+          "Groin": {
+            "deprecated": false,
+            "name": "Groin",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BodyPartType"
+            }
+          },
+          "Foot_L": {
+            "deprecated": false,
+            "name": "Foot_L",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BodyPartType"
+            }
+          },
+          "UpperArm_L": {
+            "deprecated": false,
+            "name": "UpperArm_L",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BodyPartType"
+            }
+          },
+          "Hand_L": {
+            "deprecated": false,
+            "name": "Hand_L",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BodyPartType"
+            }
+          },
+          "LowerLeg_L": {
+            "deprecated": false,
+            "name": "LowerLeg_L",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BodyPartType"
+            }
+          },
+          "Neck": {
+            "deprecated": false,
+            "name": "Neck",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BodyPartType"
+            }
+          }
+        },
+        "javaType": "enum"
+      }
+    }
+  }
+}

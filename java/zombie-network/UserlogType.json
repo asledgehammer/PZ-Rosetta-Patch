@@ -1,0 +1,181 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-network": {
+      "UserlogType": {
+        "extends": "Enum",
+        "methods": [
+          {
+            "name": "FromString",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "UserlogType"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "str",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "fromIndex",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "UserlogType"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "value",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "index",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "Returns an array containing the constants of this enum class, in the order they are declared.",
+            "name": "values",
+            "returns": {
+              "notes": "an array containing the constants of this enum class, in the order they are declared",
+              "type": {
+                "nullable": true,
+                "basic": "UserlogType"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "static"
+        ],
+        "fields": {
+          "DupeItem": {
+            "deprecated": false,
+            "name": "DupeItem",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "UserlogType"
+            }
+          },
+          "UnauthorizedPacket": {
+            "deprecated": false,
+            "name": "UnauthorizedPacket",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "UserlogType"
+            }
+          },
+          "LuaChecksum": {
+            "deprecated": false,
+            "name": "LuaChecksum",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "UserlogType"
+            }
+          },
+          "AdminLog": {
+            "deprecated": false,
+            "name": "AdminLog",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "UserlogType"
+            }
+          },
+          "Banned": {
+            "deprecated": false,
+            "name": "Banned",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "UserlogType"
+            }
+          },
+          "Kicked": {
+            "deprecated": false,
+            "name": "Kicked",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "UserlogType"
+            }
+          },
+          "WarningPoint": {
+            "deprecated": false,
+            "name": "WarningPoint",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "UserlogType"
+            }
+          }
+        },
+        "javaType": "enum"
+      }
+    }
+  }
+}

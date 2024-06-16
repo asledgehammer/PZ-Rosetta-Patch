@@ -1,0 +1,329 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-util-list": {
+      "PZArrayList": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "elementType",
+                "type": {
+                  "nullable": true,
+                  "basic": "Class",
+                  "full": "Class\u003cE\u003e"
+                }
+              },
+              {
+                "name": "initialCapacity",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          }
+        ],
+        "extends": "AbstractList",
+        "methods": [
+          {
+            "name": "add",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "e",
+                "type": {
+                  "nullable": true,
+                  "basic": "E"
+                }
+              }
+            ]
+          },
+          {
+            "name": "add",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "index",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "e",
+                "type": {
+                  "nullable": true,
+                  "basic": "E"
+                }
+              }
+            ]
+          },
+          {
+            "name": "clear",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "contains",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "o",
+                "type": {
+                  "nullable": true,
+                  "basic": "Object"
+                }
+              }
+            ]
+          },
+          {
+            "name": "emptyList",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "AbstractList"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "get",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "E"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "index",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getElements",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "E"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "indexOf",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "o",
+                "type": {
+                  "nullable": true,
+                  "basic": "Object"
+                }
+              }
+            ]
+          },
+          {
+            "name": "isEmpty",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "iterator",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Iterator"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "listIterator",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ListIterator"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "listIterator",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ListIterator"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "index",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "remove",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "E"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "index",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "remove",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "o",
+                "type": {
+                  "nullable": true,
+                  "basic": "Object"
+                }
+              }
+            ]
+          },
+          {
+            "name": "set",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "E"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "index",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "e",
+                "type": {
+                  "nullable": true,
+                  "basic": "E"
+                }
+              }
+            ]
+          },
+          {
+            "name": "size",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "final"
+        ],
+        "javaType": "class"
+      }
+    }
+  }
+}

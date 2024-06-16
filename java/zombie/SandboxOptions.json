@@ -1,0 +1,1964 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie": {
+      "SandboxOptions": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "extends": "Object",
+        "methods": [
+          {
+            "name": "Reset",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "applySettings",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "copyValuesFrom",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "other",
+                "type": {
+                  "nullable": true,
+                  "basic": "SandboxOptions"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getAllClothesUnlocked",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getCompostHours",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getDayLengthMinutes",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getDayLengthMinutesDefault",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getElecShutModifier",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getEnduranceRegenMultiplier",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "double"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getErosionSpeed",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getFirstYear",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getFoodLootModifier",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getInstance",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "SandboxOptions"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "getNumOptions",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getOptionByIndex",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "SandboxOption"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "index",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getOptionByName",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "SandboxOption"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getOtherLootModifier",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getRainModifier",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getStatsDecreaseMultiplier",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "double"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getTemperatureModifier",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getTimeSinceApo",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getWaterShutModifier",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getWeaponLootModifier",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "handleOldServerZombiesFile",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "handleOldZombiesFile1",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "handleOldZombiesFile2",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "initSandboxVars",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "isValidPresetName",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "load",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "input",
+                "type": {
+                  "nullable": true,
+                  "basic": "ByteBuffer"
+                }
+              }
+            ]
+          },
+          {
+            "name": "load",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "loadCurrentGameBinFile",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "loadGameFile",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "presetName",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "loadPresetFile",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "presetName",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "loadServerLuaFile",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "serverName",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "loadServerTextFile",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "serverName",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "loadServerZombiesFile",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "serverName",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "newCopy",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "SandboxOptions"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "newCustomOption",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "customSandboxOption",
+                "type": {
+                  "nullable": true,
+                  "basic": "CustomSandboxOption"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "Random the number of day for the selectricity shut off",
+            "name": "randomElectricityShut",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "electricityShutoffModifier",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "Random the number of day for the water shut off",
+            "name": "randomWaterShut",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "waterShutoffModifier",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "resetToDefault",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "save",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "output",
+                "type": {
+                  "nullable": true,
+                  "basic": "ByteBuffer"
+                }
+              }
+            ]
+          },
+          {
+            "name": "saveGameFile",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "presetName",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "savePresetFile",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "presetName",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "saveServerLuaFile",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "serverName",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "sendToServer",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "set",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "o",
+                "type": {
+                  "nullable": true,
+                  "basic": "Object"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setDefaultsToCurrentValues",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "toLua",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "updateFromLua",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "final"
+        ],
+        "fields": {
+          "ZoneStoryChance": {
+            "deprecated": false,
+            "name": "ZoneStoryChance",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "NatureAbundance": {
+            "deprecated": false,
+            "name": "NatureAbundance",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "DecayingCorpseHealthImpact": {
+            "deprecated": false,
+            "name": "DecayingCorpseHealthImpact",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "VehicleStoryChance": {
+            "deprecated": false,
+            "name": "VehicleStoryChance",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "VehicleEasyUse": {
+            "deprecated": false,
+            "name": "VehicleEasyUse",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanSandboxOption"
+            }
+          },
+          "StartYear": {
+            "deprecated": false,
+            "name": "StartYear",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "DaysForRottenFoodRemoval": {
+            "deprecated": false,
+            "name": "DaysForRottenFoodRemoval",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "IntegerSandboxOption"
+            }
+          },
+          "InjurySeverity": {
+            "deprecated": false,
+            "name": "InjurySeverity",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "zombieConfig": {
+            "deprecated": false,
+            "name": "zombieConfig",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "ZombieConfig"
+            }
+          },
+          "LockedCar": {
+            "deprecated": false,
+            "name": "LockedCar",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "CompostTime": {
+            "deprecated": false,
+            "name": "CompostTime",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "FireSpread": {
+            "deprecated": false,
+            "name": "FireSpread",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanSandboxOption"
+            }
+          },
+          "SleepingEvent": {
+            "deprecated": false,
+            "name": "SleepingEvent",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "Lore": {
+            "deprecated": false,
+            "name": "Lore",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "ZombieLore"
+            }
+          },
+          "FoodLoot": {
+            "deprecated": false,
+            "name": "FoodLoot",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "CharacterFreePoints": {
+            "deprecated": false,
+            "name": "CharacterFreePoints",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "IntegerSandboxOption"
+            }
+          },
+          "Distribution": {
+            "deprecated": false,
+            "name": "Distribution",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "ElecShut": {
+            "deprecated": false,
+            "name": "ElecShut",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "Map": {
+            "deprecated": false,
+            "name": "Map",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Map"
+            }
+          },
+          "MetaEvent": {
+            "deprecated": false,
+            "name": "MetaEvent",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "Farming": {
+            "deprecated": false,
+            "name": "Farming",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "MaxRainFxIntensity": {
+            "deprecated": false,
+            "name": "MaxRainFxIntensity",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "DayLength": {
+            "deprecated": false,
+            "name": "DayLength",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "EnableSnowOnGround": {
+            "deprecated": false,
+            "name": "EnableSnowOnGround",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanSandboxOption"
+            }
+          },
+          "LootRespawn": {
+            "deprecated": false,
+            "name": "LootRespawn",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "StartMonth": {
+            "deprecated": false,
+            "name": "StartMonth",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "GeneratorSpawning": {
+            "deprecated": false,
+            "name": "GeneratorSpawning",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "DamageToPlayerFromHitByACar": {
+            "deprecated": false,
+            "name": "DamageToPlayerFromHitByACar",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "CannedFoodLoot": {
+            "deprecated": false,
+            "name": "CannedFoodLoot",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "WorldItemRemovalList": {
+            "deprecated": false,
+            "name": "WorldItemRemovalList",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "StringSandboxOption"
+            }
+          },
+          "AnnotatedMapChance": {
+            "deprecated": false,
+            "name": "AnnotatedMapChance",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "TrafficJam": {
+            "deprecated": false,
+            "name": "TrafficJam",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanSandboxOption"
+            }
+          },
+          "EnableVehicles": {
+            "deprecated": false,
+            "name": "EnableVehicles",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanSandboxOption"
+            }
+          },
+          "Zombies": {
+            "deprecated": false,
+            "name": "Zombies",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "PlantResilience": {
+            "deprecated": false,
+            "name": "PlantResilience",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "NightLength": {
+            "deprecated": false,
+            "name": "NightLength",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "ErosionSpeed": {
+            "deprecated": false,
+            "name": "ErosionSpeed",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "ItemRemovalListBlacklistToggle": {
+            "deprecated": false,
+            "name": "ItemRemovalListBlacklistToggle",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanSandboxOption"
+            }
+          },
+          "CarDamageOnImpact": {
+            "deprecated": false,
+            "name": "CarDamageOnImpact",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "FuelStationGas": {
+            "deprecated": false,
+            "name": "FuelStationGas",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "FridgeFactor": {
+            "deprecated": false,
+            "name": "FridgeFactor",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "AttackBlockMovements": {
+            "deprecated": false,
+            "name": "AttackBlockMovements",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanSandboxOption"
+            }
+          },
+          "PlayerDamageFromCrash": {
+            "deprecated": false,
+            "name": "PlayerDamageFromCrash",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanSandboxOption"
+            }
+          },
+          "instance": {
+            "deprecated": false,
+            "name": "instance",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "SandboxOptions"
+            }
+          },
+          "ClothingDegradation": {
+            "deprecated": false,
+            "name": "ClothingDegradation",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "CarGeneralCondition": {
+            "deprecated": false,
+            "name": "CarGeneralCondition",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "CarAlarm": {
+            "deprecated": false,
+            "name": "CarAlarm",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "StarterKit": {
+            "deprecated": false,
+            "name": "StarterKit",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanSandboxOption"
+            }
+          },
+          "MaxFogIntensity": {
+            "deprecated": false,
+            "name": "MaxFogIntensity",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "SirenShutoffHours": {
+            "deprecated": false,
+            "name": "SirenShutoffHours",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "DoubleSandboxOption"
+            }
+          },
+          "StatsDecrease": {
+            "deprecated": false,
+            "name": "StatsDecrease",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "BloodLevel": {
+            "deprecated": false,
+            "name": "BloodLevel",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "Rain": {
+            "deprecated": false,
+            "name": "Rain",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "FIRST_YEAR": {
+            "deprecated": false,
+            "name": "FIRST_YEAR",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "CarGasConsumption": {
+            "deprecated": false,
+            "name": "CarGasConsumption",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "DoubleSandboxOption"
+            }
+          },
+          "WeaponLoot": {
+            "deprecated": false,
+            "name": "WeaponLoot",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "XpMultiplier": {
+            "deprecated": false,
+            "name": "XpMultiplier",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "DoubleSandboxOption"
+            }
+          },
+          "Helicopter": {
+            "deprecated": false,
+            "name": "Helicopter",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "AllowExteriorGenerator": {
+            "deprecated": false,
+            "name": "AllowExteriorGenerator",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanSandboxOption"
+            }
+          },
+          "ChanceHasGas": {
+            "deprecated": false,
+            "name": "ChanceHasGas",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "InitialGas": {
+            "deprecated": false,
+            "name": "InitialGas",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "StartTime": {
+            "deprecated": false,
+            "name": "StartTime",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "BoneFracture": {
+            "deprecated": false,
+            "name": "BoneFracture",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanSandboxOption"
+            }
+          },
+          "StartDay": {
+            "deprecated": false,
+            "name": "StartDay",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "TimeSinceApo": {
+            "deprecated": false,
+            "name": "TimeSinceApo",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "ConstructionBonusPoints": {
+            "deprecated": false,
+            "name": "ConstructionBonusPoints",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "FoodRotSpeed": {
+            "deprecated": false,
+            "name": "FoodRotSpeed",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "EndRegen": {
+            "deprecated": false,
+            "name": "EndRegen",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "NightDarkness": {
+            "deprecated": false,
+            "name": "NightDarkness",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "RecentlySurvivorVehicles": {
+            "deprecated": false,
+            "name": "RecentlySurvivorVehicles",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "CarSpawnRate": {
+            "deprecated": false,
+            "name": "CarSpawnRate",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "ElecShutModifier": {
+            "deprecated": false,
+            "name": "ElecShutModifier",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "IntegerSandboxOption"
+            }
+          },
+          "LockedHouses": {
+            "deprecated": false,
+            "name": "LockedHouses",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "SeenHoursPreventLootRespawn": {
+            "deprecated": false,
+            "name": "SeenHoursPreventLootRespawn",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "IntegerSandboxOption"
+            }
+          },
+          "RangedWeaponLoot": {
+            "deprecated": false,
+            "name": "RangedWeaponLoot",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "WaterShutModifier": {
+            "deprecated": false,
+            "name": "WaterShutModifier",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "IntegerSandboxOption"
+            }
+          },
+          "AmmoLoot": {
+            "deprecated": false,
+            "name": "AmmoLoot",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "Temperature": {
+            "deprecated": false,
+            "name": "Temperature",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "MedicalLoot": {
+            "deprecated": false,
+            "name": "MedicalLoot",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "MultiHitZombies": {
+            "deprecated": false,
+            "name": "MultiHitZombies",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanSandboxOption"
+            }
+          },
+          "OtherLoot": {
+            "deprecated": false,
+            "name": "OtherLoot",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "RearVulnerability": {
+            "deprecated": false,
+            "name": "RearVulnerability",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "HoursForWorldItemRemoval": {
+            "deprecated": false,
+            "name": "HoursForWorldItemRemoval",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "DoubleSandboxOption"
+            }
+          },
+          "SurvivalGearsLoot": {
+            "deprecated": false,
+            "name": "SurvivalGearsLoot",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "PlantAbundance": {
+            "deprecated": false,
+            "name": "PlantAbundance",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "GeneratorFuelConsumption": {
+            "deprecated": false,
+            "name": "GeneratorFuelConsumption",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "DoubleSandboxOption"
+            }
+          },
+          "LiteratureLoot": {
+            "deprecated": false,
+            "name": "LiteratureLoot",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "MechanicsLoot": {
+            "deprecated": false,
+            "name": "MechanicsLoot",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "ErosionDays": {
+            "deprecated": false,
+            "name": "ErosionDays",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "IntegerSandboxOption"
+            }
+          },
+          "HoursForCorpseRemoval": {
+            "deprecated": false,
+            "name": "HoursForCorpseRemoval",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "DoubleSandboxOption"
+            }
+          },
+          "Speed": {
+            "deprecated": false,
+            "name": "Speed",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "Nutrition": {
+            "deprecated": false,
+            "name": "Nutrition",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanSandboxOption"
+            }
+          },
+          "WaterShut": {
+            "deprecated": false,
+            "name": "WaterShut",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "SurvivorHouseChance": {
+            "deprecated": false,
+            "name": "SurvivorHouseChance",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "ZombieAttractionMultiplier": {
+            "deprecated": false,
+            "name": "ZombieAttractionMultiplier",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "DoubleSandboxOption"
+            }
+          },
+          "Alarm": {
+            "deprecated": false,
+            "name": "Alarm",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "EnumSandboxOption"
+            }
+          },
+          "AllClothesUnlocked": {
+            "deprecated": false,
+            "name": "AllClothesUnlocked",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanSandboxOption"
+            }
+          }
+        },
+        "javaType": "class"
+      }
+    }
+  }
+}

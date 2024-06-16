@@ -1,0 +1,952 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-iso-areas-isoregion": {
+      "IsoRegions": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "notes": "TurboTuTone.",
+        "extends": "Object",
+        "methods": [
+          {
+            "name": "GetOppositeDir",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "byte"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "dir",
+                "type": {
+                  "nullable": false,
+                  "basic": "byte"
+                }
+              }
+            ]
+          },
+          {
+            "name": "ResetAllDataDebug",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "getChunkFile",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "File"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "chunkX",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "chunkY",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "Returns a IChunkRegion for the square.  Note: Returned objects from this function should not be retained as the DataRoot may get swapped.",
+            "name": "getChunkRegion",
+            "returns": {
+              "notes": "can be null.",
+              "type": {
+                "nullable": true,
+                "basic": "IChunkRegion"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "z",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "Returns a DataChunk for the square.  Note: Returned objects from this function should not be retained as the DataRoot may get swapped.",
+            "name": "getDataChunk",
+            "returns": {
+              "notes": "can be null.",
+              "type": {
+                "nullable": true,
+                "basic": "DataChunk"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "chunkx",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "chunky",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getDirectory",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "File"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "getHeaderFile",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "File"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "notes": "Returns a IWorldRegion for the square.  Note: Returned objects from this function should not be retained as the DataRoot may get swapped.  Note: The IWorldRegion does get cached in IsoGridSquare for optimizing purposes but this gets handled in \u0027clientResetCachedRegionReferences()\u0027",
+            "name": "getIsoWorldRegion",
+            "returns": {
+              "notes": "can be null.",
+              "type": {
+                "nullable": true,
+                "basic": "IWorldRegion"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "z",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getLogger",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IsoRegionsLogger"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "getSquareFlags",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "byte"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "z",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "hash",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "init",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "isDebugLoadAllChunks",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "log",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "str",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "log",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "str",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "col",
+                "type": {
+                  "nullable": true,
+                  "basic": "Color"
+                }
+              }
+            ]
+          },
+          {
+            "name": "receiveClientRequestFullDataChunks",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "input",
+                "type": {
+                  "nullable": true,
+                  "basic": "ByteBuffer"
+                }
+              },
+              {
+                "name": "conn",
+                "type": {
+                  "nullable": true,
+                  "basic": "UdpConnection"
+                }
+              }
+            ]
+          },
+          {
+            "name": "receiveServerUpdatePacket",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "input",
+                "type": {
+                  "nullable": true,
+                  "basic": "ByteBuffer"
+                }
+              }
+            ]
+          },
+          {
+            "name": "reset",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "setDebugLoadAllChunks",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "b",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "Needs to be called before a player manipulates the grid.  Records bitFlags for the state of the square that are compared to bitFlags for the state of the square after manipulation to detect relevant changes.",
+            "name": "setPreviousFlags",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "gs",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGridSquare"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "Called after the grid has been manipulated by a player.  NOTE: setPreviousFlags needs to be called prior to the grid being manipulated by a player.",
+            "name": "squareChanged",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "gs",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGridSquare"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "Called after the grid has been manipulated by a player.  NOTE: setPreviousFlags needs to be called prior to the grid being manipulated by a player.",
+            "name": "squareChanged",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "gs",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGridSquare"
+                }
+              },
+              {
+                "name": "isRemoval",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "update",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "warn",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "str",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "final"
+        ],
+        "fields": {
+          "CELL_DIM": {
+            "deprecated": false,
+            "name": "CELL_DIM",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "BIT_HAS_ROOF": {
+            "deprecated": false,
+            "name": "BIT_HAS_ROOF",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "byte"
+            }
+          },
+          "BIT_WALL_W": {
+            "deprecated": false,
+            "name": "BIT_WALL_W",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "byte"
+            }
+          },
+          "SINGLE_CHUNK_PACKET_SIZE": {
+            "deprecated": false,
+            "name": "SINGLE_CHUNK_PACKET_SIZE",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "FILE_DIR": {
+            "deprecated": false,
+            "name": "FILE_DIR",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "String"
+            }
+          },
+          "DIR_NONE": {
+            "deprecated": false,
+            "name": "DIR_NONE",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "byte"
+            }
+          },
+          "DIR_TOP": {
+            "deprecated": false,
+            "name": "DIR_TOP",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "byte"
+            }
+          },
+          "CELL_CHUNK_DIM": {
+            "deprecated": false,
+            "name": "CELL_CHUNK_DIM",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "DIR_E": {
+            "deprecated": false,
+            "name": "DIR_E",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "byte"
+            }
+          },
+          "BIT_PATH_WALL_W": {
+            "deprecated": false,
+            "name": "BIT_PATH_WALL_W",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "byte"
+            }
+          },
+          "BIT_WALL_N": {
+            "deprecated": false,
+            "name": "BIT_WALL_N",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "byte"
+            }
+          },
+          "FILE_SEP": {
+            "deprecated": false,
+            "name": "FILE_SEP",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "String"
+            }
+          },
+          "DIR_2D_NW": {
+            "deprecated": false,
+            "name": "DIR_2D_NW",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "byte"
+            }
+          },
+          "DIR_MAX": {
+            "deprecated": false,
+            "name": "DIR_MAX",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "byte"
+            }
+          },
+          "PRINT_D": {
+            "deprecated": false,
+            "name": "PRINT_D",
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "boolean"
+            }
+          },
+          "DIR_N": {
+            "deprecated": false,
+            "name": "DIR_N",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "byte"
+            }
+          },
+          "FILE_EXT": {
+            "deprecated": false,
+            "name": "FILE_EXT",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "String"
+            }
+          },
+          "CHUNKS_DATA_PACKET_SIZE": {
+            "deprecated": false,
+            "name": "CHUNKS_DATA_PACKET_SIZE",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "BIT_PATH_WALL_N": {
+            "deprecated": false,
+            "name": "BIT_PATH_WALL_N",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "byte"
+            }
+          },
+          "CHUNK_DIM": {
+            "deprecated": false,
+            "name": "CHUNK_DIM",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "DIR_S": {
+            "deprecated": false,
+            "name": "DIR_S",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "byte"
+            }
+          },
+          "FILE_PRE": {
+            "deprecated": false,
+            "name": "FILE_PRE",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "String"
+            }
+          },
+          "DIR_W": {
+            "deprecated": false,
+            "name": "DIR_W",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "byte"
+            }
+          },
+          "BIT_EMPTY": {
+            "deprecated": false,
+            "name": "BIT_EMPTY",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "byte"
+            }
+          },
+          "CHUNK_MAX_Z": {
+            "deprecated": false,
+            "name": "CHUNK_MAX_Z",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "BIT_STAIRCASE": {
+            "deprecated": false,
+            "name": "BIT_STAIRCASE",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "byte"
+            }
+          },
+          "BIT_HAS_FLOOR": {
+            "deprecated": false,
+            "name": "BIT_HAS_FLOOR",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "byte"
+            }
+          },
+          "DIR_2D_MAX": {
+            "deprecated": false,
+            "name": "DIR_2D_MAX",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "byte"
+            }
+          },
+          "DIR_BOT": {
+            "deprecated": false,
+            "name": "DIR_BOT",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "byte"
+            }
+          }
+        },
+        "javaType": "class"
+      }
+    }
+  }
+}

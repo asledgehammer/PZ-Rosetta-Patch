@@ -1,0 +1,74 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "java-util": {
+      "Iterator": {
+        "methods": [
+          {
+            "name": "forEachRemaining",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void",
+                "full": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "arg0",
+                "type": {
+                  "nullable": true,
+                  "basic": "Consumer\u003c? super E\u003e",
+                  "full": "java.util.function.Consumer\u003c? super E\u003e"
+                }
+              }
+            ]
+          },
+          {
+            "name": "hasNext",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean",
+                "full": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "next",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "E",
+                "full": "E"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "remove",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void",
+                "full": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "javaType": "interface"
+      }
+    }
+  }
+}

@@ -1,0 +1,771 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-iso": {
+      "Vector3": {
+        "constructors": [
+          {
+            "notes": "Create a new vector with zero length",
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "Create a new vector which is identical to another vector",
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "The Vector2 to copy",
+                "name": "other",
+                "type": {
+                  "nullable": true,
+                  "basic": "Vector3"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "Create a new vector with specified horizontal and vertical parts",
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "The horizontal part",
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "z",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          }
+        ],
+        "extends": "Object",
+        "methods": [
+          {
+            "notes": "Add another vector to this one and return as a new vector",
+            "name": "add",
+            "returns": {
+              "notes": "The result as new Vector2",
+              "type": {
+                "nullable": true,
+                "basic": "Vector2"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "The other Vector2 to add to this one",
+                "name": "other",
+                "type": {
+                  "nullable": true,
+                  "basic": "Vector2"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "Add another vector to this one and store the result in this one",
+            "name": "addToThis",
+            "returns": {
+              "notes": "This vector, with the other vector added",
+              "type": {
+                "nullable": true,
+                "basic": "Vector3"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "The other Vector2 to add to this one",
+                "name": "other",
+                "type": {
+                  "nullable": true,
+                  "basic": "Vector2"
+                }
+              }
+            ]
+          },
+          {
+            "name": "addToThis",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Vector3"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "other",
+                "type": {
+                  "nullable": true,
+                  "basic": "Vector3"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "Set the direction of this vector to point to another vector, maintaining the length",
+            "name": "aimAt",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Vector3"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "The Vector2 to point this one at.",
+                "name": "other",
+                "type": {
+                  "nullable": true,
+                  "basic": "Vector2"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "Calculate the angle between this point and another",
+            "name": "angleTo",
+            "returns": {
+              "notes": "The angle between them, in radians",
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "The second point as vector",
+                "name": "other",
+                "type": {
+                  "nullable": true,
+                  "basic": "Vector2"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "Clone this vector",
+            "name": "clone",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Vector3"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "Calculate the distance between this point and another",
+            "name": "distanceTo",
+            "returns": {
+              "notes": "The distance between them",
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "The second point as vector",
+                "name": "other",
+                "type": {
+                  "nullable": true,
+                  "basic": "Vector2"
+                }
+              }
+            ]
+          },
+          {
+            "name": "div",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Vector3"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "scalar",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "dot",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "tx",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "ty",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "dot",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "other",
+                "type": {
+                  "nullable": true,
+                  "basic": "Vector2"
+                }
+              }
+            ]
+          },
+          {
+            "name": "dot3d",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "other",
+                "type": {
+                  "nullable": true,
+                  "basic": "Vector3"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "See if this vector is equal to another",
+            "name": "equals",
+            "returns": {
+              "notes": "true if other is a Vector2 equal to this one",
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "A Vector2 to compare this one to",
+                "name": "other",
+                "type": {
+                  "nullable": true,
+                  "basic": "Object"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "Create a new vector from an AWT Point",
+            "name": "fromAwtPoint",
+            "returns": {
+              "notes": "A new Vector2 representing the Point",
+              "type": {
+                "nullable": true,
+                "basic": "Vector2"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "notes": "The java.awt.Point to convert",
+                "name": "p",
+                "type": {
+                  "nullable": true,
+                  "basic": "Point"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "Create a new vector with a specified length and direction",
+            "name": "fromLengthDirection",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Vector2"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "length",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "notes": "The direction of the new vector, in radians",
+                "name": "direction",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "get the direction in which this vector is pointing",
+            "name": "getDirection",
+            "returns": {
+              "notes": "The direction in which this vector is pointing in radians",
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "get the length of this vector",
+            "name": "getLength",
+            "returns": {
+              "notes": "The length of this vector",
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "get the length squared (L^2) of this vector",
+            "name": "getLengthSq",
+            "returns": {
+              "notes": "The length squared of this vector",
+              "type": {
+                "nullable": false,
+                "basic": "float"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "normalize",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "rotate",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "rad",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "rotatey",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "rad",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "Make this vector identical to another vector",
+            "name": "set",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Vector3"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "The Vector2 to copy",
+                "name": "other",
+                "type": {
+                  "nullable": true,
+                  "basic": "Vector3"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "Set the horizontal and vertical parts of this vector",
+            "name": "set",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Vector3"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "The horizontal part",
+                "name": "x",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "y",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "z",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "Set the direction of this vector, maintaining the length",
+            "name": "setDirection",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Vector3"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "The new direction of this vector, in radians",
+                "name": "direction",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "Set the length of this vector, maintaining the direction",
+            "name": "setLength",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Vector3"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "The length of this vector",
+                "name": "length",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "Set the length and direction of this vector",
+            "name": "setLengthAndDirection",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Vector3"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "notes": "The direction of this vector, in radians",
+                "name": "direction",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              },
+              {
+                "name": "length",
+                "type": {
+                  "nullable": false,
+                  "basic": "float"
+                }
+              }
+            ]
+          },
+          {
+            "name": "sub",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Vector3"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "val",
+                "type": {
+                  "nullable": true,
+                  "basic": "Vector3"
+                }
+              },
+              {
+                "name": "out",
+                "type": {
+                  "nullable": true,
+                  "basic": "Vector3"
+                }
+              }
+            ]
+          },
+          {
+            "name": "sub",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Vector3"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "a",
+                "type": {
+                  "nullable": true,
+                  "basic": "Vector3"
+                }
+              },
+              {
+                "name": "b",
+                "type": {
+                  "nullable": true,
+                  "basic": "Vector3"
+                }
+              },
+              {
+                "name": "out",
+                "type": {
+                  "nullable": true,
+                  "basic": "Vector3"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "Convert this vector to an AWT Dimension",
+            "name": "toAwtDimension",
+            "returns": {
+              "notes": "a java.awt.Dimension",
+              "type": {
+                "nullable": true,
+                "basic": "Dimension"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "Convert this vector to an AWT Point",
+            "name": "toAwtPoint",
+            "returns": {
+              "notes": "a java.awt.Point",
+              "type": {
+                "nullable": true,
+                "basic": "Point"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "final"
+        ],
+        "fields": {
+          "x": {
+            "notes": "The horizontal part of this vector",
+            "deprecated": false,
+            "name": "x",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "float"
+            }
+          },
+          "y": {
+            "notes": "The vertical part of this vector",
+            "deprecated": false,
+            "name": "y",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "float"
+            }
+          },
+          "z": {
+            "deprecated": false,
+            "name": "z",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "float"
+            }
+          }
+        },
+        "javaType": "class"
+      }
+    }
+  }
+}

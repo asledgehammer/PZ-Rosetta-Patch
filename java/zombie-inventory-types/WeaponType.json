@@ -1,0 +1,263 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-inventory-types": {
+      "WeaponType": {
+        "extends": "Enum",
+        "methods": [
+          {
+            "name": "getType",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getWeaponType",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "WeaponType"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "weapon",
+                "type": {
+                  "nullable": true,
+                  "basic": "HandWeapon"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getWeaponType",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "WeaponType"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "chr",
+                "type": {
+                  "nullable": true,
+                  "basic": "IsoGameCharacter"
+                }
+              }
+            ]
+          },
+          {
+            "notes": "Returns an array containing the constants of this enum class, in the order they are declared.",
+            "name": "values",
+            "returns": {
+              "notes": "an array containing the constants of this enum class, in the order they are declared",
+              "type": {
+                "nullable": true,
+                "basic": "WeaponType"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public"
+        ],
+        "fields": {
+          "type": {
+            "deprecated": false,
+            "name": "type",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "String"
+            }
+          },
+          "canMiss": {
+            "deprecated": false,
+            "name": "canMiss",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "boolean"
+            }
+          },
+          "isRanged": {
+            "deprecated": false,
+            "name": "isRanged",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "boolean"
+            }
+          },
+          "heavy": {
+            "deprecated": false,
+            "name": "heavy",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "WeaponType"
+            }
+          },
+          "throwing": {
+            "deprecated": false,
+            "name": "throwing",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "WeaponType"
+            }
+          },
+          "onehanded": {
+            "deprecated": false,
+            "name": "onehanded",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "WeaponType"
+            }
+          },
+          "spear": {
+            "deprecated": false,
+            "name": "spear",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "WeaponType"
+            }
+          },
+          "knife": {
+            "deprecated": false,
+            "name": "knife",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "WeaponType"
+            }
+          },
+          "possibleAttack": {
+            "deprecated": false,
+            "name": "possibleAttack",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "List"
+            }
+          },
+          "chainsaw": {
+            "deprecated": false,
+            "name": "chainsaw",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "WeaponType"
+            }
+          },
+          "firearm": {
+            "deprecated": false,
+            "name": "firearm",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "WeaponType"
+            }
+          },
+          "barehand": {
+            "deprecated": false,
+            "name": "barehand",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "WeaponType"
+            }
+          },
+          "handgun": {
+            "deprecated": false,
+            "name": "handgun",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "WeaponType"
+            }
+          },
+          "twohanded": {
+            "deprecated": false,
+            "name": "twohanded",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "WeaponType"
+            }
+          }
+        },
+        "javaType": "enum"
+      }
+    }
+  }
+}

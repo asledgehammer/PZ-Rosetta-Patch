@@ -1,0 +1,76 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-scripting-objects": {
+      "BaseScriptObject": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "extends": "Object",
+        "methods": [
+          {
+            "name": "Load",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "strArray",
+                "type": {
+                  "nullable": true,
+                  "basic": "String[]"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getModule",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ScriptModule"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public"
+        ],
+        "fields": {
+          "module": {
+            "deprecated": false,
+            "name": "module",
+            "modifiers": [
+              "public"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "ScriptModule"
+            }
+          }
+        },
+        "javaType": "class"
+      }
+    }
+  }
+}

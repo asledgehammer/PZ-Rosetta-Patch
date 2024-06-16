@@ -1,0 +1,120 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-iso-weather": {
+      "StrLerpVal": {
+        "extends": "Enum",
+        "methods": [
+          {
+            "name": "fromValue",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "StrLerpVal"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "id",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getValue",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "notes": "Returns an array containing the constants of this enum class, in the order they are declared.",
+            "name": "values",
+            "returns": {
+              "notes": "an array containing the constants of this enum class, in the order they are declared",
+              "type": {
+                "nullable": true,
+                "basic": "StrLerpVal"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "static"
+        ],
+        "fields": {
+          "Entry": {
+            "deprecated": false,
+            "name": "Entry",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "StrLerpVal"
+            }
+          },
+          "Target": {
+            "deprecated": false,
+            "name": "Target",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "StrLerpVal"
+            }
+          },
+          "NextTarget": {
+            "deprecated": false,
+            "name": "NextTarget",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "StrLerpVal"
+            }
+          },
+          "None": {
+            "deprecated": false,
+            "name": "None",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "StrLerpVal"
+            }
+          }
+        },
+        "javaType": "enum"
+      }
+    }
+  }
+}

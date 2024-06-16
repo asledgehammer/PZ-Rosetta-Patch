@@ -1,0 +1,1601 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-core": {
+      "Colors": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "notes": "TurboTuTone.",
+        "extends": "Object",
+        "methods": [
+          {
+            "name": "ColorExists",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "GetColorByName",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Color"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "GetColorFromIndex",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Color"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "index",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "GetColorNames",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "ArrayList"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "GetColorsCount",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "GetRandomColor",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Color"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "final"
+        ],
+        "fields": {
+          "MediumOrchid": {
+            "deprecated": false,
+            "name": "MediumOrchid",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "DarkSeaGreen": {
+            "deprecated": false,
+            "name": "DarkSeaGreen",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Sienna": {
+            "deprecated": false,
+            "name": "Sienna",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "LightCoral": {
+            "deprecated": false,
+            "name": "LightCoral",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Orange": {
+            "deprecated": false,
+            "name": "Orange",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "DodgerBlue": {
+            "deprecated": false,
+            "name": "DodgerBlue",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Aquamarine": {
+            "deprecated": false,
+            "name": "Aquamarine",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "LightSeaGreen": {
+            "deprecated": false,
+            "name": "LightSeaGreen",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "RoyalBlue": {
+            "deprecated": false,
+            "name": "RoyalBlue",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "DarkViolet": {
+            "deprecated": false,
+            "name": "DarkViolet",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "MediumAquamarine": {
+            "deprecated": false,
+            "name": "MediumAquamarine",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "MediumSlateBlue": {
+            "deprecated": false,
+            "name": "MediumSlateBlue",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "OliveDrab": {
+            "deprecated": false,
+            "name": "OliveDrab",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "MidnightBlue": {
+            "deprecated": false,
+            "name": "MidnightBlue",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "SandyBrown": {
+            "deprecated": false,
+            "name": "SandyBrown",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Violet": {
+            "deprecated": false,
+            "name": "Violet",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "LimeGreen": {
+            "deprecated": false,
+            "name": "LimeGreen",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "PaleGoldenrod": {
+            "deprecated": false,
+            "name": "PaleGoldenrod",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Magenta": {
+            "deprecated": false,
+            "name": "Magenta",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "PowderBlue": {
+            "deprecated": false,
+            "name": "PowderBlue",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "DarkSlateBlue": {
+            "deprecated": false,
+            "name": "DarkSlateBlue",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "DeepSkyBlue": {
+            "deprecated": false,
+            "name": "DeepSkyBlue",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "DarkTurquoise": {
+            "deprecated": false,
+            "name": "DarkTurquoise",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Chartreuse": {
+            "deprecated": false,
+            "name": "Chartreuse",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Olive": {
+            "deprecated": false,
+            "name": "Olive",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "IndianRed": {
+            "deprecated": false,
+            "name": "IndianRed",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "MediumPurple": {
+            "deprecated": false,
+            "name": "MediumPurple",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Yellow": {
+            "deprecated": false,
+            "name": "Yellow",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "LightBlue": {
+            "deprecated": false,
+            "name": "LightBlue",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Indigo": {
+            "deprecated": false,
+            "name": "Indigo",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "SpringGreen": {
+            "deprecated": false,
+            "name": "SpringGreen",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "DarkRed": {
+            "deprecated": false,
+            "name": "DarkRed",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Peru": {
+            "deprecated": false,
+            "name": "Peru",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Wheat": {
+            "deprecated": false,
+            "name": "Wheat",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "RosyBrown": {
+            "deprecated": false,
+            "name": "RosyBrown",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "DarkCyan": {
+            "deprecated": false,
+            "name": "DarkCyan",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "FireBrick": {
+            "deprecated": false,
+            "name": "FireBrick",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "LawnGreen": {
+            "deprecated": false,
+            "name": "LawnGreen",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "OrangeRed": {
+            "deprecated": false,
+            "name": "OrangeRed",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "DarkOrange": {
+            "deprecated": false,
+            "name": "DarkOrange",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Teal": {
+            "deprecated": false,
+            "name": "Teal",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Turquoise": {
+            "deprecated": false,
+            "name": "Turquoise",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Maroon": {
+            "deprecated": false,
+            "name": "Maroon",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Cyan": {
+            "deprecated": false,
+            "name": "Cyan",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Blue": {
+            "deprecated": false,
+            "name": "Blue",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Moccasin": {
+            "deprecated": false,
+            "name": "Moccasin",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Chocolate": {
+            "deprecated": false,
+            "name": "Chocolate",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "MediumSeaGreen": {
+            "deprecated": false,
+            "name": "MediumSeaGreen",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "SeaGreen": {
+            "deprecated": false,
+            "name": "SeaGreen",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Thistle": {
+            "deprecated": false,
+            "name": "Thistle",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "LightCyan": {
+            "deprecated": false,
+            "name": "LightCyan",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Red": {
+            "deprecated": false,
+            "name": "Red",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Crimson": {
+            "deprecated": false,
+            "name": "Crimson",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "NavajoWhite": {
+            "deprecated": false,
+            "name": "NavajoWhite",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "SlateBlue": {
+            "deprecated": false,
+            "name": "SlateBlue",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Orchid": {
+            "deprecated": false,
+            "name": "Orchid",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Tan": {
+            "deprecated": false,
+            "name": "Tan",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "LightSalmon": {
+            "deprecated": false,
+            "name": "LightSalmon",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "DarkBlue": {
+            "deprecated": false,
+            "name": "DarkBlue",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Fuchsia": {
+            "deprecated": false,
+            "name": "Fuchsia",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Tomato": {
+            "deprecated": false,
+            "name": "Tomato",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Plum": {
+            "deprecated": false,
+            "name": "Plum",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "PaleGreen": {
+            "deprecated": false,
+            "name": "PaleGreen",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "YellowGreen": {
+            "deprecated": false,
+            "name": "YellowGreen",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "PaleVioletRed": {
+            "deprecated": false,
+            "name": "PaleVioletRed",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Gold": {
+            "deprecated": false,
+            "name": "Gold",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "DarkOliveGreen": {
+            "deprecated": false,
+            "name": "DarkOliveGreen",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Salmon": {
+            "deprecated": false,
+            "name": "Salmon",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "CornFlowerBlue": {
+            "deprecated": false,
+            "name": "CornFlowerBlue",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "LemonChiffon": {
+            "deprecated": false,
+            "name": "LemonChiffon",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "BlanchedAlmond": {
+            "deprecated": false,
+            "name": "BlanchedAlmond",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "GreenYellow": {
+            "deprecated": false,
+            "name": "GreenYellow",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Khaki": {
+            "deprecated": false,
+            "name": "Khaki",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Pink": {
+            "deprecated": false,
+            "name": "Pink",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "LightSkyBlue": {
+            "deprecated": false,
+            "name": "LightSkyBlue",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "DarkGreen": {
+            "deprecated": false,
+            "name": "DarkGreen",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "DarkSalmon": {
+            "deprecated": false,
+            "name": "DarkSalmon",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "PapayaWhip": {
+            "deprecated": false,
+            "name": "PapayaWhip",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "LightGoldenrodYellow": {
+            "deprecated": false,
+            "name": "LightGoldenrodYellow",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "CornSilk": {
+            "deprecated": false,
+            "name": "CornSilk",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "LightGreen": {
+            "deprecated": false,
+            "name": "LightGreen",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "MediumTurquoise": {
+            "deprecated": false,
+            "name": "MediumTurquoise",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Brown": {
+            "deprecated": false,
+            "name": "Brown",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "LightPink": {
+            "deprecated": false,
+            "name": "LightPink",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Aqua": {
+            "deprecated": false,
+            "name": "Aqua",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Bisque": {
+            "deprecated": false,
+            "name": "Bisque",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "CadetBlue": {
+            "deprecated": false,
+            "name": "CadetBlue",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "BurlyWood": {
+            "deprecated": false,
+            "name": "BurlyWood",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "MediumBlue": {
+            "deprecated": false,
+            "name": "MediumBlue",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "BlueViolet": {
+            "deprecated": false,
+            "name": "BlueViolet",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Lime": {
+            "deprecated": false,
+            "name": "Lime",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Lavender": {
+            "deprecated": false,
+            "name": "Lavender",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "LightSteelBlue": {
+            "deprecated": false,
+            "name": "LightSteelBlue",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Goldenrod": {
+            "deprecated": false,
+            "name": "Goldenrod",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "SteelBlue": {
+            "deprecated": false,
+            "name": "SteelBlue",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "MediumSpringGreen": {
+            "deprecated": false,
+            "name": "MediumSpringGreen",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "DarkKhaki": {
+            "deprecated": false,
+            "name": "DarkKhaki",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "PaleTurquoise": {
+            "deprecated": false,
+            "name": "PaleTurquoise",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "DarkGoldenrod": {
+            "deprecated": false,
+            "name": "DarkGoldenrod",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "PeachPu": {
+            "deprecated": false,
+            "name": "PeachPu",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "ForestGreen": {
+            "deprecated": false,
+            "name": "ForestGreen",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "DarkOrchid": {
+            "deprecated": false,
+            "name": "DarkOrchid",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "DeepPink": {
+            "deprecated": false,
+            "name": "DeepPink",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "MediumVioletRed": {
+            "deprecated": false,
+            "name": "MediumVioletRed",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "HotPink": {
+            "deprecated": false,
+            "name": "HotPink",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "LightYellow": {
+            "deprecated": false,
+            "name": "LightYellow",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Navy": {
+            "deprecated": false,
+            "name": "Navy",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "SaddleBrown": {
+            "deprecated": false,
+            "name": "SaddleBrown",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Coral": {
+            "deprecated": false,
+            "name": "Coral",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Purple": {
+            "deprecated": false,
+            "name": "Purple",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "DarkMagenta": {
+            "deprecated": false,
+            "name": "DarkMagenta",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "Green": {
+            "deprecated": false,
+            "name": "Green",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          },
+          "SkyBlue": {
+            "deprecated": false,
+            "name": "SkyBlue",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Color"
+            }
+          }
+        },
+        "javaType": "class"
+      }
+    }
+  }
+}

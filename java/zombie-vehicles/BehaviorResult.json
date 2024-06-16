@@ -1,0 +1,73 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-vehicles": {
+      "BehaviorResult": {
+        "extends": "Enum",
+        "methods": [
+          {
+            "notes": "Returns an array containing the constants of this enum class, in the order they are declared.",
+            "name": "values",
+            "returns": {
+              "notes": "an array containing the constants of this enum class, in the order they are declared",
+              "type": {
+                "nullable": true,
+                "basic": "BehaviorResult"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "static"
+        ],
+        "fields": {
+          "Succeeded": {
+            "deprecated": false,
+            "name": "Succeeded",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BehaviorResult"
+            }
+          },
+          "Working": {
+            "deprecated": false,
+            "name": "Working",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BehaviorResult"
+            }
+          },
+          "Failed": {
+            "deprecated": false,
+            "name": "Failed",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BehaviorResult"
+            }
+          }
+        },
+        "javaType": "enum"
+      }
+    }
+  }
+}

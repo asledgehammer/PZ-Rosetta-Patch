@@ -1,0 +1,442 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-network": {
+      "NetworkAIParams": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "extends": "Object",
+        "methods": [
+          {
+            "name": "Init",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "isShowConnectionInfo",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "isShowPingInfo",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "isShowServerInfo",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ]
+          },
+          {
+            "name": "setShowConnectionInfo",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "enabled",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setShowPingInfo",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "enabled",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setShowServerInfo",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "enabled",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          "public"
+        ],
+        "fields": {
+          "VEHICLE_SPEED_CAP": {
+            "deprecated": false,
+            "name": "VEHICLE_SPEED_CAP",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "ZOMBIE_REMOVE_INTERVAL_MS": {
+            "deprecated": false,
+            "name": "ZOMBIE_REMOVE_INTERVAL_MS",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "CHARACTER_UPDATE_RATE_MS": {
+            "deprecated": false,
+            "name": "CHARACTER_UPDATE_RATE_MS",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "VEHICLE_MP_PHYSIC_UPDATE_RATE": {
+            "deprecated": false,
+            "name": "VEHICLE_MP_PHYSIC_UPDATE_RATE",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "MAX_RECONNECT_DISTANCE_SQ": {
+            "deprecated": false,
+            "name": "MAX_RECONNECT_DISTANCE_SQ",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "float"
+            }
+          },
+          "TOWING_DISTANCE": {
+            "deprecated": false,
+            "name": "TOWING_DISTANCE",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "float"
+            }
+          },
+          "VEHICLE_BUFFER_DELAY_MS": {
+            "deprecated": false,
+            "name": "VEHICLE_BUFFER_DELAY_MS",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "ZOMBIE_MAX_UPDATE_INTERVAL_MS": {
+            "deprecated": false,
+            "name": "ZOMBIE_MAX_UPDATE_INTERVAL_MS",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "ZOMBIE_TELEPORT_PLAYER": {
+            "deprecated": false,
+            "name": "ZOMBIE_TELEPORT_PLAYER",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "MAX_TOWING_TRAILER_DISTANCE_SQ": {
+            "deprecated": false,
+            "name": "MAX_TOWING_TRAILER_DISTANCE_SQ",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "float"
+            }
+          },
+          "MAX_TOWING_CAR_DISTANCE_SQ": {
+            "deprecated": false,
+            "name": "MAX_TOWING_CAR_DISTANCE_SQ",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "float"
+            }
+          },
+          "TIME_VALIDATION_INTERVAL": {
+            "deprecated": false,
+            "name": "TIME_VALIDATION_INTERVAL",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "long"
+            }
+          },
+          "TIME_VALIDATION_TIMEOUT": {
+            "deprecated": false,
+            "name": "TIME_VALIDATION_TIMEOUT",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "long"
+            }
+          },
+          "VEHICLE_MOVING_MP_PHYSIC_UPDATE_RATE": {
+            "deprecated": false,
+            "name": "VEHICLE_MOVING_MP_PHYSIC_UPDATE_RATE",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "CHARACTER_PREDICTION_INTERVAL_MS": {
+            "deprecated": false,
+            "name": "CHARACTER_PREDICTION_INTERVAL_MS",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "ZOMBIE_ANTICIPATORY_UPDATE_MULTIPLIER": {
+            "deprecated": false,
+            "name": "ZOMBIE_ANTICIPATORY_UPDATE_MULTIPLIER",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "float"
+            }
+          },
+          "ZOMBIE_OWNERSHIP_INTERVAL": {
+            "deprecated": false,
+            "name": "ZOMBIE_OWNERSHIP_INTERVAL",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "CHARACTER_EXTRAPOLATION_UPDATE_INTERVAL_MS": {
+            "deprecated": false,
+            "name": "CHARACTER_EXTRAPOLATION_UPDATE_INTERVAL_MS",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "TIME_VALIDATION_DELAY": {
+            "deprecated": false,
+            "name": "TIME_VALIDATION_DELAY",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "long"
+            }
+          },
+          "ZOMBIE_UPDATE_INFO_BUNCH_RATE_MS": {
+            "deprecated": false,
+            "name": "ZOMBIE_UPDATE_INFO_BUNCH_RATE_MS",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "VEHICLE_BUFFER_HISTORY_MS": {
+            "deprecated": false,
+            "name": "VEHICLE_BUFFER_HISTORY_MS",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "ZOMBIE_MIN_UPDATE_INTERVAL_MS": {
+            "deprecated": false,
+            "name": "ZOMBIE_MIN_UPDATE_INTERVAL_MS",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "ZOMBIE_TELEPORT_DISTANCE_SQ": {
+            "deprecated": false,
+            "name": "ZOMBIE_TELEPORT_DISTANCE_SQ",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          }
+        },
+        "javaType": "class"
+      }
+    }
+  }
+}

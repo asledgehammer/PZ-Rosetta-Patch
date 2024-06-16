@@ -1,0 +1,1761 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "namespaces": {
+    "zombie-debug": {
+      "DebugOptions": {
+        "constructors": [
+          {
+            "modifiers": [
+              "public"
+            ]
+          }
+        ],
+        "extends": "Object",
+        "methods": [
+          {
+            "name": "addChild",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "newChild",
+                "type": {
+                  "nullable": true,
+                  "basic": "IDebugOption"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getBoolean",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "boolean"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getChildren",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "Iterable"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getName",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "String"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getOptionByIndex",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "BooleanDebugOption"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "index",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getOptionByName",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "BooleanDebugOption"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getOptionCount",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "int"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "getParent",
+            "returns": {
+              "type": {
+                "nullable": true,
+                "basic": "IDebugOptionGroup"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "init",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "load",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "onChildAdded",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "newOption",
+                "type": {
+                  "nullable": true,
+                  "basic": "IDebugOption"
+                }
+              }
+            ]
+          },
+          {
+            "name": "onDescendantAdded",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "newOption",
+                "type": {
+                  "nullable": true,
+                  "basic": "IDebugOption"
+                }
+              }
+            ]
+          },
+          {
+            "name": "save",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ]
+          },
+          {
+            "name": "setBoolean",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "name",
+                "type": {
+                  "nullable": true,
+                  "basic": "String"
+                }
+              },
+              {
+                "name": "value",
+                "type": {
+                  "nullable": false,
+                  "basic": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "setParent",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public"
+            ],
+            "parameters": [
+              {
+                "name": "parent",
+                "type": {
+                  "nullable": true,
+                  "basic": "IDebugOptionGroup"
+                }
+              }
+            ]
+          },
+          {
+            "name": "testThreadCrash",
+            "returns": {
+              "type": {
+                "nullable": false,
+                "basic": "void"
+              }
+            },
+            "modifiers": [
+              "public",
+              "static"
+            ],
+            "parameters": [
+              {
+                "name": "idx",
+                "type": {
+                  "nullable": false,
+                  "basic": "int"
+                }
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          "public",
+          "final"
+        ],
+        "fields": {
+          "ZombieRenderCanCrawlUnderVehicle": {
+            "deprecated": false,
+            "name": "ZombieRenderCanCrawlUnderVehicle",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "CheatPlayerInvisibleSprint": {
+            "deprecated": false,
+            "name": "CheatPlayerInvisibleSprint",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "IsoSprite": {
+            "deprecated": false,
+            "name": "IsoSprite",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "IsoSprite"
+            }
+          },
+          "PathfindRenderPath": {
+            "deprecated": false,
+            "name": "PathfindRenderPath",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "GameProfilerEnabled": {
+            "deprecated": false,
+            "name": "GameProfilerEnabled",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "MultiplayerShowPosition": {
+            "deprecated": false,
+            "name": "MultiplayerShowPosition",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "TooltipModName": {
+            "deprecated": false,
+            "name": "TooltipModName",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "PolymapRenderLineClearCollide": {
+            "deprecated": false,
+            "name": "PolymapRenderLineClearCollide",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "PolymapRenderNodes": {
+            "deprecated": false,
+            "name": "PolymapRenderNodes",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "Network": {
+            "deprecated": false,
+            "name": "Network",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Network"
+            }
+          },
+          "CheatPlayerSeeEveryone": {
+            "deprecated": false,
+            "name": "CheatPlayerSeeEveryone",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "CheatPlayerStartInvisible": {
+            "deprecated": false,
+            "name": "CheatPlayerStartInvisible",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "ModelRenderWireframe": {
+            "deprecated": false,
+            "name": "ModelRenderWireframe",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "ModelRenderBounds": {
+            "deprecated": false,
+            "name": "ModelRenderBounds",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "MultiplayerFailChecksum": {
+            "deprecated": false,
+            "name": "MultiplayerFailChecksum",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "CheatVehicleMechanicsAnywhere": {
+            "deprecated": false,
+            "name": "CheatVehicleMechanicsAnywhere",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "WorldStreamerSlowLoad": {
+            "deprecated": false,
+            "name": "WorldStreamerSlowLoad",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "ThreadCrash_RenderThread": {
+            "deprecated": false,
+            "name": "ThreadCrash_RenderThread",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "ModelSkeleton": {
+            "deprecated": false,
+            "name": "ModelSkeleton",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "ModRenderLoaded": {
+            "deprecated": false,
+            "name": "ModRenderLoaded",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "MultiplayerLogPrediction": {
+            "deprecated": false,
+            "name": "MultiplayerLogPrediction",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "VehicleRenderIntersectedSquares": {
+            "deprecated": false,
+            "name": "VehicleRenderIntersectedSquares",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "MechanicsRenderHitbox": {
+            "deprecated": false,
+            "name": "MechanicsRenderHitbox",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "PolymapRenderConnections": {
+            "deprecated": false,
+            "name": "PolymapRenderConnections",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "UIRenderOutline": {
+            "deprecated": false,
+            "name": "UIRenderOutline",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "VehicleRenderInterpolateBuffer": {
+            "deprecated": false,
+            "name": "VehicleRenderInterpolateBuffer",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "VehicleRenderRust0": {
+            "deprecated": false,
+            "name": "VehicleRenderRust0",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "MultiplayerShowPlayerPrediction": {
+            "deprecated": false,
+            "name": "MultiplayerShowPlayerPrediction",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "VehicleRenderAttackPositions": {
+            "deprecated": false,
+            "name": "VehicleRenderAttackPositions",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "GameTimeSpeedQuarter": {
+            "deprecated": false,
+            "name": "GameTimeSpeedQuarter",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "MultiplayerZombieCrawler": {
+            "deprecated": false,
+            "name": "MultiplayerZombieCrawler",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "PathfindPathToMouseIgnoreCrawlCost": {
+            "deprecated": false,
+            "name": "PathfindPathToMouseIgnoreCrawlCost",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "ZombieRenderMemory": {
+            "deprecated": false,
+            "name": "ZombieRenderMemory",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "DebugDraw_SkipDrawNonSkinnedModel": {
+            "deprecated": false,
+            "name": "DebugDraw_SkipDrawNonSkinnedModel",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "MultiplayerPlayerZombie": {
+            "deprecated": false,
+            "name": "MultiplayerPlayerZombie",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "VehicleRenderBlood100": {
+            "deprecated": false,
+            "name": "VehicleRenderBlood100",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "VehicleRenderRust100": {
+            "deprecated": false,
+            "name": "VehicleRenderRust100",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "VehicleRenderDamage0": {
+            "deprecated": false,
+            "name": "VehicleRenderDamage0",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "PathfindPathToMouseAllowThump": {
+            "deprecated": false,
+            "name": "PathfindPathToMouseAllowThump",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "MultiplayerShowPlayerStatus": {
+            "deprecated": false,
+            "name": "MultiplayerShowPlayerStatus",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "MultiplayerAttackPlayer": {
+            "deprecated": false,
+            "name": "MultiplayerAttackPlayer",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "SkyboxShow": {
+            "deprecated": false,
+            "name": "SkyboxShow",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "ModelRenderBones": {
+            "deprecated": false,
+            "name": "ModelRenderBones",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "MultiplayerTorsoHit": {
+            "deprecated": false,
+            "name": "MultiplayerTorsoHit",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "CheatDoorUnlock": {
+            "deprecated": false,
+            "name": "CheatDoorUnlock",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "TooltipInfo": {
+            "deprecated": false,
+            "name": "TooltipInfo",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "AssetSlowLoad": {
+            "deprecated": false,
+            "name": "AssetSlowLoad",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "DeadBodyAtlasRender": {
+            "deprecated": false,
+            "name": "DeadBodyAtlasRender",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "ModelRenderMuzzleflash": {
+            "deprecated": false,
+            "name": "ModelRenderMuzzleflash",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "Terrain": {
+            "deprecated": false,
+            "name": "Terrain",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Terrain"
+            }
+          },
+          "UIDebugConsoleStartVisible": {
+            "deprecated": false,
+            "name": "UIDebugConsoleStartVisible",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "MultiplayerShowHit": {
+            "deprecated": false,
+            "name": "MultiplayerShowHit",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "VehicleRenderTrailerPositions": {
+            "deprecated": false,
+            "name": "VehicleRenderTrailerPositions",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "VERSION": {
+            "deprecated": false,
+            "name": "VERSION",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": false,
+              "basic": "int"
+            }
+          },
+          "Animation": {
+            "deprecated": false,
+            "name": "Animation",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Animation"
+            }
+          },
+          "WorldSoundRender": {
+            "deprecated": false,
+            "name": "WorldSoundRender",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "MultiplayerCriticalHit": {
+            "deprecated": false,
+            "name": "MultiplayerCriticalHit",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "UIDebugConsoleEchoCommand": {
+            "deprecated": false,
+            "name": "UIDebugConsoleEchoCommand",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "ModelRenderSkipVehicles": {
+            "deprecated": false,
+            "name": "ModelRenderSkipVehicles",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "LightingRender": {
+            "deprecated": false,
+            "name": "LightingRender",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "instance": {
+            "deprecated": false,
+            "name": "instance",
+            "modifiers": [
+              "public",
+              "static",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "DebugOptions"
+            }
+          },
+          "VehicleRenderExit": {
+            "deprecated": false,
+            "name": "VehicleRenderExit",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "DebugDraw_SkipVBODraw": {
+            "deprecated": false,
+            "name": "DebugDraw_SkipVBODraw",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "CheatVehicleStartWithoutKey": {
+            "deprecated": false,
+            "name": "CheatVehicleStartWithoutKey",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "VehicleRenderBlood0": {
+            "deprecated": false,
+            "name": "VehicleRenderBlood0",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "MultiplayerShowZombieDesync": {
+            "deprecated": false,
+            "name": "MultiplayerShowZombieDesync",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "ThreadCrash_GameThread": {
+            "deprecated": false,
+            "name": "ThreadCrash_GameThread",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "WorldItemAtlasRender": {
+            "deprecated": false,
+            "name": "WorldItemAtlasRender",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "MultiplayerShowZombieStatus": {
+            "deprecated": false,
+            "name": "MultiplayerShowZombieStatus",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "ModelRenderAxis": {
+            "deprecated": false,
+            "name": "ModelRenderAxis",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "MultiplayerAutoEquip": {
+            "deprecated": false,
+            "name": "MultiplayerAutoEquip",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "DebugScenarioForceLaunch": {
+            "deprecated": false,
+            "name": "DebugScenarioForceLaunch",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "ModelRenderAttachments": {
+            "deprecated": false,
+            "name": "ModelRenderAttachments",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "Character": {
+            "deprecated": false,
+            "name": "Character",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Character"
+            }
+          },
+          "OffscreenBuffer": {
+            "deprecated": false,
+            "name": "OffscreenBuffer",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "OffscreenBuffer"
+            }
+          },
+          "VehicleRenderDamage2": {
+            "deprecated": false,
+            "name": "VehicleRenderDamage2",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "VehicleRenderDamage1": {
+            "deprecated": false,
+            "name": "VehicleRenderDamage1",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "CollideWithObstaclesRenderNormals": {
+            "deprecated": false,
+            "name": "CollideWithObstaclesRenderNormals",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "MultiplayerShowTeleport": {
+            "deprecated": false,
+            "name": "MultiplayerShowTeleport",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "ThreadCrash_Enabled": {
+            "deprecated": false,
+            "name": "ThreadCrash_Enabled",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "ZombieOutfitRandom": {
+            "deprecated": false,
+            "name": "ZombieOutfitRandom",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "VehicleRenderOutline": {
+            "deprecated": false,
+            "name": "VehicleRenderOutline",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "VehicleRenderBlood50": {
+            "deprecated": false,
+            "name": "VehicleRenderBlood50",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "ObjectAmbientEmitterRender": {
+            "deprecated": false,
+            "name": "ObjectAmbientEmitterRender",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "Checks": {
+            "deprecated": false,
+            "name": "Checks",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Checks"
+            }
+          },
+          "MultiplayerFollowPlayer": {
+            "deprecated": false,
+            "name": "MultiplayerFollowPlayer",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "ModelRenderLights": {
+            "deprecated": false,
+            "name": "ModelRenderLights",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "CheatWindowUnlock": {
+            "deprecated": false,
+            "name": "CheatWindowUnlock",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "VehicleSpawnEverywhere": {
+            "deprecated": false,
+            "name": "VehicleSpawnEverywhere",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "CheatUnlimitedAmmo": {
+            "deprecated": false,
+            "name": "CheatUnlimitedAmmo",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "ZombieRenderFakeDead": {
+            "deprecated": false,
+            "name": "ZombieRenderFakeDead",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "MultiplayerShowZombieMultiplier": {
+            "deprecated": false,
+            "name": "MultiplayerShowZombieMultiplier",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "PathfindPathToMouseEnable": {
+            "deprecated": false,
+            "name": "PathfindPathToMouseEnable",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "MultiplayerShowZombiePrediction": {
+            "deprecated": false,
+            "name": "MultiplayerShowZombiePrediction",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "MultiplayerHotKey": {
+            "deprecated": false,
+            "name": "MultiplayerHotKey",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "MultiplayerSeeNonPvpZones": {
+            "deprecated": false,
+            "name": "MultiplayerSeeNonPvpZones",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "GameTimeSpeedHalf": {
+            "deprecated": false,
+            "name": "GameTimeSpeedHalf",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "WorldChunkMap5x5": {
+            "deprecated": false,
+            "name": "WorldChunkMap5x5",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "PolymapRenderCrawling": {
+            "deprecated": false,
+            "name": "PolymapRenderCrawling",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "VehicleCycleColor": {
+            "deprecated": false,
+            "name": "VehicleCycleColor",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "VehicleRenderAuthorizations": {
+            "deprecated": false,
+            "name": "VehicleRenderAuthorizations",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "CollideWithObstaclesRenderRadius": {
+            "deprecated": false,
+            "name": "CollideWithObstaclesRenderRadius",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "ModelRenderWeaponHitPoint": {
+            "deprecated": false,
+            "name": "ModelRenderWeaponHitPoint",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "ThreadCrash_GameLoadingThread": {
+            "deprecated": false,
+            "name": "ThreadCrash_GameLoadingThread",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "VehicleRenderArea": {
+            "deprecated": false,
+            "name": "VehicleRenderArea",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "DebugDraw_SkipWorldShading": {
+            "deprecated": false,
+            "name": "DebugDraw_SkipWorldShading",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "PhysicsRender": {
+            "deprecated": false,
+            "name": "PhysicsRender",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "UIDisableWelcomeMessage": {
+            "deprecated": false,
+            "name": "UIDisableWelcomeMessage",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "Weather": {
+            "deprecated": false,
+            "name": "Weather",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "Weather"
+            }
+          },
+          "CheatRecipeKnowAll": {
+            "deprecated": false,
+            "name": "CheatRecipeKnowAll",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "CheatTimedActionInstant": {
+            "deprecated": false,
+            "name": "CheatTimedActionInstant",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "UIDebugConsoleDebugLog": {
+            "deprecated": false,
+            "name": "UIDebugConsoleDebugLog",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "JoypadRenderUI": {
+            "deprecated": false,
+            "name": "JoypadRenderUI",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "CheatClockVisible": {
+            "deprecated": false,
+            "name": "CheatClockVisible",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "CollideWithObstaclesRenderObstacles": {
+            "deprecated": false,
+            "name": "CollideWithObstaclesRenderObstacles",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "PathfindPathToMouseAllowCrawl": {
+            "deprecated": false,
+            "name": "PathfindPathToMouseAllowCrawl",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "PathfindRenderWaiting": {
+            "deprecated": false,
+            "name": "PathfindRenderWaiting",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "TranslationPrefix": {
+            "deprecated": false,
+            "name": "TranslationPrefix",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "VehicleRenderRust50": {
+            "deprecated": false,
+            "name": "VehicleRenderRust50",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "MultiplayerShowZombieOwner": {
+            "deprecated": false,
+            "name": "MultiplayerShowZombieOwner",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          },
+          "PolymapRenderClusters": {
+            "deprecated": false,
+            "name": "PolymapRenderClusters",
+            "modifiers": [
+              "public",
+              "final"
+            ],
+            "type": {
+              "nullable": true,
+              "basic": "BooleanDebugOption"
+            }
+          }
+        },
+        "javaType": "class"
+      }
+    }
+  }
+}
