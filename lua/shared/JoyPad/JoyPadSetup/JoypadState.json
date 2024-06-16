@@ -1,0 +1,141 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "tables": {
+    "JoypadState": {
+      "fields": {
+        "debugUI": {
+          "type": "ISJoypadDebugUI",
+          "notes": "The Debug UI instance for Joypads.",
+          "defaultValue": "nil",
+          "nullable": true
+        },
+        "players": {
+          "type": "JoypadData[]",
+          "notes": "JoypadData objects sorted by the player's index number.",
+          "nullable": false
+        },
+        "saveFocus": {
+          "type": "JoypadData[]",
+          "nullable": true
+        }
+      },
+      "functions": {
+        "getMainMenuJoypad": {
+          "returns": {
+            "type": "JoypadData",
+            "notes": "If one of the joypads has control over the main menu, it is returned. If none of them are, nil is returned.",
+            "nullable": false
+          }
+        },
+        "onCoopJoinFailed": {
+          "notes": "Triggered when a player attempts to join a co-op session and fails.",
+          "parameters": [
+            {
+              "name": "playerIndex",
+              "type": "number",
+              "notes": "The player's index.",
+              "optional": false,
+              "nullable": false
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": "",
+            "nullable": false
+          }
+        },
+        "onGamepadConnect": {
+          "notes": "TODO: Document.",
+          "parameters": [
+            {
+              "name": "id",
+              "type": "number",
+              "notes": "The ID of the gamepad.",
+              "optional": false,
+              "nullable": false
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": "",
+            "nullable": false
+          }
+        },
+        "onGamepadDisconnect": {
+          "notes": "TODO: Document.",
+          "parameters": [
+            {
+              "name": "id",
+              "type": "any",
+              "notes": "The ID of the gamepad.",
+              "optional": false,
+              "nullable": false
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": "",
+            "nullable": false
+          }
+        },
+        "onGameStart": {
+          "notes": "Triggered when the game starts.",
+          "returns": {
+            "type": "void",
+            "notes": "",
+            "nullable": false
+          }
+        },
+        "onPlayerDeath": {
+          "notes": "Triggered when the a player dies.",
+          "parameters": [
+            {
+              "name": "isoPlayer",
+              "type": "IsoPlayer",
+              "notes": "The player object instance.",
+              "optional": false,
+              "nullable": false
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": "",
+            "nullable": false
+          }
+        },
+        "onRenderUI": {
+          "notes": "Triggered when rendering the UI. (Only debug UI is rendered here)",
+          "returns": {
+            "type": "void",
+            "notes": "",
+            "nullable": false
+          }
+        },
+        "restoreAllFocus": {
+          "notes": "Restores all focused joypads from the saveFocus field.",
+          "returns": {
+            "type": "void",
+            "notes": "",
+            "nullable": false
+          }
+        },
+        "saveAllFocus": {
+          "notes": "Stores all of the focused joypads to a saveFocus field.",
+          "returns": {
+            "type": "void",
+            "notes": "",
+            "nullable": false
+          }
+        },
+        "useKeyboardMouse": {
+          "notes": "TODO: Document.",
+          "returns": {
+            "type": "void",
+            "notes": "",
+            "nullable": false
+          }
+        }
+      }
+    }
+  }
+}

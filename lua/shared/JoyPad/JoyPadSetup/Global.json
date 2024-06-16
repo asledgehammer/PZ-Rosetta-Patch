@@ -1,0 +1,205 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "functions": {
+    "getFocusForPlayer": {
+      "notes": "TODO: Document.",
+      "parameters": [
+        {
+          "name": "playerIndex",
+          "type": "number",
+          "notes": "The player's index. (Used when multiple players locally, otherwise 0)",
+          "optional": false,
+          "nullable": false
+        }
+      ],
+      "returns": {
+        "type": "ISUIElement",
+        "nullable": true
+      }
+    },
+    "getJoypadFocus": {
+      "notes": "TODO: Document.",
+      "parameters": [
+        {
+          "name": "playerIndex",
+          "type": "number",
+          "notes": "The player's index. (Used when multiple players locally, otherwise 0)",
+          "optional": false,
+          "nullable": false
+        }
+      ],
+      "returns": {
+        "type": "ISUIElement",
+        "nullable": true
+      }
+    },
+    "setJoypadFocus": {
+      "notes": "TODO: Document.",
+      "parameters": [
+        {
+          "name": "playerIndex",
+          "type": "number",
+          "notes": "The player's index. (Used when multiple players locally, otherwise 0)",
+          "optional": false,
+          "nullable": false
+        },
+        {
+          "name": "control",
+          "type": "ISUIElement",
+          "notes": "The ISUIElement to focus.",
+          "optional": false,
+          "nullable": false
+        }
+      ],
+      "returns": {
+        "type": "void",
+        "nullable": false
+      }
+    },
+    "setPrevFocusForPlayer": {
+      "notes": "TODO: Document.",
+      "parameters": [
+        {
+          "name": "playerIndex",
+          "type": "number",
+          "notes": "The player's index. (Used when multiple players locally, otherwise 0)",
+          "optional": false,
+          "nullable": false
+        }
+      ],
+      "returns": {
+        "type": "void",
+        "nullable": false
+      }
+    },
+    "setPrevPrevFocusForPlayer": {
+      "notes": "TODO: Document.",
+      "parameters": [
+        {
+          "name": "playerIndex",
+          "type": "number",
+          "notes": "The player's index. (Used when multiple players locally, otherwise 0)",
+          "optional": false,
+          "nullable": false
+        }
+      ],
+      "returns": {
+        "type": "void",
+        "nullable": false
+      }
+    },
+    "updateJoypadFocus": {
+      "notes": "Updates all Lua-side Joypad code.",
+      "returns": {
+        "type": "void",
+        "nullable": false
+      }
+    },
+    "onJoypadRenderTick": {
+      "notes": "TODO: Document.",
+      "parameters": [
+        {
+          "name": "ticks",
+          "type": "number",
+          "notes": "The number of ticks in the update thread.",
+          "optional": false,
+          "nullable": false
+        }
+      ],
+      "returns": {
+        "type": "void",
+        "nullable": false
+      }
+    },
+    "onJoypadActivate": {
+      "notes": "TODO: Document.",
+      "parameters": [
+        {
+          "name": "joypadIndex",
+          "type": "number",
+          "optional": false,
+          "nullable": false
+        }
+      ],
+      "returns": {
+        "type": "void",
+        "nullable": false
+      }
+    },
+    "onJoypadActivateUI": {
+      "notes": "TODO: Document.",
+      "parameters": [
+        {
+          "name": "joypadIndex",
+          "type": "number",
+          "optional": false,
+          "nullable": false
+        }
+      ],
+      "returns": {
+        "type": "void",
+        "nullable": false
+      }
+    },
+    "onJoypadBeforeDeactivate": {
+      "notes": "TODO: Document.",
+      "parameters": [
+        {
+          "name": "controllerIndex",
+          "type": "number",
+          "optional": false,
+          "nullable": false
+        }
+      ],
+      "returns": {
+        "type": "void",
+        "nullable": false
+      }
+    },
+    "onJoypadDeactivate": {
+      "notes": "TODO: Document.",
+      "parameters": [
+        {
+          "name": "controllerIndex",
+          "type": "number",
+          "optional": false,
+          "nullable": false
+        }
+      ],
+      "returns": {
+        "type": "void",
+        "nullable": false
+      }
+    },
+    "onJoypadBeforeReactivate": {
+      "notes": "TODO: Document.",
+      "parameters": [
+        {
+          "name": "controllerIndex",
+          "type": "number",
+          "optional": false,
+          "nullable": false
+        }
+      ],
+      "returns": {
+        "type": "void",
+        "nullable": false
+      }
+    },
+    "onJoypadReactivate": {
+      "notes": "TODO: Document.",
+      "parameters": [
+        {
+          "name": "controllerIndex",
+          "type": "number",
+          "optional": false,
+          "nullable": false
+        }
+      ],
+      "returns": {
+        "type": "void",
+        "nullable": false
+      }
+    }
+  }
+}

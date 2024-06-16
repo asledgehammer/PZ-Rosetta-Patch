@@ -1,0 +1,199 @@
+{
+  "$schema": "https://raw.githubusercontent.com/asledgehammer/PZ-Rosetta-Schema/main/rosetta-schema.json",
+  "luaClasses": {
+    "JoypadControllerData": {
+      "extends": "ISBaseObject",
+      "fields": {
+        "connected": {
+          "type": "boolean",
+          "notes": "True if the controller is fully connected.",
+          "nullable": false
+        },
+        "id": {
+          "type": "number",
+          "notes": "The internal ID of the controller.",
+          "nullable": false
+        },
+        "joypad": {
+          "type": "JoypadData",
+          "nullable": false
+        },
+        "pressed": {
+          "type": "table",
+          "nullable": false
+        },
+        "wasPressed": {
+          "type": "table",
+          "nullable": false
+        }
+      },
+      "constructor": {},
+      "methods": {
+        "clearJoypad": {
+          "notes": "Clears the JoypadData instance from the controller. (Does the same for the JoypadData instance's controller reference)",
+          "returns": {
+            "type": "void",
+            "notes": "",
+            "nullable": false
+          }
+        },
+        "onPauseButtonPressed": {
+          "notes": "TODO: Document.",
+          "returns": {
+            "type": "void",
+            "notes": "",
+            "nullable": false
+          }
+        },
+        "onPressButton": {
+          "notes": "TODO: Document.",
+          "parameters": [
+            {
+              "name": "button",
+              "type": "number",
+              "notes": "The button pressed. (See [Joypad]((./Joypad) for buttons)",
+              "optional": false,
+              "nullable": false
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": "",
+            "nullable": false
+          }
+        },
+        "onPressButtonNoFocus": {
+          "notes": "TODO: Document.",
+          "parameters": [
+            {
+              "name": "button",
+              "type": "number",
+              "notes": "The button pressed. (See [Joypad](./Joypad) for buttons)",
+              "optional": false,
+              "nullable": false
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": "",
+            "nullable": false
+          }
+        },
+        "onPressDown": {
+          "notes": "TODO: Document.",
+          "returns": {
+            "type": "void",
+            "notes": "",
+            "nullable": false
+          }
+        },
+        "onPressLeft": {
+          "notes": "TODO: Document.",
+          "returns": {
+            "type": "void",
+            "notes": "",
+            "nullable": false
+          }
+        },
+        "onPressRight": {
+          "notes": "TODO: Document.",
+          "returns": {
+            "type": "void",
+            "notes": "",
+            "nullable": false
+          }
+        },
+        "onPressUp": {
+          "notes": "TODO: Document.",
+          "returns": {
+            "type": "void",
+            "notes": "",
+            "nullable": false
+          }
+        },
+        "onReleaseButton": {
+          "notes": "TODO: Document.",
+          "parameters": [
+            {
+              "name": "button",
+              "type": "number",
+              "notes": "The button pressed. (See [Joypad](((./Joypad) for buttons)",
+              "optional": false,
+              "nullable": false
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": "",
+            "nullable": false
+          }
+        },
+        "onReleaseDown": {
+          "notes": "TODO: Document.",
+          "returns": {
+            "type": "void",
+            "notes": "",
+            "nullable": false
+          }
+        },
+        "onReleaseLeft": {
+          "notes": "TODO: Document.",
+          "returns": {
+            "type": "void",
+            "notes": "",
+            "nullable": false
+          }
+        },
+        "onReleaseRight": {
+          "notes": "TODO: Document.",
+          "returns": {
+            "type": "void",
+            "notes": "",
+            "nullable": false
+          }
+        },
+        "onReleaseUp": {
+          "notes": "TODO: Document.",
+          "returns": {
+            "type": "void",
+            "notes": "",
+            "nullable": false
+          }
+        },
+        "setJoypad": {
+          "notes": "Sets the JoypadData instance for the controller. (Does the same for the Joypad instance's controller reference)",
+          "parameters": [
+            {
+              "name": "joypadData",
+              "type": "JoypadData",
+              "optional": false,
+              "nullable": false
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "nullable": false
+          }
+        },
+        "update": {
+          "notes": "The heartbeat of the Joypad controller. All checks are made here each tick to see if components' states of the joypad change and methods are fired based on those states.",
+          "parameters": [
+            {
+              "name": "time",
+              "type": "number",
+              "notes": "The time. (In milliseconds)",
+              "optional": false,
+              "nullable": false
+            }
+          ],
+          "returns": {
+            "type": "void",
+            "notes": "",
+            "nullable": false
+          }
+        }
+      },
+      "mutable": false
+    }
+  }
+}
